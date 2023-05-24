@@ -1,0 +1,1623 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"23 Si4463/radio.h
+[; ;Si4463/radio.h: 23: typedef struct {
+[s S156 `*Cuc 1 `uc 1 `uc 1 `uc 1 `us 1 `uc -> 64 `i ]
+[n S156 . Radio_ConfigurationArray Radio_ChannelNumber Radio_PacketLength Radio_State_After_Power_Up Radio_Delay_Cnt_After_Reset Radio_CustomPayload ]
+"35 Si4463/si446x_api_lib.h
+[; ;Si4463/si446x_api_lib.h: 35: void si446x_reset(void);
+[v _si446x_reset `(v ~T0 @X0 0 ef ]
+"59 Si4463/radio.c
+[; ;Si4463/radio.c: 59:     while (SI446X_SUCCESS != si446x_configuration_init(pRadioConfiguration->Radio_ConfigurationArray)) {
+[c E1544 0 1 2 3 4 .. ]
+[n E1544 . SI446X_SUCCESS SI446X_NO_PATCH SI446X_CTS_TIMEOUT SI446X_PATCH_FAIL SI446X_COMMAND_ERROR  ]
+"38 Si4463/si446x_api_lib.h
+[; ;Si4463/si446x_api_lib.h: 38: U8 si446x_configuration_init(const U8* pSetPropCmd);
+[v _si446x_configuration_init `(uc ~T0 @X0 0 ef1`*Cuc ]
+"45
+[; ;Si4463/si446x_api_lib.h: 45: void si446x_get_int_status(U8 PH_CLR_PEND, U8 MODEM_CLR_PEND, U8 CHIP_CLR_PEND);
+[v _si446x_get_int_status `(v ~T0 @X0 0 ef3`uc`uc`uc ]
+"35 Si4463/radio_hal.h
+[; ;Si4463/radio_hal.h: 35: BIT radio_hal_NirqLevel(void);
+[v _radio_hal_NirqLevel `(uc ~T0 @X0 0 ef ]
+"23 Si4463/si446x_cmd.h
+[; ;Si4463/si446x_cmd.h: 23: struct si446x_reply_GENERIC_map {
+[s S135 `uc -> 16 `i ]
+[n S135 si446x_reply_GENERIC_map REPLY ]
+"27
+[; ;Si4463/si446x_cmd.h: 27: struct si446x_reply_PART_INFO_map {
+[s S136 `uc 1 `us 1 `uc 1 `us 1 `uc 1 `uc 1 ]
+[n S136 si446x_reply_PART_INFO_map CHIPREV PART PBUILD ID CUSTOMER ROMID ]
+"36
+[; ;Si4463/si446x_cmd.h: 36: struct si446x_reply_FUNC_INFO_map {
+[s S137 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S137 si446x_reply_FUNC_INFO_map REVEXT REVBRANCH REVINT FUNC ]
+"43
+[; ;Si4463/si446x_cmd.h: 43: struct si446x_reply_GET_PROPERTY_map {
+[s S138 `uc -> 16 `i ]
+[n S138 si446x_reply_GET_PROPERTY_map DATA ]
+"47
+[; ;Si4463/si446x_cmd.h: 47: struct si446x_reply_GPIO_PIN_CFG_map {
+[s S139 `uc -> 4 `i `uc 1 `uc 1 `uc 1 ]
+[n S139 si446x_reply_GPIO_PIN_CFG_map GPIO NIRQ SDO GEN_CONFIG ]
+"54
+[; ;Si4463/si446x_cmd.h: 54: struct si446x_reply_FIFO_INFO_map {
+[s S140 `uc 1 `uc 1 ]
+[n S140 si446x_reply_FIFO_INFO_map RX_FIFO_COUNT TX_FIFO_SPACE ]
+"59
+[; ;Si4463/si446x_cmd.h: 59: struct si446x_reply_GET_INT_STATUS_map {
+[s S141 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S141 si446x_reply_GET_INT_STATUS_map INT_PEND INT_STATUS PH_PEND PH_STATUS MODEM_PEND MODEM_STATUS CHIP_PEND CHIP_STATUS ]
+"70
+[; ;Si4463/si446x_cmd.h: 70: struct si446x_reply_REQUEST_DEVICE_STATE_map {
+[s S142 `uc 1 `uc 1 ]
+[n S142 si446x_reply_REQUEST_DEVICE_STATE_map CURR_STATE CURRENT_CHANNEL ]
+"75
+[; ;Si4463/si446x_cmd.h: 75: struct si446x_reply_READ_CMD_BUFF_map {
+[s S143 `uc -> 16 `i ]
+[n S143 si446x_reply_READ_CMD_BUFF_map BYTE ]
+"79
+[; ;Si4463/si446x_cmd.h: 79: struct si446x_reply_FRR_A_READ_map {
+[s S144 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S144 si446x_reply_FRR_A_READ_map FRR_A_VALUE FRR_B_VALUE FRR_C_VALUE FRR_D_VALUE ]
+"86
+[; ;Si4463/si446x_cmd.h: 86: struct si446x_reply_FRR_B_READ_map {
+[s S145 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S145 si446x_reply_FRR_B_READ_map FRR_B_VALUE FRR_C_VALUE FRR_D_VALUE FRR_A_VALUE ]
+"93
+[; ;Si4463/si446x_cmd.h: 93: struct si446x_reply_FRR_C_READ_map {
+[s S146 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S146 si446x_reply_FRR_C_READ_map FRR_C_VALUE FRR_D_VALUE FRR_A_VALUE FRR_B_VALUE ]
+"100
+[; ;Si4463/si446x_cmd.h: 100: struct si446x_reply_FRR_D_READ_map {
+[s S147 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S147 si446x_reply_FRR_D_READ_map FRR_D_VALUE FRR_A_VALUE FRR_B_VALUE FRR_C_VALUE ]
+"107
+[; ;Si4463/si446x_cmd.h: 107: struct si446x_reply_IRCAL_MANUAL_map {
+[s S148 `uc 1 `uc 1 ]
+[n S148 si446x_reply_IRCAL_MANUAL_map IRCAL_AMP_REPLY IRCAL_PH_REPLY ]
+"112
+[; ;Si4463/si446x_cmd.h: 112: struct si446x_reply_PACKET_INFO_map {
+[s S149 `us 1 ]
+[n S149 si446x_reply_PACKET_INFO_map LENGTH ]
+"116
+[; ;Si4463/si446x_cmd.h: 116: struct si446x_reply_GET_MODEM_STATUS_map {
+[s S150 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `us 1 ]
+[n S150 si446x_reply_GET_MODEM_STATUS_map MODEM_PEND MODEM_STATUS CURR_RSSI LATCH_RSSI ANT1_RSSI ANT2_RSSI AFC_FREQ_OFFSET ]
+"126
+[; ;Si4463/si446x_cmd.h: 126: struct si446x_reply_READ_RX_FIFO_map {
+[s S151 `uc -> 2 `i ]
+[n S151 si446x_reply_READ_RX_FIFO_map DATA ]
+"130
+[; ;Si4463/si446x_cmd.h: 130: struct si446x_reply_GET_ADC_READING_map {
+[s S152 `us 1 `us 1 `us 1 ]
+[n S152 si446x_reply_GET_ADC_READING_map GPIO_ADC BATTERY_ADC TEMP_ADC ]
+"136
+[; ;Si4463/si446x_cmd.h: 136: struct si446x_reply_GET_PH_STATUS_map {
+[s S153 `uc 1 `uc 1 ]
+[n S153 si446x_reply_GET_PH_STATUS_map PH_PEND PH_STATUS ]
+"141
+[; ;Si4463/si446x_cmd.h: 141: struct si446x_reply_GET_CHIP_STATUS_map {
+[s S154 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S154 si446x_reply_GET_CHIP_STATUS_map CHIP_PEND CHIP_STATUS CMD_ERR_STATUS CMD_ERR_CMD_ID ]
+"150
+[; ;Si4463/si446x_cmd.h: 150: union si446x_cmd_reply_union {
+[u S155 `uc -> 16 `i `S135 1 `S136 1 `S137 1 `S138 1 `S139 1 `S140 1 `S141 1 `S142 1 `S143 1 `S144 1 `S145 1 `S146 1 `S147 1 `S148 1 `S149 1 `S150 1 `S151 1 `S152 1 `S153 1 `S154 1 ]
+[n S155 si446x_cmd_reply_union RAW GENERIC PART_INFO FUNC_INFO GET_PROPERTY GPIO_PIN_CFG FIFO_INFO GET_INT_STATUS REQUEST_DEVICE_STATE READ_CMD_BUFF FRR_A_READ FRR_B_READ FRR_C_READ FRR_D_READ IRCAL_MANUAL PACKET_INFO GET_MODEM_STATUS READ_RX_FIFO GET_ADC_READING GET_PH_STATUS GET_CHIP_STATUS ]
+"23 Si4463/radio.c
+[; ;Si4463/radio.c: 23: extern union si446x_cmd_reply_union Si446xCmd;
+[v _Si446xCmd `S155 ~T0 @X0 0 e ]
+"49 Si4463/si446x_api_lib.h
+[; ;Si4463/si446x_api_lib.h: 49: void si446x_change_state(U8 NEXT_STATE1);
+[v _si446x_change_state `(v ~T0 @X0 0 ef1`uc ]
+"54
+[; ;Si4463/si446x_api_lib.h: 54: void si446x_fifo_info(U8 FIFO);
+[v _si446x_fifo_info `(v ~T0 @X0 0 ef1`uc ]
+"56
+[; ;Si4463/si446x_api_lib.h: 56: void si446x_read_rx_fifo( U8 numBytes, U8* pRxData );
+[v _si446x_read_rx_fifo `(v ~T0 @X0 0 ef2`uc`*uc ]
+"43 Si4463/../inc/chipset.h
+[; ;Si4463/../inc/chipset.h: 43: void UART_TxChar(char ch);
+[v _UART_TxChar `(v ~T0 @X0 0 ef1`uc ]
+"43 Si4463/si446x_api_lib.h
+[; ;Si4463/si446x_api_lib.h: 43: void si446x_start_rx(U8 CHANNEL, U8 CONDITION, U16 RX_LEN, U8 NEXT_STATE1, U8 NEXT_STATE2, U8 NEXT_STATE3);
+[v _si446x_start_rx `(v ~T0 @X0 0 ef6`uc`uc`us`uc`uc`uc ]
+"55
+[; ;Si4463/si446x_api_lib.h: 55: void si446x_write_tx_fifo( U8 numBytes, U8* pData );
+[v _si446x_write_tx_fifo `(v ~T0 @X0 0 ef2`uc`*uc ]
+"42
+[; ;Si4463/si446x_api_lib.h: 42: void si446x_start_tx(U8 CHANNEL, U8 CONDITION, U16 TX_LEN);
+[v _si446x_start_tx `(v ~T0 @X0 0 ef3`uc`uc`us ]
+"14 Si4463/../inc/main_pic16f883.h
+[p x FOSC  =  INTRC_CLKOUT           ]
+"15
+[p x WDTE  =  OFF                    ]
+"16
+[p x PWRTE  =  OFF                   ]
+"17
+[p x MCLRE  =  ON                    ]
+"18
+[p x CP  =  OFF                      ]
+"19
+[p x CPD  =  OFF                     ]
+"20
+[p x BOREN  =  ON                    ]
+"21
+[p x IESO  =  ON                     ]
+"22
+[p x FCMEN  =  ON                    ]
+"23
+[p x LVP  =  OFF                     ]
+"27
+[p x BOR4V  =  BOR21V                ]
+"28
+[p x WRT  =  OFF                     ]
+"55 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 55: __asm("INDF equ 00h");
+[; <" INDF equ 00h ;# ">
+"62
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 62: __asm("TMR0 equ 01h");
+[; <" TMR0 equ 01h ;# ">
+"69
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 69: __asm("PCL equ 02h");
+[; <" PCL equ 02h ;# ">
+"76
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 76: __asm("STATUS equ 03h");
+[; <" STATUS equ 03h ;# ">
+"162
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 162: __asm("FSR equ 04h");
+[; <" FSR equ 04h ;# ">
+"169
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 169: __asm("PORTA equ 05h");
+[; <" PORTA equ 05h ;# ">
+"231
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 231: __asm("PORTB equ 06h");
+[; <" PORTB equ 06h ;# ">
+"293
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 293: __asm("PORTC equ 07h");
+[; <" PORTC equ 07h ;# ">
+"355
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 355: __asm("PORTE equ 09h");
+[; <" PORTE equ 09h ;# ">
+"376
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 376: __asm("PCLATH equ 0Ah");
+[; <" PCLATH equ 0Ah ;# ">
+"383
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 383: __asm("INTCON equ 0Bh");
+[; <" INTCON equ 0Bh ;# ">
+"461
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 461: __asm("PIR1 equ 0Ch");
+[; <" PIR1 equ 0Ch ;# ">
+"517
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 517: __asm("PIR2 equ 0Dh");
+[; <" PIR2 equ 0Dh ;# ">
+"574
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 574: __asm("TMR1 equ 0Eh");
+[; <" TMR1 equ 0Eh ;# ">
+"581
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 581: __asm("TMR1L equ 0Eh");
+[; <" TMR1L equ 0Eh ;# ">
+"588
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 588: __asm("TMR1H equ 0Fh");
+[; <" TMR1H equ 0Fh ;# ">
+"595
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 595: __asm("T1CON equ 010h");
+[; <" T1CON equ 010h ;# ">
+"689
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 689: __asm("TMR2 equ 011h");
+[; <" TMR2 equ 011h ;# ">
+"696
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 696: __asm("T2CON equ 012h");
+[; <" T2CON equ 012h ;# ">
+"767
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 767: __asm("SSPBUF equ 013h");
+[; <" SSPBUF equ 013h ;# ">
+"774
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 774: __asm("SSPCON equ 014h");
+[; <" SSPCON equ 014h ;# ">
+"844
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 844: __asm("CCPR1 equ 015h");
+[; <" CCPR1 equ 015h ;# ">
+"851
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 851: __asm("CCPR1L equ 015h");
+[; <" CCPR1L equ 015h ;# ">
+"858
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 858: __asm("CCPR1H equ 016h");
+[; <" CCPR1H equ 016h ;# ">
+"865
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 865: __asm("CCP1CON equ 017h");
+[; <" CCP1CON equ 017h ;# ">
+"962
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 962: __asm("RCSTA equ 018h");
+[; <" RCSTA equ 018h ;# ">
+"1057
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 1057: __asm("TXREG equ 019h");
+[; <" TXREG equ 019h ;# ">
+"1064
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 1064: __asm("RCREG equ 01Ah");
+[; <" RCREG equ 01Ah ;# ">
+"1071
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 1071: __asm("CCPR2 equ 01Bh");
+[; <" CCPR2 equ 01Bh ;# ">
+"1078
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 1078: __asm("CCPR2L equ 01Bh");
+[; <" CCPR2L equ 01Bh ;# ">
+"1085
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 1085: __asm("CCPR2H equ 01Ch");
+[; <" CCPR2H equ 01Ch ;# ">
+"1092
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 1092: __asm("CCP2CON equ 01Dh");
+[; <" CCP2CON equ 01Dh ;# ">
+"1162
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 1162: __asm("ADRESH equ 01Eh");
+[; <" ADRESH equ 01Eh ;# ">
+"1169
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 1169: __asm("ADCON0 equ 01Fh");
+[; <" ADCON0 equ 01Fh ;# ">
+"1270
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 1270: __asm("OPTION_REG equ 081h");
+[; <" OPTION_REG equ 081h ;# ">
+"1340
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 1340: __asm("TRISA equ 085h");
+[; <" TRISA equ 085h ;# ">
+"1402
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 1402: __asm("TRISB equ 086h");
+[; <" TRISB equ 086h ;# ">
+"1464
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 1464: __asm("TRISC equ 087h");
+[; <" TRISC equ 087h ;# ">
+"1526
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 1526: __asm("TRISE equ 089h");
+[; <" TRISE equ 089h ;# ">
+"1547
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 1547: __asm("PIE1 equ 08Ch");
+[; <" PIE1 equ 08Ch ;# ">
+"1603
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 1603: __asm("PIE2 equ 08Dh");
+[; <" PIE2 equ 08Dh ;# ">
+"1660
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 1660: __asm("PCON equ 08Eh");
+[; <" PCON equ 08Eh ;# ">
+"1707
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 1707: __asm("OSCCON equ 08Fh");
+[; <" OSCCON equ 08Fh ;# ">
+"1772
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 1772: __asm("OSCTUNE equ 090h");
+[; <" OSCTUNE equ 090h ;# ">
+"1824
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 1824: __asm("SSPCON2 equ 091h");
+[; <" SSPCON2 equ 091h ;# ">
+"1886
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 1886: __asm("PR2 equ 092h");
+[; <" PR2 equ 092h ;# ">
+"1893
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 1893: __asm("SSPADD equ 093h");
+[; <" SSPADD equ 093h ;# ">
+"1900
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 1900: __asm("SSPMSK equ 093h");
+[; <" SSPMSK equ 093h ;# ">
+"1905
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 1905: __asm("MSK equ 093h");
+[; <" MSK equ 093h ;# ">
+"2022
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 2022: __asm("SSPSTAT equ 094h");
+[; <" SSPSTAT equ 094h ;# ">
+"2191
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 2191: __asm("WPUB equ 095h");
+[; <" WPUB equ 095h ;# ">
+"2261
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 2261: __asm("IOCB equ 096h");
+[; <" IOCB equ 096h ;# ">
+"2331
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 2331: __asm("VRCON equ 097h");
+[; <" VRCON equ 097h ;# ">
+"2401
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 2401: __asm("TXSTA equ 098h");
+[; <" TXSTA equ 098h ;# ">
+"2487
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 2487: __asm("SPBRG equ 099h");
+[; <" SPBRG equ 099h ;# ">
+"2549
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 2549: __asm("SPBRGH equ 09Ah");
+[; <" SPBRGH equ 09Ah ;# ">
+"2619
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 2619: __asm("PWM1CON equ 09Bh");
+[; <" PWM1CON equ 09Bh ;# ">
+"2689
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 2689: __asm("ECCPAS equ 09Ch");
+[; <" ECCPAS equ 09Ch ;# ">
+"2771
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 2771: __asm("PSTRCON equ 09Dh");
+[; <" PSTRCON equ 09Dh ;# ">
+"2815
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 2815: __asm("ADRESL equ 09Eh");
+[; <" ADRESL equ 09Eh ;# ">
+"2822
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 2822: __asm("ADCON1 equ 09Fh");
+[; <" ADCON1 equ 09Fh ;# ">
+"2856
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 2856: __asm("WDTCON equ 0105h");
+[; <" WDTCON equ 0105h ;# ">
+"2909
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 2909: __asm("CM1CON0 equ 0107h");
+[; <" CM1CON0 equ 0107h ;# ">
+"2974
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 2974: __asm("CM2CON0 equ 0108h");
+[; <" CM2CON0 equ 0108h ;# ">
+"3039
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 3039: __asm("CM2CON1 equ 0109h");
+[; <" CM2CON1 equ 0109h ;# ">
+"3090
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 3090: __asm("EEDATA equ 010Ch");
+[; <" EEDATA equ 010Ch ;# ">
+"3095
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 3095: __asm("EEDAT equ 010Ch");
+[; <" EEDAT equ 010Ch ;# ">
+"3102
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 3102: __asm("EEADR equ 010Dh");
+[; <" EEADR equ 010Dh ;# ">
+"3109
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 3109: __asm("EEDATH equ 010Eh");
+[; <" EEDATH equ 010Eh ;# ">
+"3116
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 3116: __asm("EEADRH equ 010Fh");
+[; <" EEADRH equ 010Fh ;# ">
+"3123
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 3123: __asm("SRCON equ 0185h");
+[; <" SRCON equ 0185h ;# ">
+"3180
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 3180: __asm("BAUDCTL equ 0187h");
+[; <" BAUDCTL equ 0187h ;# ">
+"3232
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 3232: __asm("ANSEL equ 0188h");
+[; <" ANSEL equ 0188h ;# ">
+"3276
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 3276: __asm("ANSELH equ 0189h");
+[; <" ANSELH equ 0189h ;# ">
+"3326
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 3326: __asm("EECON1 equ 018Ch");
+[; <" EECON1 equ 018Ch ;# ">
+"3371
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 3371: __asm("EECON2 equ 018Dh");
+[; <" EECON2 equ 018Dh ;# ">
+"19 Si4463/radio.c
+[; ;Si4463/radio.c: 19: const U8 Radio_Configuration_Data_Array[] = { 0x08,0x04,0x21,0x71,0x4B,0x00,0x00,0xDC,0x95, 0x08,0x05,0xA6,0x22,0x21,0xF0,0x41,0x5B,0x26, 0x08,0xE2,0x2F,0x1C,0xBB,0x0A,0xA8,0x94,0x28, 0x08,0x05,0x87,0x67,0xE2,0x58,0x1A,0x07,0x5B, 0x08,0xE1,0xD0,0x72,0xD8,0x8A,0xB8,0x5B,0x7D, 0x08,0x05,0x11,0xEC,0x9E,0x28,0x23,0x1B,0x6D, 0x08,0xE2,0x4F,0x8A,0xB2,0xA9,0x29,0x14,0x13, 0x08,0x05,0xD1,0x2E,0x71,0x6A,0x51,0x4C,0x2C, 0x08,0xE5,0x80,0x27,0x42,0xA4,0x69,0xB0,0x7F, 0x08,0x05,0xAA,0x81,0x2A,0xBD,0x45,0xE8,0xA8, 0x08,0xEA,0xE4,0xF0,0x24,0xC9,0x9F,0xCC,0x3C, 0x08,0x05,0x08,0xF5,0x05,0x04,0x27,0x62,0x98, 0x08,0xEA,0x6B,0x62,0x84,0xA1,0xF9,0x4A,0xE2, 0x08,0x05,0xE9,0x77,0x05,0x4F,0x84,0xEE,0x35, 0x08,0xE2,0x43,0xC3,0x8D,0xFB,0xAD,0x54,0x25, 0x08,0x05,0x14,0x06,0x5E,0x39,0x36,0x2F,0x45, 0x08,0xEA,0x0C,0x1C,0x74,0xD0,0x11,0xFC,0x32, 0x08,0x05,0xDA,0x38,0xBA,0x0E,0x3C,0xE7,0x8B, 0x08,0xEA,0xB0,0x09,0xE6,0xFF,0x94,0xBB,0xA9, 0x08,0x05,0xD7,0x11,0x29,0xFE,0xDC,0x71,0xD5, 0x08,0xEA,0x7F,0x83,0xA7,0x60,0x90,0x62,0x18, 0x08,0x05,0x84,0x7F,0x6A,0xD1,0x91,0xC6,0x52, 0x08,0xEA,0x2A,0xD8,0x7B,0x8E,0x4A,0x9F,0x91, 0x08,0x05,0xBD,0xAA,0x9D,0x16,0x18,0x06,0x15, 0x08,0xE2,0x55,0xAD,0x2D,0x0A,0x14,0x1F,0x5D, 0x08,0x05,0xD3,0xE0,0x7C,0x39,0xCF,0x01,0xF0, 0x08,0xEF,0x3A,0x91,0x72,0x6A,0x03,0xBB,0x96, 0x08,0xE7,0x83,0x6D,0xA4,0x92,0xFC,0x13,0xA7, 0x08,0xEF,0xF8,0xFD,0xCF,0x62,0x07,0x6F,0x1E, 0x08,0xE7,0x4C,0xEA,0x4A,0x75,0x4F,0xD6,0xCF, 0x08,0xE2,0xF6,0x11,0xE4,0x26,0x0D,0x4D,0xC6, 0x08,0x05,0xFB,0xBF,0xE8,0x07,0x89,0xC3,0x51, 0x08,0xEF,0x82,0x27,0x04,0x3F,0x96,0xA8,0x58, 0x08,0xE7,0x41,0x29,0x3C,0x75,0x2A,0x03,0x1C, 0x08,0xEF,0xAF,0x59,0x98,0x36,0xAA,0x0F,0x06, 0x08,0xE6,0xF6,0x93,0x41,0x2D,0xEC,0x0E,0x99, 0x08,0x05,0x29,0x19,0x90,0xE5,0xAA,0x36,0x40, 0x08,0xE7,0xFB,0x68,0x10,0x7D,0x77,0x5D,0xC0, 0x08,0xE7,0xCB,0xB4,0xDD,0xCE,0x90,0x54,0xBE, 0x08,0xE7,0x72,0x8A,0xD6,0x02,0xF4,0xDD,0xCC, 0x08,0xE7,0x6A,0x21,0x0B,0x02,0x86,0xEC,0x15, 0x08,0xE7,0x7B,0x7C,0x3D,0x6B,0x81,0x03,0xD0, 0x08,0xEF,0x7D,0x61,0x36,0x94,0x7C,0xA0,0xDF, 0x08,0xEF,0xCC,0x85,0x3B,0xDA,0xE0,0x5C,0x1C, 0x08,0xE7,0xE3,0x75,0xBB,0x39,0x22,0x4B,0xA8, 0x08,0xEF,0xF9,0xCE,0xE0,0x5E,0xEB,0x1D,0xCB, 0x08,0xE7,0xBD,0xE2,0x70,0xD5,0xAB,0x4E,0x3F, 0x08,0xE7,0xB7,0x8D,0x20,0x68,0x6B,0x09,0x52, 0x08,0xEF,0xA1,0x1B,0x90,0xCD,0x98,0x00,0x63, 0x08,0xEF,0x54,0x67,0x5D,0x9C,0x11,0xFC,0x45, 0x08,0xE7,0xD4,0x9B,0xC8,0x97,0xBE,0x8A,0x07, 0x08,0xEF,0x52,0x8D,0x90,0x63,0x73,0xD5,0x2A, 0x08,0xEF,0x03,0xBC,0x6E,0x1C,0x76,0xBE,0x4A, 0x08,0xE7,0xC2,0xED,0x67,0xBA,0x5E,0x66,0x21, 0x08,0xEF,0xE7,0x3F,0x87,0xBE,0xE0,0x7A,0x6D, 0x08,0xE7,0xC9,0x70,0x93,0x1D,0x64,0xF5,0x6C, 0x08,0xEF,0xF5,0x28,0x08,0x34,0xB3,0xB6,0x2C, 0x08,0xEF,0x3A,0x0A,0xEC,0x0F,0xDB,0x56,0xCA, 0x08,0xEF,0x39,0xA0,0x6E,0xED,0x79,0xD0,0x24, 0x08,0xE7,0x6C,0x0B,0xAF,0xA9,0x4E,0x40,0xB5, 0x08,0xE9,0xB9,0xAF,0xBF,0x25,0x50,0xD1,0x37, 0x08,0x05,0x9E,0xDB,0xDE,0x3F,0x94,0xE9,0x6B, 0x08,0xEC,0xC5,0x05,0xAA,0x57,0xDC,0x8A,0x5E, 0x08,0x05,0x70,0xDA,0x84,0x84,0xDD,0xCA,0x90, 0x07, 0x02, 0x81, 0x00, 0x01, 0xC9, 0xC3, 0x80, 0x08, 0x13, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x06, 0x11, 0x00, 0x01, 0x00, 0x00, 0x00, 0x05, 0x11, 0x00, 0x01, 0x03, 0x20, 0x06, 0x11, 0x01, 0x02, 0x00, 0x01, 0x38, 0x08, 0x11, 0x02, 0x04, 0x00, 0x00, 0x00, 0x00, 0x00, 0x0D, 0x11, 0x10, 0x09, 0x00, 0x08, 0x14, 0x00, 0x0F, 0x31, 0x00, 0x00, 0x00, 0x00, 0x0A, 0x11, 0x11, 0x06, 0x00, 0x09, 0xB4, 0x2B, 0x00, 0x00, 0x00, 0x10, 0x11, 0x12, 0x0C, 0x00, 0x04, 0x00, 0x30, 0xFF, 0xFF, 0x20, 0x22, 0x00, 0x00, 0x00, 0x00, 0x30, 0x10, 0x11, 0x12, 0x0C, 0x0C, 0x30, 0x00, 0x07, 0x14, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x10, 0x11, 0x12, 0x0C, 0x18, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x10, 0x11, 0x12, 0x0C, 0x24, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x09, 0x11, 0x12, 0x05, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x08, 0x11, 0x12, 0x04, 0x36, 0x00, 0x00, 0x00, 0x00, 0x10, 0x11, 0x20, 0x0C, 0x00, 0x05, 0x00, 0x07, 0x01, 0x77, 0x00, 0x05, 0xC9, 0xC3, 0x80, 0x00, 0x00, 0x05, 0x11, 0x20, 0x01, 0x0C, 0xD2, 0x10, 0x11, 0x20, 0x0C, 0x18, 0x05, 0x00, 0x08, 0x03, 0x80, 0x00, 0x30, 0x20, 0x0C, 0xE8, 0x03, 0x0D, 0x10, 0x11, 0x20, 0x0C, 0x24, 0x00, 0xA7, 0xC6, 0x00, 0x43, 0x02, 0x02, 0x00, 0x00, 0x12, 0x80, 0x15, 0x07, 0x11, 0x20, 0x03, 0x30, 0x0F, 0x10, 0xA0, 0x05, 0x11, 0x20, 0x01, 0x35, 0xE0, 0x10, 0x11, 0x20, 0x0C, 0x38, 0x11, 0xAB, 0xAB, 0x00, 0x1A, 0x35, 0x55, 0x00, 0x2B, 0x0C, 0xA4, 0x23, 0x0E, 0x11, 0x20, 0x0A, 0x45, 0x03, 0x00, 0x42, 0x01, 0x00, 0xFF, 0x06, 0x00, 0x18, 0x40, 0x06, 0x11, 0x20, 0x02, 0x50, 0x84, 0x0A, 0x06, 0x11, 0x20, 0x02, 0x54, 0x03, 0x07, 0x05, 0x11, 0x20, 0x01, 0x57, 0x00, 0x09, 0x11, 0x20, 0x05, 0x5B, 0x40, 0x04, 0x05, 0x78, 0x20, 0x10, 0x11, 0x21, 0x0C, 0x00, 0xA2, 0x81, 0x26, 0xAF, 0x3F, 0xEE, 0xC8, 0xC7, 0xDB, 0xF2, 0x02, 0x08, 0x10, 0x11, 0x21, 0x0C, 0x0C, 0x07, 0x03, 0x15, 0xFC, 0x0F, 0x00, 0xA2, 0x81, 0x26, 0xAF, 0x3F, 0xEE, 0x10, 0x11, 0x21, 0x0C, 0x18, 0xC8, 0xC7, 0xDB, 0xF2, 0x02, 0x08, 0x07, 0x03, 0x15, 0xFC, 0x0F, 0x00, 0x08, 0x11, 0x22, 0x04, 0x00, 0x08, 0x7F, 0x00, 0x1D, 0x0B, 0x11, 0x23, 0x07, 0x00, 0x2C, 0x0E, 0x0B, 0x04, 0x0C, 0x73, 0x03, 0x10, 0x11, 0x30, 0x0C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x0C, 0x11, 0x40, 0x08, 0x00, 0x3A, 0x0D, 0x17, 0xE4, 0x06, 0xD4, 0x20, 0xFE, 0x00 };
+[v _Radio_Configuration_Data_Array `Cuc ~T0 @X0 -> 970 `i e ]
+[i _Radio_Configuration_Data_Array
+:U ..
+-> -> 8 `i `uc
+-> -> 4 `i `uc
+-> -> 33 `i `uc
+-> -> 113 `i `uc
+-> -> 75 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 220 `i `uc
+-> -> 149 `i `uc
+-> -> 8 `i `uc
+-> -> 5 `i `uc
+-> -> 166 `i `uc
+-> -> 34 `i `uc
+-> -> 33 `i `uc
+-> -> 240 `i `uc
+-> -> 65 `i `uc
+-> -> 91 `i `uc
+-> -> 38 `i `uc
+-> -> 8 `i `uc
+-> -> 226 `i `uc
+-> -> 47 `i `uc
+-> -> 28 `i `uc
+-> -> 187 `i `uc
+-> -> 10 `i `uc
+-> -> 168 `i `uc
+-> -> 148 `i `uc
+-> -> 40 `i `uc
+-> -> 8 `i `uc
+-> -> 5 `i `uc
+-> -> 135 `i `uc
+-> -> 103 `i `uc
+-> -> 226 `i `uc
+-> -> 88 `i `uc
+-> -> 26 `i `uc
+-> -> 7 `i `uc
+-> -> 91 `i `uc
+-> -> 8 `i `uc
+-> -> 225 `i `uc
+-> -> 208 `i `uc
+-> -> 114 `i `uc
+-> -> 216 `i `uc
+-> -> 138 `i `uc
+-> -> 184 `i `uc
+-> -> 91 `i `uc
+-> -> 125 `i `uc
+-> -> 8 `i `uc
+-> -> 5 `i `uc
+-> -> 17 `i `uc
+-> -> 236 `i `uc
+-> -> 158 `i `uc
+-> -> 40 `i `uc
+-> -> 35 `i `uc
+-> -> 27 `i `uc
+-> -> 109 `i `uc
+-> -> 8 `i `uc
+-> -> 226 `i `uc
+-> -> 79 `i `uc
+-> -> 138 `i `uc
+-> -> 178 `i `uc
+-> -> 169 `i `uc
+-> -> 41 `i `uc
+-> -> 20 `i `uc
+-> -> 19 `i `uc
+-> -> 8 `i `uc
+-> -> 5 `i `uc
+-> -> 209 `i `uc
+-> -> 46 `i `uc
+-> -> 113 `i `uc
+-> -> 106 `i `uc
+-> -> 81 `i `uc
+-> -> 76 `i `uc
+-> -> 44 `i `uc
+-> -> 8 `i `uc
+-> -> 229 `i `uc
+-> -> 128 `i `uc
+-> -> 39 `i `uc
+-> -> 66 `i `uc
+-> -> 164 `i `uc
+-> -> 105 `i `uc
+-> -> 176 `i `uc
+-> -> 127 `i `uc
+-> -> 8 `i `uc
+-> -> 5 `i `uc
+-> -> 170 `i `uc
+-> -> 129 `i `uc
+-> -> 42 `i `uc
+-> -> 189 `i `uc
+-> -> 69 `i `uc
+-> -> 232 `i `uc
+-> -> 168 `i `uc
+-> -> 8 `i `uc
+-> -> 234 `i `uc
+-> -> 228 `i `uc
+-> -> 240 `i `uc
+-> -> 36 `i `uc
+-> -> 201 `i `uc
+-> -> 159 `i `uc
+-> -> 204 `i `uc
+-> -> 60 `i `uc
+-> -> 8 `i `uc
+-> -> 5 `i `uc
+-> -> 8 `i `uc
+-> -> 245 `i `uc
+-> -> 5 `i `uc
+-> -> 4 `i `uc
+-> -> 39 `i `uc
+-> -> 98 `i `uc
+-> -> 152 `i `uc
+-> -> 8 `i `uc
+-> -> 234 `i `uc
+-> -> 107 `i `uc
+-> -> 98 `i `uc
+-> -> 132 `i `uc
+-> -> 161 `i `uc
+-> -> 249 `i `uc
+-> -> 74 `i `uc
+-> -> 226 `i `uc
+-> -> 8 `i `uc
+-> -> 5 `i `uc
+-> -> 233 `i `uc
+-> -> 119 `i `uc
+-> -> 5 `i `uc
+-> -> 79 `i `uc
+-> -> 132 `i `uc
+-> -> 238 `i `uc
+-> -> 53 `i `uc
+-> -> 8 `i `uc
+-> -> 226 `i `uc
+-> -> 67 `i `uc
+-> -> 195 `i `uc
+-> -> 141 `i `uc
+-> -> 251 `i `uc
+-> -> 173 `i `uc
+-> -> 84 `i `uc
+-> -> 37 `i `uc
+-> -> 8 `i `uc
+-> -> 5 `i `uc
+-> -> 20 `i `uc
+-> -> 6 `i `uc
+-> -> 94 `i `uc
+-> -> 57 `i `uc
+-> -> 54 `i `uc
+-> -> 47 `i `uc
+-> -> 69 `i `uc
+-> -> 8 `i `uc
+-> -> 234 `i `uc
+-> -> 12 `i `uc
+-> -> 28 `i `uc
+-> -> 116 `i `uc
+-> -> 208 `i `uc
+-> -> 17 `i `uc
+-> -> 252 `i `uc
+-> -> 50 `i `uc
+-> -> 8 `i `uc
+-> -> 5 `i `uc
+-> -> 218 `i `uc
+-> -> 56 `i `uc
+-> -> 186 `i `uc
+-> -> 14 `i `uc
+-> -> 60 `i `uc
+-> -> 231 `i `uc
+-> -> 139 `i `uc
+-> -> 8 `i `uc
+-> -> 234 `i `uc
+-> -> 176 `i `uc
+-> -> 9 `i `uc
+-> -> 230 `i `uc
+-> -> 255 `i `uc
+-> -> 148 `i `uc
+-> -> 187 `i `uc
+-> -> 169 `i `uc
+-> -> 8 `i `uc
+-> -> 5 `i `uc
+-> -> 215 `i `uc
+-> -> 17 `i `uc
+-> -> 41 `i `uc
+-> -> 254 `i `uc
+-> -> 220 `i `uc
+-> -> 113 `i `uc
+-> -> 213 `i `uc
+-> -> 8 `i `uc
+-> -> 234 `i `uc
+-> -> 127 `i `uc
+-> -> 131 `i `uc
+-> -> 167 `i `uc
+-> -> 96 `i `uc
+-> -> 144 `i `uc
+-> -> 98 `i `uc
+-> -> 24 `i `uc
+-> -> 8 `i `uc
+-> -> 5 `i `uc
+-> -> 132 `i `uc
+-> -> 127 `i `uc
+-> -> 106 `i `uc
+-> -> 209 `i `uc
+-> -> 145 `i `uc
+-> -> 198 `i `uc
+-> -> 82 `i `uc
+-> -> 8 `i `uc
+-> -> 234 `i `uc
+-> -> 42 `i `uc
+-> -> 216 `i `uc
+-> -> 123 `i `uc
+-> -> 142 `i `uc
+-> -> 74 `i `uc
+-> -> 159 `i `uc
+-> -> 145 `i `uc
+-> -> 8 `i `uc
+-> -> 5 `i `uc
+-> -> 189 `i `uc
+-> -> 170 `i `uc
+-> -> 157 `i `uc
+-> -> 22 `i `uc
+-> -> 24 `i `uc
+-> -> 6 `i `uc
+-> -> 21 `i `uc
+-> -> 8 `i `uc
+-> -> 226 `i `uc
+-> -> 85 `i `uc
+-> -> 173 `i `uc
+-> -> 45 `i `uc
+-> -> 10 `i `uc
+-> -> 20 `i `uc
+-> -> 31 `i `uc
+-> -> 93 `i `uc
+-> -> 8 `i `uc
+-> -> 5 `i `uc
+-> -> 211 `i `uc
+-> -> 224 `i `uc
+-> -> 124 `i `uc
+-> -> 57 `i `uc
+-> -> 207 `i `uc
+-> -> 1 `i `uc
+-> -> 240 `i `uc
+-> -> 8 `i `uc
+-> -> 239 `i `uc
+-> -> 58 `i `uc
+-> -> 145 `i `uc
+-> -> 114 `i `uc
+-> -> 106 `i `uc
+-> -> 3 `i `uc
+-> -> 187 `i `uc
+-> -> 150 `i `uc
+-> -> 8 `i `uc
+-> -> 231 `i `uc
+-> -> 131 `i `uc
+-> -> 109 `i `uc
+-> -> 164 `i `uc
+-> -> 146 `i `uc
+-> -> 252 `i `uc
+-> -> 19 `i `uc
+-> -> 167 `i `uc
+-> -> 8 `i `uc
+-> -> 239 `i `uc
+-> -> 248 `i `uc
+-> -> 253 `i `uc
+-> -> 207 `i `uc
+-> -> 98 `i `uc
+-> -> 7 `i `uc
+-> -> 111 `i `uc
+-> -> 30 `i `uc
+-> -> 8 `i `uc
+-> -> 231 `i `uc
+-> -> 76 `i `uc
+-> -> 234 `i `uc
+-> -> 74 `i `uc
+-> -> 117 `i `uc
+-> -> 79 `i `uc
+-> -> 214 `i `uc
+-> -> 207 `i `uc
+-> -> 8 `i `uc
+-> -> 226 `i `uc
+-> -> 246 `i `uc
+-> -> 17 `i `uc
+-> -> 228 `i `uc
+-> -> 38 `i `uc
+-> -> 13 `i `uc
+-> -> 77 `i `uc
+-> -> 198 `i `uc
+-> -> 8 `i `uc
+-> -> 5 `i `uc
+-> -> 251 `i `uc
+-> -> 191 `i `uc
+-> -> 232 `i `uc
+-> -> 7 `i `uc
+-> -> 137 `i `uc
+-> -> 195 `i `uc
+-> -> 81 `i `uc
+-> -> 8 `i `uc
+-> -> 239 `i `uc
+-> -> 130 `i `uc
+-> -> 39 `i `uc
+-> -> 4 `i `uc
+-> -> 63 `i `uc
+-> -> 150 `i `uc
+-> -> 168 `i `uc
+-> -> 88 `i `uc
+-> -> 8 `i `uc
+-> -> 231 `i `uc
+-> -> 65 `i `uc
+-> -> 41 `i `uc
+-> -> 60 `i `uc
+-> -> 117 `i `uc
+-> -> 42 `i `uc
+-> -> 3 `i `uc
+-> -> 28 `i `uc
+-> -> 8 `i `uc
+-> -> 239 `i `uc
+-> -> 175 `i `uc
+-> -> 89 `i `uc
+-> -> 152 `i `uc
+-> -> 54 `i `uc
+-> -> 170 `i `uc
+-> -> 15 `i `uc
+-> -> 6 `i `uc
+-> -> 8 `i `uc
+-> -> 230 `i `uc
+-> -> 246 `i `uc
+-> -> 147 `i `uc
+-> -> 65 `i `uc
+-> -> 45 `i `uc
+-> -> 236 `i `uc
+-> -> 14 `i `uc
+-> -> 153 `i `uc
+-> -> 8 `i `uc
+-> -> 5 `i `uc
+-> -> 41 `i `uc
+-> -> 25 `i `uc
+-> -> 144 `i `uc
+-> -> 229 `i `uc
+-> -> 170 `i `uc
+-> -> 54 `i `uc
+-> -> 64 `i `uc
+-> -> 8 `i `uc
+-> -> 231 `i `uc
+-> -> 251 `i `uc
+-> -> 104 `i `uc
+-> -> 16 `i `uc
+-> -> 125 `i `uc
+-> -> 119 `i `uc
+-> -> 93 `i `uc
+-> -> 192 `i `uc
+-> -> 8 `i `uc
+-> -> 231 `i `uc
+-> -> 203 `i `uc
+-> -> 180 `i `uc
+-> -> 221 `i `uc
+-> -> 206 `i `uc
+-> -> 144 `i `uc
+-> -> 84 `i `uc
+-> -> 190 `i `uc
+-> -> 8 `i `uc
+-> -> 231 `i `uc
+-> -> 114 `i `uc
+-> -> 138 `i `uc
+-> -> 214 `i `uc
+-> -> 2 `i `uc
+-> -> 244 `i `uc
+-> -> 221 `i `uc
+-> -> 204 `i `uc
+-> -> 8 `i `uc
+-> -> 231 `i `uc
+-> -> 106 `i `uc
+-> -> 33 `i `uc
+-> -> 11 `i `uc
+-> -> 2 `i `uc
+-> -> 134 `i `uc
+-> -> 236 `i `uc
+-> -> 21 `i `uc
+-> -> 8 `i `uc
+-> -> 231 `i `uc
+-> -> 123 `i `uc
+-> -> 124 `i `uc
+-> -> 61 `i `uc
+-> -> 107 `i `uc
+-> -> 129 `i `uc
+-> -> 3 `i `uc
+-> -> 208 `i `uc
+-> -> 8 `i `uc
+-> -> 239 `i `uc
+-> -> 125 `i `uc
+-> -> 97 `i `uc
+-> -> 54 `i `uc
+-> -> 148 `i `uc
+-> -> 124 `i `uc
+-> -> 160 `i `uc
+-> -> 223 `i `uc
+-> -> 8 `i `uc
+-> -> 239 `i `uc
+-> -> 204 `i `uc
+-> -> 133 `i `uc
+-> -> 59 `i `uc
+-> -> 218 `i `uc
+-> -> 224 `i `uc
+-> -> 92 `i `uc
+-> -> 28 `i `uc
+-> -> 8 `i `uc
+-> -> 231 `i `uc
+-> -> 227 `i `uc
+-> -> 117 `i `uc
+-> -> 187 `i `uc
+-> -> 57 `i `uc
+-> -> 34 `i `uc
+-> -> 75 `i `uc
+-> -> 168 `i `uc
+-> -> 8 `i `uc
+-> -> 239 `i `uc
+-> -> 249 `i `uc
+-> -> 206 `i `uc
+-> -> 224 `i `uc
+-> -> 94 `i `uc
+-> -> 235 `i `uc
+-> -> 29 `i `uc
+-> -> 203 `i `uc
+-> -> 8 `i `uc
+-> -> 231 `i `uc
+-> -> 189 `i `uc
+-> -> 226 `i `uc
+-> -> 112 `i `uc
+-> -> 213 `i `uc
+-> -> 171 `i `uc
+-> -> 78 `i `uc
+-> -> 63 `i `uc
+-> -> 8 `i `uc
+-> -> 231 `i `uc
+-> -> 183 `i `uc
+-> -> 141 `i `uc
+-> -> 32 `i `uc
+-> -> 104 `i `uc
+-> -> 107 `i `uc
+-> -> 9 `i `uc
+-> -> 82 `i `uc
+-> -> 8 `i `uc
+-> -> 239 `i `uc
+-> -> 161 `i `uc
+-> -> 27 `i `uc
+-> -> 144 `i `uc
+-> -> 205 `i `uc
+-> -> 152 `i `uc
+-> -> 0 `i `uc
+-> -> 99 `i `uc
+-> -> 8 `i `uc
+-> -> 239 `i `uc
+-> -> 84 `i `uc
+-> -> 103 `i `uc
+-> -> 93 `i `uc
+-> -> 156 `i `uc
+-> -> 17 `i `uc
+-> -> 252 `i `uc
+-> -> 69 `i `uc
+-> -> 8 `i `uc
+-> -> 231 `i `uc
+-> -> 212 `i `uc
+-> -> 155 `i `uc
+-> -> 200 `i `uc
+-> -> 151 `i `uc
+-> -> 190 `i `uc
+-> -> 138 `i `uc
+-> -> 7 `i `uc
+-> -> 8 `i `uc
+-> -> 239 `i `uc
+-> -> 82 `i `uc
+-> -> 141 `i `uc
+-> -> 144 `i `uc
+-> -> 99 `i `uc
+-> -> 115 `i `uc
+-> -> 213 `i `uc
+-> -> 42 `i `uc
+-> -> 8 `i `uc
+-> -> 239 `i `uc
+-> -> 3 `i `uc
+-> -> 188 `i `uc
+-> -> 110 `i `uc
+-> -> 28 `i `uc
+-> -> 118 `i `uc
+-> -> 190 `i `uc
+-> -> 74 `i `uc
+-> -> 8 `i `uc
+-> -> 231 `i `uc
+-> -> 194 `i `uc
+-> -> 237 `i `uc
+-> -> 103 `i `uc
+-> -> 186 `i `uc
+-> -> 94 `i `uc
+-> -> 102 `i `uc
+-> -> 33 `i `uc
+-> -> 8 `i `uc
+-> -> 239 `i `uc
+-> -> 231 `i `uc
+-> -> 63 `i `uc
+-> -> 135 `i `uc
+-> -> 190 `i `uc
+-> -> 224 `i `uc
+-> -> 122 `i `uc
+-> -> 109 `i `uc
+-> -> 8 `i `uc
+-> -> 231 `i `uc
+-> -> 201 `i `uc
+-> -> 112 `i `uc
+-> -> 147 `i `uc
+-> -> 29 `i `uc
+-> -> 100 `i `uc
+-> -> 245 `i `uc
+-> -> 108 `i `uc
+-> -> 8 `i `uc
+-> -> 239 `i `uc
+-> -> 245 `i `uc
+-> -> 40 `i `uc
+-> -> 8 `i `uc
+-> -> 52 `i `uc
+-> -> 179 `i `uc
+-> -> 182 `i `uc
+-> -> 44 `i `uc
+-> -> 8 `i `uc
+-> -> 239 `i `uc
+-> -> 58 `i `uc
+-> -> 10 `i `uc
+-> -> 236 `i `uc
+-> -> 15 `i `uc
+-> -> 219 `i `uc
+-> -> 86 `i `uc
+-> -> 202 `i `uc
+-> -> 8 `i `uc
+-> -> 239 `i `uc
+-> -> 57 `i `uc
+-> -> 160 `i `uc
+-> -> 110 `i `uc
+-> -> 237 `i `uc
+-> -> 121 `i `uc
+-> -> 208 `i `uc
+-> -> 36 `i `uc
+-> -> 8 `i `uc
+-> -> 231 `i `uc
+-> -> 108 `i `uc
+-> -> 11 `i `uc
+-> -> 175 `i `uc
+-> -> 169 `i `uc
+-> -> 78 `i `uc
+-> -> 64 `i `uc
+-> -> 181 `i `uc
+-> -> 8 `i `uc
+-> -> 233 `i `uc
+-> -> 185 `i `uc
+-> -> 175 `i `uc
+-> -> 191 `i `uc
+-> -> 37 `i `uc
+-> -> 80 `i `uc
+-> -> 209 `i `uc
+-> -> 55 `i `uc
+-> -> 8 `i `uc
+-> -> 5 `i `uc
+-> -> 158 `i `uc
+-> -> 219 `i `uc
+-> -> 222 `i `uc
+-> -> 63 `i `uc
+-> -> 148 `i `uc
+-> -> 233 `i `uc
+-> -> 107 `i `uc
+-> -> 8 `i `uc
+-> -> 236 `i `uc
+-> -> 197 `i `uc
+-> -> 5 `i `uc
+-> -> 170 `i `uc
+-> -> 87 `i `uc
+-> -> 220 `i `uc
+-> -> 138 `i `uc
+-> -> 94 `i `uc
+-> -> 8 `i `uc
+-> -> 5 `i `uc
+-> -> 112 `i `uc
+-> -> 218 `i `uc
+-> -> 132 `i `uc
+-> -> 132 `i `uc
+-> -> 221 `i `uc
+-> -> 202 `i `uc
+-> -> 144 `i `uc
+-> -> 7 `i `uc
+-> -> 2 `i `uc
+-> -> 129 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 201 `i `uc
+-> -> 195 `i `uc
+-> -> 128 `i `uc
+-> -> 8 `i `uc
+-> -> 19 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 6 `i `uc
+-> -> 17 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 5 `i `uc
+-> -> 17 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 3 `i `uc
+-> -> 32 `i `uc
+-> -> 6 `i `uc
+-> -> 17 `i `uc
+-> -> 1 `i `uc
+-> -> 2 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 56 `i `uc
+-> -> 8 `i `uc
+-> -> 17 `i `uc
+-> -> 2 `i `uc
+-> -> 4 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 13 `i `uc
+-> -> 17 `i `uc
+-> -> 16 `i `uc
+-> -> 9 `i `uc
+-> -> 0 `i `uc
+-> -> 8 `i `uc
+-> -> 20 `i `uc
+-> -> 0 `i `uc
+-> -> 15 `i `uc
+-> -> 49 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 10 `i `uc
+-> -> 17 `i `uc
+-> -> 17 `i `uc
+-> -> 6 `i `uc
+-> -> 0 `i `uc
+-> -> 9 `i `uc
+-> -> 180 `i `uc
+-> -> 43 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 16 `i `uc
+-> -> 17 `i `uc
+-> -> 18 `i `uc
+-> -> 12 `i `uc
+-> -> 0 `i `uc
+-> -> 4 `i `uc
+-> -> 0 `i `uc
+-> -> 48 `i `uc
+-> -> 255 `i `uc
+-> -> 255 `i `uc
+-> -> 32 `i `uc
+-> -> 34 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 48 `i `uc
+-> -> 16 `i `uc
+-> -> 17 `i `uc
+-> -> 18 `i `uc
+-> -> 12 `i `uc
+-> -> 12 `i `uc
+-> -> 48 `i `uc
+-> -> 0 `i `uc
+-> -> 7 `i `uc
+-> -> 20 `i `uc
+-> -> 128 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 16 `i `uc
+-> -> 17 `i `uc
+-> -> 18 `i `uc
+-> -> 12 `i `uc
+-> -> 24 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 16 `i `uc
+-> -> 17 `i `uc
+-> -> 18 `i `uc
+-> -> 12 `i `uc
+-> -> 36 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 9 `i `uc
+-> -> 17 `i `uc
+-> -> 18 `i `uc
+-> -> 5 `i `uc
+-> -> 48 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 8 `i `uc
+-> -> 17 `i `uc
+-> -> 18 `i `uc
+-> -> 4 `i `uc
+-> -> 54 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 16 `i `uc
+-> -> 17 `i `uc
+-> -> 32 `i `uc
+-> -> 12 `i `uc
+-> -> 0 `i `uc
+-> -> 5 `i `uc
+-> -> 0 `i `uc
+-> -> 7 `i `uc
+-> -> 1 `i `uc
+-> -> 119 `i `uc
+-> -> 0 `i `uc
+-> -> 5 `i `uc
+-> -> 201 `i `uc
+-> -> 195 `i `uc
+-> -> 128 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 5 `i `uc
+-> -> 17 `i `uc
+-> -> 32 `i `uc
+-> -> 1 `i `uc
+-> -> 12 `i `uc
+-> -> 210 `i `uc
+-> -> 16 `i `uc
+-> -> 17 `i `uc
+-> -> 32 `i `uc
+-> -> 12 `i `uc
+-> -> 24 `i `uc
+-> -> 5 `i `uc
+-> -> 0 `i `uc
+-> -> 8 `i `uc
+-> -> 3 `i `uc
+-> -> 128 `i `uc
+-> -> 0 `i `uc
+-> -> 48 `i `uc
+-> -> 32 `i `uc
+-> -> 12 `i `uc
+-> -> 232 `i `uc
+-> -> 3 `i `uc
+-> -> 13 `i `uc
+-> -> 16 `i `uc
+-> -> 17 `i `uc
+-> -> 32 `i `uc
+-> -> 12 `i `uc
+-> -> 36 `i `uc
+-> -> 0 `i `uc
+-> -> 167 `i `uc
+-> -> 198 `i `uc
+-> -> 0 `i `uc
+-> -> 67 `i `uc
+-> -> 2 `i `uc
+-> -> 2 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 18 `i `uc
+-> -> 128 `i `uc
+-> -> 21 `i `uc
+-> -> 7 `i `uc
+-> -> 17 `i `uc
+-> -> 32 `i `uc
+-> -> 3 `i `uc
+-> -> 48 `i `uc
+-> -> 15 `i `uc
+-> -> 16 `i `uc
+-> -> 160 `i `uc
+-> -> 5 `i `uc
+-> -> 17 `i `uc
+-> -> 32 `i `uc
+-> -> 1 `i `uc
+-> -> 53 `i `uc
+-> -> 224 `i `uc
+-> -> 16 `i `uc
+-> -> 17 `i `uc
+-> -> 32 `i `uc
+-> -> 12 `i `uc
+-> -> 56 `i `uc
+-> -> 17 `i `uc
+-> -> 171 `i `uc
+-> -> 171 `i `uc
+-> -> 0 `i `uc
+-> -> 26 `i `uc
+-> -> 53 `i `uc
+-> -> 85 `i `uc
+-> -> 0 `i `uc
+-> -> 43 `i `uc
+-> -> 12 `i `uc
+-> -> 164 `i `uc
+-> -> 35 `i `uc
+-> -> 14 `i `uc
+-> -> 17 `i `uc
+-> -> 32 `i `uc
+-> -> 10 `i `uc
+-> -> 69 `i `uc
+-> -> 3 `i `uc
+-> -> 0 `i `uc
+-> -> 66 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 255 `i `uc
+-> -> 6 `i `uc
+-> -> 0 `i `uc
+-> -> 24 `i `uc
+-> -> 64 `i `uc
+-> -> 6 `i `uc
+-> -> 17 `i `uc
+-> -> 32 `i `uc
+-> -> 2 `i `uc
+-> -> 80 `i `uc
+-> -> 132 `i `uc
+-> -> 10 `i `uc
+-> -> 6 `i `uc
+-> -> 17 `i `uc
+-> -> 32 `i `uc
+-> -> 2 `i `uc
+-> -> 84 `i `uc
+-> -> 3 `i `uc
+-> -> 7 `i `uc
+-> -> 5 `i `uc
+-> -> 17 `i `uc
+-> -> 32 `i `uc
+-> -> 1 `i `uc
+-> -> 87 `i `uc
+-> -> 0 `i `uc
+-> -> 9 `i `uc
+-> -> 17 `i `uc
+-> -> 32 `i `uc
+-> -> 5 `i `uc
+-> -> 91 `i `uc
+-> -> 64 `i `uc
+-> -> 4 `i `uc
+-> -> 5 `i `uc
+-> -> 120 `i `uc
+-> -> 32 `i `uc
+-> -> 16 `i `uc
+-> -> 17 `i `uc
+-> -> 33 `i `uc
+-> -> 12 `i `uc
+-> -> 0 `i `uc
+-> -> 162 `i `uc
+-> -> 129 `i `uc
+-> -> 38 `i `uc
+-> -> 175 `i `uc
+-> -> 63 `i `uc
+-> -> 238 `i `uc
+-> -> 200 `i `uc
+-> -> 199 `i `uc
+-> -> 219 `i `uc
+-> -> 242 `i `uc
+-> -> 2 `i `uc
+-> -> 8 `i `uc
+-> -> 16 `i `uc
+-> -> 17 `i `uc
+-> -> 33 `i `uc
+-> -> 12 `i `uc
+-> -> 12 `i `uc
+-> -> 7 `i `uc
+-> -> 3 `i `uc
+-> -> 21 `i `uc
+-> -> 252 `i `uc
+-> -> 15 `i `uc
+-> -> 0 `i `uc
+-> -> 162 `i `uc
+-> -> 129 `i `uc
+-> -> 38 `i `uc
+-> -> 175 `i `uc
+-> -> 63 `i `uc
+-> -> 238 `i `uc
+-> -> 16 `i `uc
+-> -> 17 `i `uc
+-> -> 33 `i `uc
+-> -> 12 `i `uc
+-> -> 24 `i `uc
+-> -> 200 `i `uc
+-> -> 199 `i `uc
+-> -> 219 `i `uc
+-> -> 242 `i `uc
+-> -> 2 `i `uc
+-> -> 8 `i `uc
+-> -> 7 `i `uc
+-> -> 3 `i `uc
+-> -> 21 `i `uc
+-> -> 252 `i `uc
+-> -> 15 `i `uc
+-> -> 0 `i `uc
+-> -> 8 `i `uc
+-> -> 17 `i `uc
+-> -> 34 `i `uc
+-> -> 4 `i `uc
+-> -> 0 `i `uc
+-> -> 8 `i `uc
+-> -> 127 `i `uc
+-> -> 0 `i `uc
+-> -> 29 `i `uc
+-> -> 11 `i `uc
+-> -> 17 `i `uc
+-> -> 35 `i `uc
+-> -> 7 `i `uc
+-> -> 0 `i `uc
+-> -> 44 `i `uc
+-> -> 14 `i `uc
+-> -> 11 `i `uc
+-> -> 4 `i `uc
+-> -> 12 `i `uc
+-> -> 115 `i `uc
+-> -> 3 `i `uc
+-> -> 16 `i `uc
+-> -> 17 `i `uc
+-> -> 48 `i `uc
+-> -> 12 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 12 `i `uc
+-> -> 17 `i `uc
+-> -> 64 `i `uc
+-> -> 8 `i `uc
+-> -> 0 `i `uc
+-> -> 58 `i `uc
+-> -> 13 `i `uc
+-> -> 23 `i `uc
+-> -> 228 `i `uc
+-> -> 6 `i `uc
+-> -> 212 `i `uc
+-> -> 32 `i `uc
+-> -> 254 `i `uc
+-> -> 0 `i `uc
+..
+]
+"20
+[; ;Si4463/radio.c: 20: const tRadioConfiguration RadioConfiguration = { Radio_Configuration_Data_Array, 0x00, 0x07, 0x03, 0xF000, {0xC5, 0xC5, 0xC5, 0xC5, 0xC5, 0xC5, 0xC5} };
+[v _RadioConfiguration `CS156 ~T0 @X0 1 e ]
+[i _RadioConfiguration
+:U ..
+:U ..
+&U _Radio_Configuration_Data_Array
+-> -> 0 `i `uc
+-> -> 7 `i `uc
+-> -> 3 `i `uc
+-> -> 61440 `ui `us
+:U ..
+-> -> 197 `i `uc
+-> -> 197 `i `uc
+-> -> 197 `i `uc
+-> -> 197 `i `uc
+-> -> 197 `i `uc
+-> -> 197 `i `uc
+-> -> 197 `i `uc
+..
+..
+..
+]
+"21
+[; ;Si4463/radio.c: 21: const tRadioConfiguration *pRadioConfiguration = &RadioConfiguration;
+[v _pRadioConfiguration `*CS156 ~T0 @X0 1 e ]
+[i _pRadioConfiguration
+&U _RadioConfiguration
+]
+"22
+[; ;Si4463/radio.c: 22: U8 customRadioPacket[64];
+[v _customRadioPacket `uc ~T0 @X0 -> 64 `i e ]
+"35
+[; ;Si4463/radio.c: 35: void vRadio_PowerUp(void) {
+[v _vRadio_PowerUp `(v ~T0 @X0 1 ef ]
+{
+[e :U _vRadio_PowerUp ]
+[f ]
+"36
+[; ;Si4463/radio.c: 36:  U16 wDelay = 0u;
+[v _wDelay `us ~T0 @X0 1 a ]
+[e = _wDelay -> -> 0 `ui `us ]
+"38
+[; ;Si4463/radio.c: 38:     si446x_reset();
+[e ( _si446x_reset ..  ]
+"41
+[; ;Si4463/radio.c: 41:     for (; wDelay < pRadioConfiguration->Radio_Delay_Cnt_After_Reset; wDelay++);
+{
+[e $U 161  ]
+[e :U 158 ]
+[e ++ _wDelay -> -> 1 `i `us ]
+[e :U 161 ]
+[e $ < -> _wDelay `ui -> . *U _pRadioConfiguration 4 `ui 158  ]
+[e :U 159 ]
+}
+"42
+[; ;Si4463/radio.c: 42: }
+[e :UE 157 ]
+}
+"52
+[; ;Si4463/radio.c: 52: void vRadio_Init(void) {
+[v _vRadio_Init `(v ~T0 @X0 1 ef ]
+{
+[e :U _vRadio_Init ]
+[f ]
+"53
+[; ;Si4463/radio.c: 53:     U16 wDelay;
+[v _wDelay `us ~T0 @X0 1 a ]
+"56
+[; ;Si4463/radio.c: 56:     vRadio_PowerUp();
+[e ( _vRadio_PowerUp ..  ]
+"59
+[; ;Si4463/radio.c: 59:     while (SI446X_SUCCESS != si446x_configuration_init(pRadioConfiguration->Radio_ConfigurationArray)) {
+[e $U 163  ]
+[e :U 164 ]
+{
+"60
+[; ;Si4463/radio.c: 60:         for (wDelay = 0x7FFF; wDelay--; ) ;
+{
+[e = _wDelay -> -> 32767 `i `us ]
+[e $U 169  ]
+[e :U 166 ]
+[e :U 169 ]
+[e $ != -> -- _wDelay -> -> 1 `i `us `ui -> -> 0 `i `ui 166  ]
+[e :U 167 ]
+}
+"61
+[; ;Si4463/radio.c: 61:         vRadio_PowerUp();
+[e ( _vRadio_PowerUp ..  ]
+"62
+[; ;Si4463/radio.c: 62:     }
+}
+[e :U 163 ]
+"59
+[; ;Si4463/radio.c: 59:     while (SI446X_SUCCESS != si446x_configuration_init(pRadioConfiguration->Radio_ConfigurationArray)) {
+[e $ != -> . `E1544 0 `i -> ( _si446x_configuration_init (1 . *U _pRadioConfiguration 0 `i 164  ]
+[e :U 165 ]
+"65
+[; ;Si4463/radio.c: 65:     si446x_get_int_status(0u, 0u, 0u);
+[e ( _si446x_get_int_status (3 , , -> -> 0 `ui `uc -> -> 0 `ui `uc -> -> 0 `ui `uc ]
+"66
+[; ;Si4463/radio.c: 66: }
+[e :UE 162 ]
+}
+"76
+[; ;Si4463/radio.c: 76: U8 bRadio_Check_Tx_RX(void)
+[v _bRadio_Check_Tx_RX `(uc ~T0 @X0 1 ef ]
+"77
+[; ;Si4463/radio.c: 77: {
+{
+[e :U _bRadio_Check_Tx_RX ]
+[f ]
+"78
+[; ;Si4463/radio.c: 78:     U8 lCnt;
+[v _lCnt `uc ~T0 @X0 1 a ]
+"79
+[; ;Si4463/radio.c: 79:     uint8_t RF_NIRQ;
+[v _RF_NIRQ `uc ~T0 @X0 1 a ]
+"81
+[; ;Si4463/radio.c: 81:     RF_NIRQ = radio_hal_NirqLevel();
+[e = _RF_NIRQ ( _radio_hal_NirqLevel ..  ]
+"82
+[; ;Si4463/radio.c: 82:     if (RF_NIRQ == 0) {
+[e $ ! == -> _RF_NIRQ `i -> 0 `i 171  ]
+{
+"84
+[; ;Si4463/radio.c: 84:         si446x_get_int_status(0u, 0u, 0u);
+[e ( _si446x_get_int_status (3 , , -> -> 0 `ui `uc -> -> 0 `ui `uc -> -> 0 `ui `uc ]
+"86
+[; ;Si4463/radio.c: 86:         if (Si446xCmd.GET_INT_STATUS.CHIP_PEND & 0x8) {
+[e $ ! != & -> . . _Si446xCmd 7 6 `i -> 8 `i -> 0 `i 172  ]
+{
+"88
+[; ;Si4463/radio.c: 88:             si446x_change_state(1);
+[e ( _si446x_change_state (1 -> -> 1 `i `uc ]
+"91
+[; ;Si4463/radio.c: 91:             si446x_fifo_info(0x2);
+[e ( _si446x_fifo_info (1 -> -> 2 `i `uc ]
+"94
+[; ;Si4463/radio.c: 94:             si446x_change_state(8);
+[e ( _si446x_change_state (1 -> -> 8 `i `uc ]
+"95
+[; ;Si4463/radio.c: 95:         }
+}
+[e :U 172 ]
+"97
+[; ;Si4463/radio.c: 97:         if(Si446xCmd.GET_INT_STATUS.PH_PEND & 0x20) {
+[e $ ! != & -> . . _Si446xCmd 7 2 `i -> 32 `i -> 0 `i 173  ]
+{
+"98
+[; ;Si4463/radio.c: 98:             return 0x20;
+[e ) -> -> 32 `i `uc ]
+[e $UE 170  ]
+"99
+[; ;Si4463/radio.c: 99:         }
+}
+[e :U 173 ]
+"101
+[; ;Si4463/radio.c: 101:         if(Si446xCmd.GET_INT_STATUS.PH_PEND & 0x10) {
+[e $ ! != & -> . . _Si446xCmd 7 2 `i -> 16 `i -> 0 `i 174  ]
+{
+"104
+[; ;Si4463/radio.c: 104:             si446x_fifo_info(0x00);
+[e ( _si446x_fifo_info (1 -> -> 0 `i `uc ]
+"106
+[; ;Si4463/radio.c: 106:             si446x_read_rx_fifo(Si446xCmd.FIFO_INFO.RX_FIFO_COUNT, &customRadioPacket[0]);
+[e ( _si446x_read_rx_fifo (2 , . . _Si446xCmd 6 0 &U *U + &U _customRadioPacket * -> -> -> 0 `i `ui `ux -> -> # *U &U _customRadioPacket `ui `ux ]
+"109
+[; ;Si4463/radio.c: 109:             for (lCnt = 0; lCnt < 64; lCnt++) {
+{
+[e = _lCnt -> -> 0 `i `uc ]
+[e $ < -> _lCnt `i -> 64 `i 175  ]
+[e $U 176  ]
+[e :U 175 ]
+{
+"110
+[; ;Si4463/radio.c: 110:                 UART_TxChar(*((U8 *) &customRadioPacket[0] + lCnt));
+[e ( _UART_TxChar (1 -> *U + &U *U + &U _customRadioPacket * -> -> -> 0 `i `ui `ux -> -> # *U &U _customRadioPacket `ui `ux * -> -> _lCnt `i `x -> -> # *U &U *U + &U _customRadioPacket * -> -> -> 0 `i `ui `ux -> -> # *U &U _customRadioPacket `ui `ux `i `x `uc ]
+"111
+[; ;Si4463/radio.c: 111:             }
+}
+[e ++ _lCnt -> -> 1 `i `uc ]
+[e $ < -> _lCnt `i -> 64 `i 175  ]
+[e :U 176 ]
+}
+"113
+[; ;Si4463/radio.c: 113:             return 0x10;
+[e ) -> -> 16 `i `uc ]
+[e $UE 170  ]
+"114
+[; ;Si4463/radio.c: 114:         }
+}
+[e :U 174 ]
+"116
+[; ;Si4463/radio.c: 116:         if (Si446xCmd.GET_INT_STATUS.PH_PEND & 0x8) {
+[e $ ! != & -> . . _Si446xCmd 7 2 `i -> 8 `i -> 0 `i 178  ]
+{
+"118
+[; ;Si4463/radio.c: 118:             si446x_fifo_info(0x2);
+[e ( _si446x_fifo_info (1 -> -> 2 `i `uc ]
+"119
+[; ;Si4463/radio.c: 119:         }
+}
+[e :U 178 ]
+"120
+[; ;Si4463/radio.c: 120:     }
+}
+[e :U 171 ]
+"121
+[; ;Si4463/radio.c: 121:     return 0;
+[e ) -> -> 0 `i `uc ]
+[e $UE 170  ]
+"122
+[; ;Si4463/radio.c: 122: }
+[e :UE 170 ]
+}
+"132
+[; ;Si4463/radio.c: 132: void vRadio_StartRX(U8 channel, U8 packetLenght ) {
+[v _vRadio_StartRX `(v ~T0 @X0 1 ef2`uc`uc ]
+{
+[e :U _vRadio_StartRX ]
+[v _channel `uc ~T0 @X0 1 r1 ]
+[v _packetLenght `uc ~T0 @X0 1 r2 ]
+[f ]
+"134
+[; ;Si4463/radio.c: 134:     si446x_get_int_status(0u, 0u, 0u);
+[e ( _si446x_get_int_status (3 , , -> -> 0 `ui `uc -> -> 0 `ui `uc -> -> 0 `ui `uc ]
+"137
+[; ;Si4463/radio.c: 137:      si446x_fifo_info(0x2);
+[e ( _si446x_fifo_info (1 -> -> 2 `i `uc ]
+"140
+[; ;Si4463/radio.c: 140:     si446x_start_rx(channel, 0u, packetLenght,
+[e ( _si446x_start_rx (4 , , , , , _channel -> -> 0 `ui `uc -> _packetLenght `us -> -> 8 `i `uc -> -> 8 `i `uc -> -> 8 `i `uc ]
+"144
+[; ;Si4463/radio.c: 144: }
+[e :UE 179 ]
+}
+"154
+[; ;Si4463/radio.c: 154: void vRadio_StartTx_Variable_Packet(U8 channel, U8 *pioRadioPacket, U8 length) {
+[v _vRadio_StartTx_Variable_Packet `(v ~T0 @X0 1 ef3`uc`*uc`uc ]
+{
+[e :U _vRadio_StartTx_Variable_Packet ]
+[v _channel `uc ~T0 @X0 1 r1 ]
+[v _pioRadioPacket `*uc ~T0 @X0 1 r2 ]
+[v _length `uc ~T0 @X0 1 r3 ]
+[f ]
+"156
+[; ;Si4463/radio.c: 156:     si446x_change_state(3);
+[e ( _si446x_change_state (1 -> -> 3 `i `uc ]
+"159
+[; ;Si4463/radio.c: 159:     si446x_get_int_status(0u, 0u, 0u);
+[e ( _si446x_get_int_status (3 , , -> -> 0 `ui `uc -> -> 0 `ui `uc -> -> 0 `ui `uc ]
+"162
+[; ;Si4463/radio.c: 162:     si446x_fifo_info(0x1);
+[e ( _si446x_fifo_info (1 -> -> 1 `i `uc ]
+"165
+[; ;Si4463/radio.c: 165:     si446x_write_tx_fifo(length, pioRadioPacket);
+[e ( _si446x_write_tx_fifo (2 , _length _pioRadioPacket ]
+"168
+[; ;Si4463/radio.c: 168:      si446x_start_tx(channel, 0x80, length);
+[e ( _si446x_start_tx (3 , , _channel -> -> 128 `i `uc -> _length `us ]
+"169
+[; ;Si4463/radio.c: 169: }
+[e :UE 180 ]
+}

@@ -1,0 +1,1155 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"23 Si4463/si446x_cmd.h
+[; ;Si4463/si446x_cmd.h: 23: struct si446x_reply_GENERIC_map {
+[s S135 `uc -> 16 `i ]
+[n S135 si446x_reply_GENERIC_map REPLY ]
+"27
+[; ;Si4463/si446x_cmd.h: 27: struct si446x_reply_PART_INFO_map {
+[s S136 `uc 1 `us 1 `uc 1 `us 1 `uc 1 `uc 1 ]
+[n S136 si446x_reply_PART_INFO_map CHIPREV PART PBUILD ID CUSTOMER ROMID ]
+"36
+[; ;Si4463/si446x_cmd.h: 36: struct si446x_reply_FUNC_INFO_map {
+[s S137 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S137 si446x_reply_FUNC_INFO_map REVEXT REVBRANCH REVINT FUNC ]
+"43
+[; ;Si4463/si446x_cmd.h: 43: struct si446x_reply_GET_PROPERTY_map {
+[s S138 `uc -> 16 `i ]
+[n S138 si446x_reply_GET_PROPERTY_map DATA ]
+"47
+[; ;Si4463/si446x_cmd.h: 47: struct si446x_reply_GPIO_PIN_CFG_map {
+[s S139 `uc -> 4 `i `uc 1 `uc 1 `uc 1 ]
+[n S139 si446x_reply_GPIO_PIN_CFG_map GPIO NIRQ SDO GEN_CONFIG ]
+"54
+[; ;Si4463/si446x_cmd.h: 54: struct si446x_reply_FIFO_INFO_map {
+[s S140 `uc 1 `uc 1 ]
+[n S140 si446x_reply_FIFO_INFO_map RX_FIFO_COUNT TX_FIFO_SPACE ]
+"59
+[; ;Si4463/si446x_cmd.h: 59: struct si446x_reply_GET_INT_STATUS_map {
+[s S141 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S141 si446x_reply_GET_INT_STATUS_map INT_PEND INT_STATUS PH_PEND PH_STATUS MODEM_PEND MODEM_STATUS CHIP_PEND CHIP_STATUS ]
+"70
+[; ;Si4463/si446x_cmd.h: 70: struct si446x_reply_REQUEST_DEVICE_STATE_map {
+[s S142 `uc 1 `uc 1 ]
+[n S142 si446x_reply_REQUEST_DEVICE_STATE_map CURR_STATE CURRENT_CHANNEL ]
+"75
+[; ;Si4463/si446x_cmd.h: 75: struct si446x_reply_READ_CMD_BUFF_map {
+[s S143 `uc -> 16 `i ]
+[n S143 si446x_reply_READ_CMD_BUFF_map BYTE ]
+"79
+[; ;Si4463/si446x_cmd.h: 79: struct si446x_reply_FRR_A_READ_map {
+[s S144 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S144 si446x_reply_FRR_A_READ_map FRR_A_VALUE FRR_B_VALUE FRR_C_VALUE FRR_D_VALUE ]
+"86
+[; ;Si4463/si446x_cmd.h: 86: struct si446x_reply_FRR_B_READ_map {
+[s S145 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S145 si446x_reply_FRR_B_READ_map FRR_B_VALUE FRR_C_VALUE FRR_D_VALUE FRR_A_VALUE ]
+"93
+[; ;Si4463/si446x_cmd.h: 93: struct si446x_reply_FRR_C_READ_map {
+[s S146 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S146 si446x_reply_FRR_C_READ_map FRR_C_VALUE FRR_D_VALUE FRR_A_VALUE FRR_B_VALUE ]
+"100
+[; ;Si4463/si446x_cmd.h: 100: struct si446x_reply_FRR_D_READ_map {
+[s S147 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S147 si446x_reply_FRR_D_READ_map FRR_D_VALUE FRR_A_VALUE FRR_B_VALUE FRR_C_VALUE ]
+"107
+[; ;Si4463/si446x_cmd.h: 107: struct si446x_reply_IRCAL_MANUAL_map {
+[s S148 `uc 1 `uc 1 ]
+[n S148 si446x_reply_IRCAL_MANUAL_map IRCAL_AMP_REPLY IRCAL_PH_REPLY ]
+"112
+[; ;Si4463/si446x_cmd.h: 112: struct si446x_reply_PACKET_INFO_map {
+[s S149 `us 1 ]
+[n S149 si446x_reply_PACKET_INFO_map LENGTH ]
+"116
+[; ;Si4463/si446x_cmd.h: 116: struct si446x_reply_GET_MODEM_STATUS_map {
+[s S150 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `us 1 ]
+[n S150 si446x_reply_GET_MODEM_STATUS_map MODEM_PEND MODEM_STATUS CURR_RSSI LATCH_RSSI ANT1_RSSI ANT2_RSSI AFC_FREQ_OFFSET ]
+"126
+[; ;Si4463/si446x_cmd.h: 126: struct si446x_reply_READ_RX_FIFO_map {
+[s S151 `uc -> 2 `i ]
+[n S151 si446x_reply_READ_RX_FIFO_map DATA ]
+"130
+[; ;Si4463/si446x_cmd.h: 130: struct si446x_reply_GET_ADC_READING_map {
+[s S152 `us 1 `us 1 `us 1 ]
+[n S152 si446x_reply_GET_ADC_READING_map GPIO_ADC BATTERY_ADC TEMP_ADC ]
+"136
+[; ;Si4463/si446x_cmd.h: 136: struct si446x_reply_GET_PH_STATUS_map {
+[s S153 `uc 1 `uc 1 ]
+[n S153 si446x_reply_GET_PH_STATUS_map PH_PEND PH_STATUS ]
+"141
+[; ;Si4463/si446x_cmd.h: 141: struct si446x_reply_GET_CHIP_STATUS_map {
+[s S154 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S154 si446x_reply_GET_CHIP_STATUS_map CHIP_PEND CHIP_STATUS CMD_ERR_STATUS CMD_ERR_CMD_ID ]
+"150
+[; ;Si4463/si446x_cmd.h: 150: union si446x_cmd_reply_union {
+[u S155 `uc -> 16 `i `S135 1 `S136 1 `S137 1 `S138 1 `S139 1 `S140 1 `S141 1 `S142 1 `S143 1 `S144 1 `S145 1 `S146 1 `S147 1 `S148 1 `S149 1 `S150 1 `S151 1 `S152 1 `S153 1 `S154 1 ]
+[n S155 si446x_cmd_reply_union RAW GENERIC PART_INFO FUNC_INFO GET_PROPERTY GPIO_PIN_CFG FIFO_INFO GET_INT_STATUS REQUEST_DEVICE_STATE READ_CMD_BUFF FRR_A_READ FRR_B_READ FRR_C_READ FRR_D_READ IRCAL_MANUAL PACKET_INFO GET_MODEM_STATUS READ_RX_FIFO GET_ADC_READING GET_PH_STATUS GET_CHIP_STATUS ]
+"31 Si4463/radio_hal.h
+[; ;Si4463/radio_hal.h: 31: void radio_hal_AssertShutdown(void);
+[v _radio_hal_AssertShutdown `(v ~T0 @X0 0 ef ]
+"32
+[; ;Si4463/radio_hal.h: 32: void radio_hal_DeassertShutdown(void);
+[v _radio_hal_DeassertShutdown `(v ~T0 @X0 0 ef ]
+"39 Si4463/radio_comm.h
+[; ;Si4463/radio_comm.h: 39: void radio_comm_ClearCTS(void);
+[v _radio_comm_ClearCTS `(v ~T0 @X0 0 ef ]
+"33
+[; ;Si4463/radio_comm.h: 33: void radio_comm_SendCmd(U8 byteCount, U8* pData);
+[v _radio_comm_SendCmd `(v ~T0 @X0 0 ef2`uc`*uc ]
+"77 Si4463/si446x_api_lib.c
+[; ;Si4463/si446x_api_lib.c: 77:       return SI446X_COMMAND_ERROR;
+[c E1544 0 1 2 3 4 .. ]
+[n E1544 . SI446X_SUCCESS SI446X_NO_PATCH SI446X_CTS_TIMEOUT SI446X_PATCH_FAIL SI446X_COMMAND_ERROR  ]
+"37 Si4463/radio_comm.h
+[; ;Si4463/radio_comm.h: 37: U8 radio_comm_SendCmdGetResp(U8 cmdByteCount, U8* pCmdData, U8 respByteCount, U8* pRespData);
+[v _radio_comm_SendCmdGetResp `(uc ~T0 @X0 0 ef4`uc`*uc`uc`*uc ]
+"35 Si4463/radio_hal.h
+[; ;Si4463/radio_hal.h: 35: BIT radio_hal_NirqLevel(void);
+[v _radio_hal_NirqLevel `(uc ~T0 @X0 0 ef ]
+"45 Si4463/si446x_api_lib.h
+[; ;Si4463/si446x_api_lib.h: 45: void si446x_get_int_status(U8 PH_CLR_PEND, U8 MODEM_CLR_PEND, U8 CHIP_CLR_PEND);
+[v _si446x_get_int_status `(v ~T0 @X0 0 ef3`uc`uc`uc ]
+"10 C:\Program Files\Microchip\xc8\v2.41\pic\include\c90\stdarg.h
+[v ___va_start `(*v ~T0 @X0 0 ef ]
+[p i ___va_start ]
+"13
+[v ___va_arg `(*v ~T0 @X0 0 ev`*v ]
+[p i ___va_arg ]
+"35 Si4463/radio_comm.h
+[; ;Si4463/radio_comm.h: 35: void radio_comm_WriteData(U8 cmd, BIT pollCts, U8 byteCount, U8* pData);
+[v _radio_comm_WriteData `(v ~T0 @X0 0 ef4`uc`uc`uc`*uc ]
+"34
+[; ;Si4463/radio_comm.h: 34: void radio_comm_ReadData(U8 cmd, BIT pollCts, U8 byteCount, U8* pData);
+[v _radio_comm_ReadData `(v ~T0 @X0 0 ef4`uc`uc`uc`*uc ]
+"14 Si4463/../inc/main_pic16f883.h
+[p x FOSC  =  INTRC_CLKOUT           ]
+"15
+[p x WDTE  =  OFF                    ]
+"16
+[p x PWRTE  =  OFF                   ]
+"17
+[p x MCLRE  =  ON                    ]
+"18
+[p x CP  =  OFF                      ]
+"19
+[p x CPD  =  OFF                     ]
+"20
+[p x BOREN  =  ON                    ]
+"21
+[p x IESO  =  ON                     ]
+"22
+[p x FCMEN  =  ON                    ]
+"23
+[p x LVP  =  OFF                     ]
+"27
+[p x BOR4V  =  BOR21V                ]
+"28
+[p x WRT  =  OFF                     ]
+"55 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 55: __asm("INDF equ 00h");
+[; <" INDF equ 00h ;# ">
+"62
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 62: __asm("TMR0 equ 01h");
+[; <" TMR0 equ 01h ;# ">
+"69
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 69: __asm("PCL equ 02h");
+[; <" PCL equ 02h ;# ">
+"76
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 76: __asm("STATUS equ 03h");
+[; <" STATUS equ 03h ;# ">
+"162
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 162: __asm("FSR equ 04h");
+[; <" FSR equ 04h ;# ">
+"169
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 169: __asm("PORTA equ 05h");
+[; <" PORTA equ 05h ;# ">
+"231
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 231: __asm("PORTB equ 06h");
+[; <" PORTB equ 06h ;# ">
+"293
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 293: __asm("PORTC equ 07h");
+[; <" PORTC equ 07h ;# ">
+"355
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 355: __asm("PORTE equ 09h");
+[; <" PORTE equ 09h ;# ">
+"376
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 376: __asm("PCLATH equ 0Ah");
+[; <" PCLATH equ 0Ah ;# ">
+"383
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 383: __asm("INTCON equ 0Bh");
+[; <" INTCON equ 0Bh ;# ">
+"461
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 461: __asm("PIR1 equ 0Ch");
+[; <" PIR1 equ 0Ch ;# ">
+"517
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 517: __asm("PIR2 equ 0Dh");
+[; <" PIR2 equ 0Dh ;# ">
+"574
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 574: __asm("TMR1 equ 0Eh");
+[; <" TMR1 equ 0Eh ;# ">
+"581
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 581: __asm("TMR1L equ 0Eh");
+[; <" TMR1L equ 0Eh ;# ">
+"588
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 588: __asm("TMR1H equ 0Fh");
+[; <" TMR1H equ 0Fh ;# ">
+"595
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 595: __asm("T1CON equ 010h");
+[; <" T1CON equ 010h ;# ">
+"689
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 689: __asm("TMR2 equ 011h");
+[; <" TMR2 equ 011h ;# ">
+"696
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 696: __asm("T2CON equ 012h");
+[; <" T2CON equ 012h ;# ">
+"767
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 767: __asm("SSPBUF equ 013h");
+[; <" SSPBUF equ 013h ;# ">
+"774
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 774: __asm("SSPCON equ 014h");
+[; <" SSPCON equ 014h ;# ">
+"844
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 844: __asm("CCPR1 equ 015h");
+[; <" CCPR1 equ 015h ;# ">
+"851
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 851: __asm("CCPR1L equ 015h");
+[; <" CCPR1L equ 015h ;# ">
+"858
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 858: __asm("CCPR1H equ 016h");
+[; <" CCPR1H equ 016h ;# ">
+"865
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 865: __asm("CCP1CON equ 017h");
+[; <" CCP1CON equ 017h ;# ">
+"962
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 962: __asm("RCSTA equ 018h");
+[; <" RCSTA equ 018h ;# ">
+"1057
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 1057: __asm("TXREG equ 019h");
+[; <" TXREG equ 019h ;# ">
+"1064
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 1064: __asm("RCREG equ 01Ah");
+[; <" RCREG equ 01Ah ;# ">
+"1071
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 1071: __asm("CCPR2 equ 01Bh");
+[; <" CCPR2 equ 01Bh ;# ">
+"1078
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 1078: __asm("CCPR2L equ 01Bh");
+[; <" CCPR2L equ 01Bh ;# ">
+"1085
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 1085: __asm("CCPR2H equ 01Ch");
+[; <" CCPR2H equ 01Ch ;# ">
+"1092
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 1092: __asm("CCP2CON equ 01Dh");
+[; <" CCP2CON equ 01Dh ;# ">
+"1162
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 1162: __asm("ADRESH equ 01Eh");
+[; <" ADRESH equ 01Eh ;# ">
+"1169
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 1169: __asm("ADCON0 equ 01Fh");
+[; <" ADCON0 equ 01Fh ;# ">
+"1270
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 1270: __asm("OPTION_REG equ 081h");
+[; <" OPTION_REG equ 081h ;# ">
+"1340
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 1340: __asm("TRISA equ 085h");
+[; <" TRISA equ 085h ;# ">
+"1402
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 1402: __asm("TRISB equ 086h");
+[; <" TRISB equ 086h ;# ">
+"1464
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 1464: __asm("TRISC equ 087h");
+[; <" TRISC equ 087h ;# ">
+"1526
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 1526: __asm("TRISE equ 089h");
+[; <" TRISE equ 089h ;# ">
+"1547
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 1547: __asm("PIE1 equ 08Ch");
+[; <" PIE1 equ 08Ch ;# ">
+"1603
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 1603: __asm("PIE2 equ 08Dh");
+[; <" PIE2 equ 08Dh ;# ">
+"1660
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 1660: __asm("PCON equ 08Eh");
+[; <" PCON equ 08Eh ;# ">
+"1707
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 1707: __asm("OSCCON equ 08Fh");
+[; <" OSCCON equ 08Fh ;# ">
+"1772
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 1772: __asm("OSCTUNE equ 090h");
+[; <" OSCTUNE equ 090h ;# ">
+"1824
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 1824: __asm("SSPCON2 equ 091h");
+[; <" SSPCON2 equ 091h ;# ">
+"1886
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 1886: __asm("PR2 equ 092h");
+[; <" PR2 equ 092h ;# ">
+"1893
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 1893: __asm("SSPADD equ 093h");
+[; <" SSPADD equ 093h ;# ">
+"1900
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 1900: __asm("SSPMSK equ 093h");
+[; <" SSPMSK equ 093h ;# ">
+"1905
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 1905: __asm("MSK equ 093h");
+[; <" MSK equ 093h ;# ">
+"2022
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 2022: __asm("SSPSTAT equ 094h");
+[; <" SSPSTAT equ 094h ;# ">
+"2191
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 2191: __asm("WPUB equ 095h");
+[; <" WPUB equ 095h ;# ">
+"2261
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 2261: __asm("IOCB equ 096h");
+[; <" IOCB equ 096h ;# ">
+"2331
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 2331: __asm("VRCON equ 097h");
+[; <" VRCON equ 097h ;# ">
+"2401
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 2401: __asm("TXSTA equ 098h");
+[; <" TXSTA equ 098h ;# ">
+"2487
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 2487: __asm("SPBRG equ 099h");
+[; <" SPBRG equ 099h ;# ">
+"2549
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 2549: __asm("SPBRGH equ 09Ah");
+[; <" SPBRGH equ 09Ah ;# ">
+"2619
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 2619: __asm("PWM1CON equ 09Bh");
+[; <" PWM1CON equ 09Bh ;# ">
+"2689
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 2689: __asm("ECCPAS equ 09Ch");
+[; <" ECCPAS equ 09Ch ;# ">
+"2771
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 2771: __asm("PSTRCON equ 09Dh");
+[; <" PSTRCON equ 09Dh ;# ">
+"2815
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 2815: __asm("ADRESL equ 09Eh");
+[; <" ADRESL equ 09Eh ;# ">
+"2822
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 2822: __asm("ADCON1 equ 09Fh");
+[; <" ADCON1 equ 09Fh ;# ">
+"2856
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 2856: __asm("WDTCON equ 0105h");
+[; <" WDTCON equ 0105h ;# ">
+"2909
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 2909: __asm("CM1CON0 equ 0107h");
+[; <" CM1CON0 equ 0107h ;# ">
+"2974
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 2974: __asm("CM2CON0 equ 0108h");
+[; <" CM2CON0 equ 0108h ;# ">
+"3039
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 3039: __asm("CM2CON1 equ 0109h");
+[; <" CM2CON1 equ 0109h ;# ">
+"3090
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 3090: __asm("EEDATA equ 010Ch");
+[; <" EEDATA equ 010Ch ;# ">
+"3095
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 3095: __asm("EEDAT equ 010Ch");
+[; <" EEDAT equ 010Ch ;# ">
+"3102
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 3102: __asm("EEADR equ 010Dh");
+[; <" EEADR equ 010Dh ;# ">
+"3109
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 3109: __asm("EEDATH equ 010Eh");
+[; <" EEDATH equ 010Eh ;# ">
+"3116
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 3116: __asm("EEADRH equ 010Fh");
+[; <" EEADRH equ 010Fh ;# ">
+"3123
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 3123: __asm("SRCON equ 0185h");
+[; <" SRCON equ 0185h ;# ">
+"3180
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 3180: __asm("BAUDCTL equ 0187h");
+[; <" BAUDCTL equ 0187h ;# ">
+"3232
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 3232: __asm("ANSEL equ 0188h");
+[; <" ANSEL equ 0188h ;# ">
+"3276
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 3276: __asm("ANSELH equ 0189h");
+[; <" ANSELH equ 0189h ;# ">
+"3326
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 3326: __asm("EECON1 equ 018Ch");
+[; <" EECON1 equ 018Ch ;# ">
+"3371
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h: 3371: __asm("EECON2 equ 018Dh");
+[; <" EECON2 equ 018Dh ;# ">
+"14 Si4463/si446x_api_lib.c
+[; ;Si4463/si446x_api_lib.c: 14: union si446x_cmd_reply_union Si446xCmd;
+[v _Si446xCmd `S155 ~T0 @X0 1 e ]
+"15
+[; ;Si4463/si446x_api_lib.c: 15: U8 Pro2Cmd[16];
+[v _Pro2Cmd `uc ~T0 @X0 -> 16 `i e ]
+"23
+[; ;Si4463/si446x_api_lib.c: 23: void si446x_reset(void)
+[v _si446x_reset `(v ~T0 @X0 1 ef ]
+"24
+[; ;Si4463/si446x_api_lib.c: 24: {
+{
+[e :U _si446x_reset ]
+[f ]
+"25
+[; ;Si4463/si446x_api_lib.c: 25:     U8 loopCount;
+[v _loopCount `uc ~T0 @X0 1 a ]
+"28
+[; ;Si4463/si446x_api_lib.c: 28:     radio_hal_AssertShutdown();
+[e ( _radio_hal_AssertShutdown ..  ]
+"30
+[; ;Si4463/si446x_api_lib.c: 30:     for (loopCount = 255; loopCount != 0; loopCount--);
+{
+[e = _loopCount -> -> 255 `i `uc ]
+[e $ != -> _loopCount `i -> 0 `i 157  ]
+[e $U 158  ]
+[e :U 157 ]
+[e -- _loopCount -> -> 1 `i `uc ]
+[e $ != -> _loopCount `i -> 0 `i 157  ]
+[e :U 158 ]
+}
+"31
+[; ;Si4463/si446x_api_lib.c: 31:     radio_hal_DeassertShutdown();
+[e ( _radio_hal_DeassertShutdown ..  ]
+"32
+[; ;Si4463/si446x_api_lib.c: 32:     for (loopCount = 255; loopCount != 0; loopCount--);
+{
+[e = _loopCount -> -> 255 `i `uc ]
+[e $ != -> _loopCount `i -> 0 `i 160  ]
+[e $U 161  ]
+[e :U 160 ]
+[e -- _loopCount -> -> 1 `i `uc ]
+[e $ != -> _loopCount `i -> 0 `i 160  ]
+[e :U 161 ]
+}
+"33
+[; ;Si4463/si446x_api_lib.c: 33:     radio_comm_ClearCTS();
+[e ( _radio_comm_ClearCTS ..  ]
+"34
+[; ;Si4463/si446x_api_lib.c: 34: }
+[e :UE 156 ]
+}
+"40
+[; ;Si4463/si446x_api_lib.c: 40: void si446x_power_up(U8 BOOT_OPTIONS, U8 XTAL_OPTIONS, U32 XO_FREQ)
+[v _si446x_power_up `(v ~T0 @X0 1 ef3`uc`uc`ui ]
+"41
+[; ;Si4463/si446x_api_lib.c: 41: {
+{
+[e :U _si446x_power_up ]
+"40
+[; ;Si4463/si446x_api_lib.c: 40: void si446x_power_up(U8 BOOT_OPTIONS, U8 XTAL_OPTIONS, U32 XO_FREQ)
+[v _BOOT_OPTIONS `uc ~T0 @X0 1 r1 ]
+[v _XTAL_OPTIONS `uc ~T0 @X0 1 r2 ]
+[v _XO_FREQ `ui ~T0 @X0 1 r3 ]
+"41
+[; ;Si4463/si446x_api_lib.c: 41: {
+[f ]
+"42
+[; ;Si4463/si446x_api_lib.c: 42:     Pro2Cmd[0] = 0x02;
+[e = *U + &U _Pro2Cmd * -> -> -> 0 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux -> -> 2 `i `uc ]
+"43
+[; ;Si4463/si446x_api_lib.c: 43:     Pro2Cmd[1] = BOOT_OPTIONS;
+[e = *U + &U _Pro2Cmd * -> -> -> 1 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux _BOOT_OPTIONS ]
+"44
+[; ;Si4463/si446x_api_lib.c: 44:     Pro2Cmd[2] = XTAL_OPTIONS;
+[e = *U + &U _Pro2Cmd * -> -> -> 2 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux _XTAL_OPTIONS ]
+"45
+[; ;Si4463/si446x_api_lib.c: 45:     Pro2Cmd[3] = (U8)(XO_FREQ >> 24);
+[e = *U + &U _Pro2Cmd * -> -> -> 3 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux -> >> _XO_FREQ -> 24 `i `uc ]
+"46
+[; ;Si4463/si446x_api_lib.c: 46:     Pro2Cmd[4] = (U8)(XO_FREQ >> 16);
+[e = *U + &U _Pro2Cmd * -> -> -> 4 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux -> >> _XO_FREQ -> 16 `i `uc ]
+"47
+[; ;Si4463/si446x_api_lib.c: 47:     Pro2Cmd[5] = (U8)(XO_FREQ >> 8);
+[e = *U + &U _Pro2Cmd * -> -> -> 5 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux -> >> _XO_FREQ -> 8 `i `uc ]
+"48
+[; ;Si4463/si446x_api_lib.c: 48:     Pro2Cmd[6] = (U8)(XO_FREQ);
+[e = *U + &U _Pro2Cmd * -> -> -> 6 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux -> _XO_FREQ `uc ]
+"50
+[; ;Si4463/si446x_api_lib.c: 50:     radio_comm_SendCmd( 7, Pro2Cmd );
+[e ( _radio_comm_SendCmd (2 , -> -> 7 `i `uc &U _Pro2Cmd ]
+"51
+[; ;Si4463/si446x_api_lib.c: 51: }
+[e :UE 163 ]
+}
+"57
+[; ;Si4463/si446x_api_lib.c: 57: U8 si446x_configuration_init(const U8* pSetPropCmd)
+[v _si446x_configuration_init `(uc ~T0 @X0 1 ef1`*Cuc ]
+"58
+[; ;Si4463/si446x_api_lib.c: 58: {
+{
+[e :U _si446x_configuration_init ]
+"57
+[; ;Si4463/si446x_api_lib.c: 57: U8 si446x_configuration_init(const U8* pSetPropCmd)
+[v _pSetPropCmd `*Cuc ~T0 @X0 1 r1 ]
+"58
+[; ;Si4463/si446x_api_lib.c: 58: {
+[f ]
+"59
+[; ;Si4463/si446x_api_lib.c: 59:  U8 col;
+[v _col `uc ~T0 @X0 1 a ]
+"60
+[; ;Si4463/si446x_api_lib.c: 60:  U8 numOfBytes;
+[v _numOfBytes `uc ~T0 @X0 1 a ]
+"61
+[; ;Si4463/si446x_api_lib.c: 61:  U8 t;
+[v _t `uc ~T0 @X0 1 a ]
+"63
+[; ;Si4463/si446x_api_lib.c: 63:   while (*pSetPropCmd != 0x00)
+[e $U 165  ]
+[e :U 166 ]
+"64
+[; ;Si4463/si446x_api_lib.c: 64:   {
+{
+"70
+[; ;Si4463/si446x_api_lib.c: 70:     numOfBytes = *pSetPropCmd++;
+[e = _numOfBytes *U ++ _pSetPropCmd * -> -> 1 `i `x -> -> # *U _pSetPropCmd `i `x ]
+"74
+[; ;Si4463/si446x_api_lib.c: 74:     if (numOfBytes > 16u)
+[e $ ! > -> _numOfBytes `ui -> 16 `ui 168  ]
+"75
+[; ;Si4463/si446x_api_lib.c: 75:     {
+{
+"77
+[; ;Si4463/si446x_api_lib.c: 77:       return SI446X_COMMAND_ERROR;
+[e ) -> . `E1544 4 `uc ]
+[e $UE 164  ]
+"78
+[; ;Si4463/si446x_api_lib.c: 78:     }
+}
+[e :U 168 ]
+"80
+[; ;Si4463/si446x_api_lib.c: 80:     for (col = 0u; col < numOfBytes; col++)
+{
+[e = _col -> -> 0 `ui `uc ]
+[e $U 172  ]
+[e :U 169 ]
+"81
+[; ;Si4463/si446x_api_lib.c: 81:     {
+{
+"82
+[; ;Si4463/si446x_api_lib.c: 82:       Pro2Cmd[col] = *pSetPropCmd;
+[e = *U + &U _Pro2Cmd * -> _col `ux -> -> # *U &U _Pro2Cmd `ui `ux *U _pSetPropCmd ]
+"83
+[; ;Si4463/si446x_api_lib.c: 83:       pSetPropCmd++;
+[e ++ _pSetPropCmd * -> -> 1 `i `x -> -> # *U _pSetPropCmd `i `x ]
+"84
+[; ;Si4463/si446x_api_lib.c: 84:     }
+}
+[e ++ _col -> -> 1 `i `uc ]
+[e :U 172 ]
+[e $ < -> _col `i -> _numOfBytes `i 169  ]
+[e :U 170 ]
+}
+"86
+[; ;Si4463/si446x_api_lib.c: 86:     if (radio_comm_SendCmdGetResp(numOfBytes, Pro2Cmd, 0, 0) != 0xFF)
+[e $ ! != -> ( _radio_comm_SendCmdGetResp (4 , , , _numOfBytes &U _Pro2Cmd -> -> 0 `i `uc -> -> 0 `i `*uc `i -> 255 `i 173  ]
+"87
+[; ;Si4463/si446x_api_lib.c: 87:     {
+{
+"89
+[; ;Si4463/si446x_api_lib.c: 89:       return SI446X_CTS_TIMEOUT;
+[e ) -> . `E1544 2 `uc ]
+[e $UE 164  ]
+"90
+[; ;Si4463/si446x_api_lib.c: 90:     }
+}
+[e :U 173 ]
+"92
+[; ;Si4463/si446x_api_lib.c: 92:     if (radio_hal_NirqLevel() == 0)
+[e $ ! == -> ( _radio_hal_NirqLevel ..  `i -> 0 `i 174  ]
+"93
+[; ;Si4463/si446x_api_lib.c: 93:     {
+{
+"95
+[; ;Si4463/si446x_api_lib.c: 95:       si446x_get_int_status(0, 0, 0);
+[e ( _si446x_get_int_status (3 , , -> -> 0 `i `uc -> -> 0 `i `uc -> -> 0 `i `uc ]
+"96
+[; ;Si4463/si446x_api_lib.c: 96:       if (Si446xCmd.GET_INT_STATUS.CHIP_PEND & 0x8)
+[e $ ! != & -> . . _Si446xCmd 7 6 `i -> 8 `i -> 0 `i 175  ]
+"97
+[; ;Si4463/si446x_api_lib.c: 97:       {
+{
+"98
+[; ;Si4463/si446x_api_lib.c: 98:         return SI446X_COMMAND_ERROR;
+[e ) -> . `E1544 4 `uc ]
+[e $UE 164  ]
+"99
+[; ;Si4463/si446x_api_lib.c: 99:       }
+}
+[e :U 175 ]
+"100
+[; ;Si4463/si446x_api_lib.c: 100:     }
+}
+[e :U 174 ]
+"101
+[; ;Si4463/si446x_api_lib.c: 101:   }
+}
+[e :U 165 ]
+"63
+[; ;Si4463/si446x_api_lib.c: 63:   while (*pSetPropCmd != 0x00)
+[e $ != -> *U _pSetPropCmd `i -> 0 `i 166  ]
+[e :U 167 ]
+"103
+[; ;Si4463/si446x_api_lib.c: 103:   return SI446X_SUCCESS;
+[e ) -> . `E1544 0 `uc ]
+[e $UE 164  ]
+"104
+[; ;Si4463/si446x_api_lib.c: 104: }
+[e :UE 164 ]
+}
+"109
+[; ;Si4463/si446x_api_lib.c: 109: void si446x_part_info(void)
+[v _si446x_part_info `(v ~T0 @X0 1 ef ]
+"110
+[; ;Si4463/si446x_api_lib.c: 110: {
+{
+[e :U _si446x_part_info ]
+[f ]
+"111
+[; ;Si4463/si446x_api_lib.c: 111:     Pro2Cmd[0] = 0x01;
+[e = *U + &U _Pro2Cmd * -> -> -> 0 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux -> -> 1 `i `uc ]
+"113
+[; ;Si4463/si446x_api_lib.c: 113:     radio_comm_SendCmdGetResp( 1,
+[e ( _radio_comm_SendCmdGetResp (4 , , , -> -> 1 `i `uc &U _Pro2Cmd -> -> 8 `i `uc &U _Pro2Cmd ]
+"118
+[; ;Si4463/si446x_api_lib.c: 118:     Si446xCmd.PART_INFO.CHIPREV = Pro2Cmd[0];
+[e = . . _Si446xCmd 2 0 *U + &U _Pro2Cmd * -> -> -> 0 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux ]
+"119
+[; ;Si4463/si446x_api_lib.c: 119:     Si446xCmd.PART_INFO.PART = ((U16)Pro2Cmd[1] << 8) & 0xFF00;
+[e = . . _Si446xCmd 2 1 -> & << -> -> *U + &U _Pro2Cmd * -> -> -> 1 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux `us `ui -> 8 `i -> 65280 `ui `us ]
+"120
+[; ;Si4463/si446x_api_lib.c: 120:     Si446xCmd.PART_INFO.PART |= (U16)Pro2Cmd[2] & 0x00FF;
+[e =| . . _Si446xCmd 2 1 -> & -> -> *U + &U _Pro2Cmd * -> -> -> 2 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux `us `ui -> -> 255 `i `ui `us ]
+"121
+[; ;Si4463/si446x_api_lib.c: 121:     Si446xCmd.PART_INFO.PBUILD = Pro2Cmd[3];
+[e = . . _Si446xCmd 2 2 *U + &U _Pro2Cmd * -> -> -> 3 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux ]
+"122
+[; ;Si4463/si446x_api_lib.c: 122:     Si446xCmd.PART_INFO.ID = ((U16)Pro2Cmd[4] << 8) & 0xFF00;
+[e = . . _Si446xCmd 2 3 -> & << -> -> *U + &U _Pro2Cmd * -> -> -> 4 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux `us `ui -> 8 `i -> 65280 `ui `us ]
+"123
+[; ;Si4463/si446x_api_lib.c: 123:     Si446xCmd.PART_INFO.ID |= (U16)Pro2Cmd[5] & 0x00FF;
+[e =| . . _Si446xCmd 2 3 -> & -> -> *U + &U _Pro2Cmd * -> -> -> 5 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux `us `ui -> -> 255 `i `ui `us ]
+"124
+[; ;Si4463/si446x_api_lib.c: 124:     Si446xCmd.PART_INFO.CUSTOMER = Pro2Cmd[6];
+[e = . . _Si446xCmd 2 4 *U + &U _Pro2Cmd * -> -> -> 6 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux ]
+"125
+[; ;Si4463/si446x_api_lib.c: 125:     Si446xCmd.PART_INFO.ROMID = Pro2Cmd[7];
+[e = . . _Si446xCmd 2 5 *U + &U _Pro2Cmd * -> -> -> 7 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux ]
+"126
+[; ;Si4463/si446x_api_lib.c: 126: }
+[e :UE 176 ]
+}
+"134
+[; ;Si4463/si446x_api_lib.c: 134: void si446x_start_tx(U8 CHANNEL, U8 CONDITION, U16 TX_LEN)
+[v _si446x_start_tx `(v ~T0 @X0 1 ef3`uc`uc`us ]
+"135
+[; ;Si4463/si446x_api_lib.c: 135: {
+{
+[e :U _si446x_start_tx ]
+"134
+[; ;Si4463/si446x_api_lib.c: 134: void si446x_start_tx(U8 CHANNEL, U8 CONDITION, U16 TX_LEN)
+[v _CHANNEL `uc ~T0 @X0 1 r1 ]
+[v _CONDITION `uc ~T0 @X0 1 r2 ]
+[v _TX_LEN `us ~T0 @X0 1 r3 ]
+"135
+[; ;Si4463/si446x_api_lib.c: 135: {
+[f ]
+"136
+[; ;Si4463/si446x_api_lib.c: 136:     Pro2Cmd[0] = 0x31;
+[e = *U + &U _Pro2Cmd * -> -> -> 0 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux -> -> 49 `i `uc ]
+"137
+[; ;Si4463/si446x_api_lib.c: 137:     Pro2Cmd[1] = CHANNEL;
+[e = *U + &U _Pro2Cmd * -> -> -> 1 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux _CHANNEL ]
+"138
+[; ;Si4463/si446x_api_lib.c: 138:     Pro2Cmd[2] = CONDITION;
+[e = *U + &U _Pro2Cmd * -> -> -> 2 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux _CONDITION ]
+"139
+[; ;Si4463/si446x_api_lib.c: 139:     Pro2Cmd[3] = (U8)(TX_LEN >> 8);
+[e = *U + &U _Pro2Cmd * -> -> -> 3 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux -> >> -> _TX_LEN `ui -> 8 `i `uc ]
+"140
+[; ;Si4463/si446x_api_lib.c: 140:     Pro2Cmd[4] = (U8)(TX_LEN);
+[e = *U + &U _Pro2Cmd * -> -> -> 4 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux -> _TX_LEN `uc ]
+"141
+[; ;Si4463/si446x_api_lib.c: 141:     Pro2Cmd[5] = 0x00;
+[e = *U + &U _Pro2Cmd * -> -> -> 5 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux -> -> 0 `i `uc ]
+"145
+[; ;Si4463/si446x_api_lib.c: 145:     Pro2Cmd[6] = 0x00;
+[e = *U + &U _Pro2Cmd * -> -> -> 6 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux -> -> 0 `i `uc ]
+"147
+[; ;Si4463/si446x_api_lib.c: 147:     radio_comm_SendCmd( 7, Pro2Cmd );
+[e ( _radio_comm_SendCmd (2 , -> -> 7 `i `uc &U _Pro2Cmd ]
+"148
+[; ;Si4463/si446x_api_lib.c: 148: }
+[e :UE 177 ]
+}
+"160
+[; ;Si4463/si446x_api_lib.c: 160: void si446x_start_rx(U8 CHANNEL, U8 CONDITION, U16 RX_LEN, U8 NEXT_STATE1, U8 NEXT_STATE2, U8 NEXT_STATE3)
+[v _si446x_start_rx `(v ~T0 @X0 1 ef6`uc`uc`us`uc`uc`uc ]
+"161
+[; ;Si4463/si446x_api_lib.c: 161: {
+{
+[e :U _si446x_start_rx ]
+"160
+[; ;Si4463/si446x_api_lib.c: 160: void si446x_start_rx(U8 CHANNEL, U8 CONDITION, U16 RX_LEN, U8 NEXT_STATE1, U8 NEXT_STATE2, U8 NEXT_STATE3)
+[v _CHANNEL `uc ~T0 @X0 1 r1 ]
+[v _CONDITION `uc ~T0 @X0 1 r2 ]
+[v _RX_LEN `us ~T0 @X0 1 r3 ]
+[v _NEXT_STATE1 `uc ~T0 @X0 1 r4 ]
+[v _NEXT_STATE2 `uc ~T0 @X0 1 r5 ]
+[v _NEXT_STATE3 `uc ~T0 @X0 1 r6 ]
+"161
+[; ;Si4463/si446x_api_lib.c: 161: {
+[f ]
+"162
+[; ;Si4463/si446x_api_lib.c: 162:     Pro2Cmd[0] = 0x32;
+[e = *U + &U _Pro2Cmd * -> -> -> 0 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux -> -> 50 `i `uc ]
+"163
+[; ;Si4463/si446x_api_lib.c: 163:     Pro2Cmd[1] = CHANNEL;
+[e = *U + &U _Pro2Cmd * -> -> -> 1 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux _CHANNEL ]
+"164
+[; ;Si4463/si446x_api_lib.c: 164:     Pro2Cmd[2] = CONDITION;
+[e = *U + &U _Pro2Cmd * -> -> -> 2 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux _CONDITION ]
+"165
+[; ;Si4463/si446x_api_lib.c: 165:     Pro2Cmd[3] = (U8)(RX_LEN >> 8);
+[e = *U + &U _Pro2Cmd * -> -> -> 3 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux -> >> -> _RX_LEN `ui -> 8 `i `uc ]
+"166
+[; ;Si4463/si446x_api_lib.c: 166:     Pro2Cmd[4] = (U8)(RX_LEN);
+[e = *U + &U _Pro2Cmd * -> -> -> 4 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux -> _RX_LEN `uc ]
+"167
+[; ;Si4463/si446x_api_lib.c: 167:     Pro2Cmd[5] = NEXT_STATE1;
+[e = *U + &U _Pro2Cmd * -> -> -> 5 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux _NEXT_STATE1 ]
+"168
+[; ;Si4463/si446x_api_lib.c: 168:     Pro2Cmd[6] = NEXT_STATE2;
+[e = *U + &U _Pro2Cmd * -> -> -> 6 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux _NEXT_STATE2 ]
+"169
+[; ;Si4463/si446x_api_lib.c: 169:     Pro2Cmd[7] = NEXT_STATE3;
+[e = *U + &U _Pro2Cmd * -> -> -> 7 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux _NEXT_STATE3 ]
+"171
+[; ;Si4463/si446x_api_lib.c: 171:     radio_comm_SendCmd( 8, Pro2Cmd );
+[e ( _radio_comm_SendCmd (2 , -> -> 8 `i `uc &U _Pro2Cmd ]
+"172
+[; ;Si4463/si446x_api_lib.c: 172: }
+[e :UE 178 ]
+}
+"181
+[; ;Si4463/si446x_api_lib.c: 181: void si446x_get_int_status(U8 PH_CLR_PEND, U8 MODEM_CLR_PEND, U8 CHIP_CLR_PEND)
+[v _si446x_get_int_status `(v ~T0 @X0 1 ef3`uc`uc`uc ]
+"182
+[; ;Si4463/si446x_api_lib.c: 182: {
+{
+[e :U _si446x_get_int_status ]
+"181
+[; ;Si4463/si446x_api_lib.c: 181: void si446x_get_int_status(U8 PH_CLR_PEND, U8 MODEM_CLR_PEND, U8 CHIP_CLR_PEND)
+[v _PH_CLR_PEND `uc ~T0 @X0 1 r1 ]
+[v _MODEM_CLR_PEND `uc ~T0 @X0 1 r2 ]
+[v _CHIP_CLR_PEND `uc ~T0 @X0 1 r3 ]
+"182
+[; ;Si4463/si446x_api_lib.c: 182: {
+[f ]
+"183
+[; ;Si4463/si446x_api_lib.c: 183:     Pro2Cmd[0] = 0x20;
+[e = *U + &U _Pro2Cmd * -> -> -> 0 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux -> -> 32 `i `uc ]
+"184
+[; ;Si4463/si446x_api_lib.c: 184:     Pro2Cmd[1] = PH_CLR_PEND;
+[e = *U + &U _Pro2Cmd * -> -> -> 1 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux _PH_CLR_PEND ]
+"185
+[; ;Si4463/si446x_api_lib.c: 185:     Pro2Cmd[2] = MODEM_CLR_PEND;
+[e = *U + &U _Pro2Cmd * -> -> -> 2 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux _MODEM_CLR_PEND ]
+"186
+[; ;Si4463/si446x_api_lib.c: 186:     Pro2Cmd[3] = CHIP_CLR_PEND;
+[e = *U + &U _Pro2Cmd * -> -> -> 3 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux _CHIP_CLR_PEND ]
+"188
+[; ;Si4463/si446x_api_lib.c: 188:     radio_comm_SendCmdGetResp( 4,
+[e ( _radio_comm_SendCmdGetResp (4 , , , -> -> 4 `i `uc &U _Pro2Cmd -> -> 8 `i `uc &U _Pro2Cmd ]
+"193
+[; ;Si4463/si446x_api_lib.c: 193:     Si446xCmd.GET_INT_STATUS.INT_PEND = Pro2Cmd[0];
+[e = . . _Si446xCmd 7 0 *U + &U _Pro2Cmd * -> -> -> 0 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux ]
+"194
+[; ;Si4463/si446x_api_lib.c: 194:     Si446xCmd.GET_INT_STATUS.INT_STATUS = Pro2Cmd[1];
+[e = . . _Si446xCmd 7 1 *U + &U _Pro2Cmd * -> -> -> 1 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux ]
+"195
+[; ;Si4463/si446x_api_lib.c: 195:     Si446xCmd.GET_INT_STATUS.PH_PEND = Pro2Cmd[2];
+[e = . . _Si446xCmd 7 2 *U + &U _Pro2Cmd * -> -> -> 2 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux ]
+"196
+[; ;Si4463/si446x_api_lib.c: 196:     Si446xCmd.GET_INT_STATUS.PH_STATUS = Pro2Cmd[3];
+[e = . . _Si446xCmd 7 3 *U + &U _Pro2Cmd * -> -> -> 3 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux ]
+"197
+[; ;Si4463/si446x_api_lib.c: 197:     Si446xCmd.GET_INT_STATUS.MODEM_PEND = Pro2Cmd[4];
+[e = . . _Si446xCmd 7 4 *U + &U _Pro2Cmd * -> -> -> 4 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux ]
+"198
+[; ;Si4463/si446x_api_lib.c: 198:     Si446xCmd.GET_INT_STATUS.MODEM_STATUS = Pro2Cmd[5];
+[e = . . _Si446xCmd 7 5 *U + &U _Pro2Cmd * -> -> -> 5 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux ]
+"199
+[; ;Si4463/si446x_api_lib.c: 199:     Si446xCmd.GET_INT_STATUS.CHIP_PEND = Pro2Cmd[6];
+[e = . . _Si446xCmd 7 6 *U + &U _Pro2Cmd * -> -> -> 6 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux ]
+"200
+[; ;Si4463/si446x_api_lib.c: 200:     Si446xCmd.GET_INT_STATUS.CHIP_STATUS = Pro2Cmd[7];
+[e = . . _Si446xCmd 7 7 *U + &U _Pro2Cmd * -> -> -> 7 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux ]
+"201
+[; ;Si4463/si446x_api_lib.c: 201: }
+[e :UE 179 ]
+}
+"215
+[; ;Si4463/si446x_api_lib.c: 215: void si446x_gpio_pin_cfg(U8 GPIO0, U8 GPIO1, U8 GPIO2, U8 GPIO3, U8 NIRQ, U8 SDO, U8 GEN_CONFIG)
+[v _si446x_gpio_pin_cfg `(v ~T0 @X0 1 ef7`uc`uc`uc`uc`uc`uc`uc ]
+"216
+[; ;Si4463/si446x_api_lib.c: 216: {
+{
+[e :U _si446x_gpio_pin_cfg ]
+"215
+[; ;Si4463/si446x_api_lib.c: 215: void si446x_gpio_pin_cfg(U8 GPIO0, U8 GPIO1, U8 GPIO2, U8 GPIO3, U8 NIRQ, U8 SDO, U8 GEN_CONFIG)
+[v _GPIO0 `uc ~T0 @X0 1 r1 ]
+[v _GPIO1 `uc ~T0 @X0 1 r2 ]
+[v _GPIO2 `uc ~T0 @X0 1 r3 ]
+[v _GPIO3 `uc ~T0 @X0 1 r4 ]
+[v _NIRQ `uc ~T0 @X0 1 r5 ]
+[v _SDO `uc ~T0 @X0 1 r6 ]
+[v _GEN_CONFIG `uc ~T0 @X0 1 r7 ]
+"216
+[; ;Si4463/si446x_api_lib.c: 216: {
+[f ]
+"217
+[; ;Si4463/si446x_api_lib.c: 217:     Pro2Cmd[0] = 0x13;
+[e = *U + &U _Pro2Cmd * -> -> -> 0 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux -> -> 19 `i `uc ]
+"218
+[; ;Si4463/si446x_api_lib.c: 218:     Pro2Cmd[1] = GPIO0;
+[e = *U + &U _Pro2Cmd * -> -> -> 1 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux _GPIO0 ]
+"219
+[; ;Si4463/si446x_api_lib.c: 219:     Pro2Cmd[2] = GPIO1;
+[e = *U + &U _Pro2Cmd * -> -> -> 2 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux _GPIO1 ]
+"220
+[; ;Si4463/si446x_api_lib.c: 220:     Pro2Cmd[3] = GPIO2;
+[e = *U + &U _Pro2Cmd * -> -> -> 3 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux _GPIO2 ]
+"221
+[; ;Si4463/si446x_api_lib.c: 221:     Pro2Cmd[4] = GPIO3;
+[e = *U + &U _Pro2Cmd * -> -> -> 4 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux _GPIO3 ]
+"222
+[; ;Si4463/si446x_api_lib.c: 222:     Pro2Cmd[5] = NIRQ;
+[e = *U + &U _Pro2Cmd * -> -> -> 5 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux _NIRQ ]
+"223
+[; ;Si4463/si446x_api_lib.c: 223:     Pro2Cmd[6] = SDO;
+[e = *U + &U _Pro2Cmd * -> -> -> 6 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux _SDO ]
+"224
+[; ;Si4463/si446x_api_lib.c: 224:     Pro2Cmd[7] = GEN_CONFIG;
+[e = *U + &U _Pro2Cmd * -> -> -> 7 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux _GEN_CONFIG ]
+"226
+[; ;Si4463/si446x_api_lib.c: 226:     radio_comm_SendCmdGetResp( 8,
+[e ( _radio_comm_SendCmdGetResp (4 , , , -> -> 8 `i `uc &U _Pro2Cmd -> -> 7 `i `uc &U _Pro2Cmd ]
+"231
+[; ;Si4463/si446x_api_lib.c: 231:     Si446xCmd.GPIO_PIN_CFG.GPIO[0] = Pro2Cmd[0];
+[e = *U + &U . . _Si446xCmd 5 0 * -> -> -> 0 `i `ui `ux -> -> # *U &U . . _Si446xCmd 5 0 `ui `ux *U + &U _Pro2Cmd * -> -> -> 0 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux ]
+"232
+[; ;Si4463/si446x_api_lib.c: 232:     Si446xCmd.GPIO_PIN_CFG.GPIO[1] = Pro2Cmd[1];
+[e = *U + &U . . _Si446xCmd 5 0 * -> -> -> 1 `i `ui `ux -> -> # *U &U . . _Si446xCmd 5 0 `ui `ux *U + &U _Pro2Cmd * -> -> -> 1 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux ]
+"233
+[; ;Si4463/si446x_api_lib.c: 233:     Si446xCmd.GPIO_PIN_CFG.GPIO[2] = Pro2Cmd[2];
+[e = *U + &U . . _Si446xCmd 5 0 * -> -> -> 2 `i `ui `ux -> -> # *U &U . . _Si446xCmd 5 0 `ui `ux *U + &U _Pro2Cmd * -> -> -> 2 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux ]
+"234
+[; ;Si4463/si446x_api_lib.c: 234:     Si446xCmd.GPIO_PIN_CFG.GPIO[3] = Pro2Cmd[3];
+[e = *U + &U . . _Si446xCmd 5 0 * -> -> -> 3 `i `ui `ux -> -> # *U &U . . _Si446xCmd 5 0 `ui `ux *U + &U _Pro2Cmd * -> -> -> 3 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux ]
+"235
+[; ;Si4463/si446x_api_lib.c: 235:     Si446xCmd.GPIO_PIN_CFG.NIRQ = Pro2Cmd[4];
+[e = . . _Si446xCmd 5 1 *U + &U _Pro2Cmd * -> -> -> 4 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux ]
+"236
+[; ;Si4463/si446x_api_lib.c: 236:     Si446xCmd.GPIO_PIN_CFG.SDO = Pro2Cmd[5];
+[e = . . _Si446xCmd 5 2 *U + &U _Pro2Cmd * -> -> -> 5 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux ]
+"237
+[; ;Si4463/si446x_api_lib.c: 237:     Si446xCmd.GPIO_PIN_CFG.GEN_CONFIG = Pro2Cmd[6];
+[e = . . _Si446xCmd 5 3 *U + &U _Pro2Cmd * -> -> -> 6 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux ]
+"238
+[; ;Si4463/si446x_api_lib.c: 238: }
+[e :UE 180 ]
+}
+"251
+[; ;Si4463/si446x_api_lib.c: 251: void si446x_set_property( U8 GROUP, U8 NUM_PROPS, U8 START_PROP, ... )
+[v _si446x_set_property `(v ~T0 @X0 1 e2v`uc`uc`uc ]
+"252
+[; ;Si4463/si446x_api_lib.c: 252: {
+{
+[e :U _si446x_set_property ]
+"251
+[; ;Si4463/si446x_api_lib.c: 251: void si446x_set_property( U8 GROUP, U8 NUM_PROPS, U8 START_PROP, ... )
+[v _GROUP `uc ~T0 @X0 1 r1 ]
+[v _NUM_PROPS `uc ~T0 @X0 1 r2 ]
+[v _START_PROP `uc ~T0 @X0 1 r0 ]
+"252
+[; ;Si4463/si446x_api_lib.c: 252: {
+[f ]
+"253
+[; ;Si4463/si446x_api_lib.c: 253:     va_list argList;
+[v _argList `*v ~T0 @X0 -> -> 1 `i `ux a ]
+"254
+[; ;Si4463/si446x_api_lib.c: 254:     U8 cmdIndex;
+[v _cmdIndex `uc ~T0 @X0 1 a ]
+"256
+[; ;Si4463/si446x_api_lib.c: 256:     Pro2Cmd[0] = 0x11;
+[e = *U + &U _Pro2Cmd * -> -> -> 0 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux -> -> 17 `i `uc ]
+"257
+[; ;Si4463/si446x_api_lib.c: 257:     Pro2Cmd[1] = GROUP;
+[e = *U + &U _Pro2Cmd * -> -> -> 1 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux _GROUP ]
+"258
+[; ;Si4463/si446x_api_lib.c: 258:     Pro2Cmd[2] = NUM_PROPS;
+[e = *U + &U _Pro2Cmd * -> -> -> 2 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux _NUM_PROPS ]
+"259
+[; ;Si4463/si446x_api_lib.c: 259:     Pro2Cmd[3] = START_PROP;
+[e = *U + &U _Pro2Cmd * -> -> -> 3 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux _START_PROP ]
+"261
+[; ;Si4463/si446x_api_lib.c: 261:     *argList = __va_start();
+[e = *U &U _argList ( ___va_start ..  ]
+"262
+[; ;Si4463/si446x_api_lib.c: 262:     cmdIndex = 4;
+[e = _cmdIndex -> -> 4 `i `uc ]
+"263
+[; ;Si4463/si446x_api_lib.c: 263:     while(NUM_PROPS--)
+[e $U 182  ]
+[e :U 183 ]
+"264
+[; ;Si4463/si446x_api_lib.c: 264:     {
+{
+"265
+[; ;Si4463/si446x_api_lib.c: 265:         Pro2Cmd[cmdIndex] = (*(U8 *)__va_arg((*(U8 **)argList), (U8)0));
+[e = *U + &U _Pro2Cmd * -> _cmdIndex `ux -> -> # *U &U _Pro2Cmd `ui `ux *U -> ( ___va_arg , (. -> *U -> &U _argList `**uc `*v -> -> -> 0 `i `uc `i `*uc ]
+"266
+[; ;Si4463/si446x_api_lib.c: 266:         cmdIndex++;
+[e ++ _cmdIndex -> -> 1 `i `uc ]
+"267
+[; ;Si4463/si446x_api_lib.c: 267:     }
+}
+[e :U 182 ]
+"263
+[; ;Si4463/si446x_api_lib.c: 263:     while(NUM_PROPS--)
+[e $ != -> -- _NUM_PROPS -> -> 1 `i `uc `i -> 0 `i 183  ]
+[e :U 184 ]
+"270
+[; ;Si4463/si446x_api_lib.c: 270:     radio_comm_SendCmd( cmdIndex, Pro2Cmd );
+[e ( _radio_comm_SendCmd (2 , _cmdIndex &U _Pro2Cmd ]
+"271
+[; ;Si4463/si446x_api_lib.c: 271: }
+[e :UE 181 ]
+}
+"278
+[; ;Si4463/si446x_api_lib.c: 278: void si446x_change_state(U8 NEXT_STATE1)
+[v _si446x_change_state `(v ~T0 @X0 1 ef1`uc ]
+"279
+[; ;Si4463/si446x_api_lib.c: 279: {
+{
+[e :U _si446x_change_state ]
+"278
+[; ;Si4463/si446x_api_lib.c: 278: void si446x_change_state(U8 NEXT_STATE1)
+[v _NEXT_STATE1 `uc ~T0 @X0 1 r1 ]
+"279
+[; ;Si4463/si446x_api_lib.c: 279: {
+[f ]
+"280
+[; ;Si4463/si446x_api_lib.c: 280:     Pro2Cmd[0] = 0x34;
+[e = *U + &U _Pro2Cmd * -> -> -> 0 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux -> -> 52 `i `uc ]
+"281
+[; ;Si4463/si446x_api_lib.c: 281:     Pro2Cmd[1] = NEXT_STATE1;
+[e = *U + &U _Pro2Cmd * -> -> -> 1 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux _NEXT_STATE1 ]
+"283
+[; ;Si4463/si446x_api_lib.c: 283:     radio_comm_SendCmd( 2, Pro2Cmd );
+[e ( _radio_comm_SendCmd (2 , -> -> 2 `i `uc &U _Pro2Cmd ]
+"284
+[; ;Si4463/si446x_api_lib.c: 284: }
+[e :UE 185 ]
+}
+"292
+[; ;Si4463/si446x_api_lib.c: 292: void si446x_nop(void)
+[v _si446x_nop `(v ~T0 @X0 1 ef ]
+"293
+[; ;Si4463/si446x_api_lib.c: 293: {
+{
+[e :U _si446x_nop ]
+[f ]
+"294
+[; ;Si4463/si446x_api_lib.c: 294:     Pro2Cmd[0] = 0x00;
+[e = *U + &U _Pro2Cmd * -> -> -> 0 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux -> -> 0 `i `uc ]
+"296
+[; ;Si4463/si446x_api_lib.c: 296:     radio_comm_SendCmd( 1, Pro2Cmd );
+[e ( _radio_comm_SendCmd (2 , -> -> 1 `i `uc &U _Pro2Cmd ]
+"297
+[; ;Si4463/si446x_api_lib.c: 297: }
+[e :UE 186 ]
+}
+"305
+[; ;Si4463/si446x_api_lib.c: 305: void si446x_fifo_info(U8 FIFO)
+[v _si446x_fifo_info `(v ~T0 @X0 1 ef1`uc ]
+"306
+[; ;Si4463/si446x_api_lib.c: 306: {
+{
+[e :U _si446x_fifo_info ]
+"305
+[; ;Si4463/si446x_api_lib.c: 305: void si446x_fifo_info(U8 FIFO)
+[v _FIFO `uc ~T0 @X0 1 r1 ]
+"306
+[; ;Si4463/si446x_api_lib.c: 306: {
+[f ]
+"307
+[; ;Si4463/si446x_api_lib.c: 307:     Pro2Cmd[0] = 0x15;
+[e = *U + &U _Pro2Cmd * -> -> -> 0 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux -> -> 21 `i `uc ]
+"308
+[; ;Si4463/si446x_api_lib.c: 308:     Pro2Cmd[1] = FIFO;
+[e = *U + &U _Pro2Cmd * -> -> -> 1 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux _FIFO ]
+"310
+[; ;Si4463/si446x_api_lib.c: 310:     radio_comm_SendCmdGetResp( 2,
+[e ( _radio_comm_SendCmdGetResp (4 , , , -> -> 2 `i `uc &U _Pro2Cmd -> -> 2 `i `uc &U _Pro2Cmd ]
+"315
+[; ;Si4463/si446x_api_lib.c: 315:     Si446xCmd.FIFO_INFO.RX_FIFO_COUNT = Pro2Cmd[0];
+[e = . . _Si446xCmd 6 0 *U + &U _Pro2Cmd * -> -> -> 0 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux ]
+"316
+[; ;Si4463/si446x_api_lib.c: 316:     Si446xCmd.FIFO_INFO.TX_FIFO_SPACE = Pro2Cmd[1];
+[e = . . _Si446xCmd 6 1 *U + &U _Pro2Cmd * -> -> -> 1 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux ]
+"317
+[; ;Si4463/si446x_api_lib.c: 317: }
+[e :UE 187 ]
+}
+"325
+[; ;Si4463/si446x_api_lib.c: 325: void si446x_write_tx_fifo(U8 numBytes, U8* pTxData)
+[v _si446x_write_tx_fifo `(v ~T0 @X0 1 ef2`uc`*uc ]
+"326
+[; ;Si4463/si446x_api_lib.c: 326: {
+{
+[e :U _si446x_write_tx_fifo ]
+"325
+[; ;Si4463/si446x_api_lib.c: 325: void si446x_write_tx_fifo(U8 numBytes, U8* pTxData)
+[v _numBytes `uc ~T0 @X0 1 r1 ]
+[v _pTxData `*uc ~T0 @X0 1 r2 ]
+"326
+[; ;Si4463/si446x_api_lib.c: 326: {
+[f ]
+"327
+[; ;Si4463/si446x_api_lib.c: 327:   radio_comm_WriteData( 0x66, 0, numBytes, pTxData );
+[e ( _radio_comm_WriteData (4 , , , -> -> 102 `i `uc -> -> 0 `i `uc _numBytes _pTxData ]
+"328
+[; ;Si4463/si446x_api_lib.c: 328: }
+[e :UE 188 ]
+}
+"336
+[; ;Si4463/si446x_api_lib.c: 336: void si446x_read_rx_fifo(U8 numBytes, U8* pRxData)
+[v _si446x_read_rx_fifo `(v ~T0 @X0 1 ef2`uc`*uc ]
+"337
+[; ;Si4463/si446x_api_lib.c: 337: {
+{
+[e :U _si446x_read_rx_fifo ]
+"336
+[; ;Si4463/si446x_api_lib.c: 336: void si446x_read_rx_fifo(U8 numBytes, U8* pRxData)
+[v _numBytes `uc ~T0 @X0 1 r1 ]
+[v _pRxData `*uc ~T0 @X0 1 r2 ]
+"337
+[; ;Si4463/si446x_api_lib.c: 337: {
+[f ]
+"338
+[; ;Si4463/si446x_api_lib.c: 338:   radio_comm_ReadData( 0x77, 0, numBytes, pRxData );
+[e ( _radio_comm_ReadData (4 , , , -> -> 119 `i `uc -> -> 0 `i `uc _numBytes _pRxData ]
+"339
+[; ;Si4463/si446x_api_lib.c: 339: }
+[e :UE 189 ]
+}
+"348
+[; ;Si4463/si446x_api_lib.c: 348: void si446x_get_property(U8 GROUP, U8 NUM_PROPS, U8 START_PROP)
+[v _si446x_get_property `(v ~T0 @X0 1 ef3`uc`uc`uc ]
+"349
+[; ;Si4463/si446x_api_lib.c: 349: {
+{
+[e :U _si446x_get_property ]
+"348
+[; ;Si4463/si446x_api_lib.c: 348: void si446x_get_property(U8 GROUP, U8 NUM_PROPS, U8 START_PROP)
+[v _GROUP `uc ~T0 @X0 1 r1 ]
+[v _NUM_PROPS `uc ~T0 @X0 1 r2 ]
+[v _START_PROP `uc ~T0 @X0 1 r3 ]
+"349
+[; ;Si4463/si446x_api_lib.c: 349: {
+[f ]
+"350
+[; ;Si4463/si446x_api_lib.c: 350:     Pro2Cmd[0] = 0x12;
+[e = *U + &U _Pro2Cmd * -> -> -> 0 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux -> -> 18 `i `uc ]
+"351
+[; ;Si4463/si446x_api_lib.c: 351:     Pro2Cmd[1] = GROUP;
+[e = *U + &U _Pro2Cmd * -> -> -> 1 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux _GROUP ]
+"352
+[; ;Si4463/si446x_api_lib.c: 352:     Pro2Cmd[2] = NUM_PROPS;
+[e = *U + &U _Pro2Cmd * -> -> -> 2 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux _NUM_PROPS ]
+"353
+[; ;Si4463/si446x_api_lib.c: 353:     Pro2Cmd[3] = START_PROP;
+[e = *U + &U _Pro2Cmd * -> -> -> 3 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux _START_PROP ]
+"355
+[; ;Si4463/si446x_api_lib.c: 355:     radio_comm_SendCmdGetResp( 4,
+[e ( _radio_comm_SendCmdGetResp (4 , , , -> -> 4 `i `uc &U _Pro2Cmd *U + &U _Pro2Cmd * -> -> -> 2 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux &U _Pro2Cmd ]
+"360
+[; ;Si4463/si446x_api_lib.c: 360:     Si446xCmd.GET_PROPERTY.DATA[0 ] = Pro2Cmd[0];
+[e = *U + &U . . _Si446xCmd 4 0 * -> -> -> 0 `i `ui `ux -> -> # *U &U . . _Si446xCmd 4 0 `ui `ux *U + &U _Pro2Cmd * -> -> -> 0 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux ]
+"361
+[; ;Si4463/si446x_api_lib.c: 361:     Si446xCmd.GET_PROPERTY.DATA[1 ] = Pro2Cmd[1];
+[e = *U + &U . . _Si446xCmd 4 0 * -> -> -> 1 `i `ui `ux -> -> # *U &U . . _Si446xCmd 4 0 `ui `ux *U + &U _Pro2Cmd * -> -> -> 1 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux ]
+"362
+[; ;Si4463/si446x_api_lib.c: 362:     Si446xCmd.GET_PROPERTY.DATA[2 ] = Pro2Cmd[2];
+[e = *U + &U . . _Si446xCmd 4 0 * -> -> -> 2 `i `ui `ux -> -> # *U &U . . _Si446xCmd 4 0 `ui `ux *U + &U _Pro2Cmd * -> -> -> 2 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux ]
+"363
+[; ;Si4463/si446x_api_lib.c: 363:     Si446xCmd.GET_PROPERTY.DATA[3 ] = Pro2Cmd[3];
+[e = *U + &U . . _Si446xCmd 4 0 * -> -> -> 3 `i `ui `ux -> -> # *U &U . . _Si446xCmd 4 0 `ui `ux *U + &U _Pro2Cmd * -> -> -> 3 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux ]
+"364
+[; ;Si4463/si446x_api_lib.c: 364:     Si446xCmd.GET_PROPERTY.DATA[4 ] = Pro2Cmd[4];
+[e = *U + &U . . _Si446xCmd 4 0 * -> -> -> 4 `i `ui `ux -> -> # *U &U . . _Si446xCmd 4 0 `ui `ux *U + &U _Pro2Cmd * -> -> -> 4 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux ]
+"365
+[; ;Si4463/si446x_api_lib.c: 365:     Si446xCmd.GET_PROPERTY.DATA[5 ] = Pro2Cmd[5];
+[e = *U + &U . . _Si446xCmd 4 0 * -> -> -> 5 `i `ui `ux -> -> # *U &U . . _Si446xCmd 4 0 `ui `ux *U + &U _Pro2Cmd * -> -> -> 5 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux ]
+"366
+[; ;Si4463/si446x_api_lib.c: 366:     Si446xCmd.GET_PROPERTY.DATA[6 ] = Pro2Cmd[6];
+[e = *U + &U . . _Si446xCmd 4 0 * -> -> -> 6 `i `ui `ux -> -> # *U &U . . _Si446xCmd 4 0 `ui `ux *U + &U _Pro2Cmd * -> -> -> 6 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux ]
+"367
+[; ;Si4463/si446x_api_lib.c: 367:     Si446xCmd.GET_PROPERTY.DATA[7 ] = Pro2Cmd[7];
+[e = *U + &U . . _Si446xCmd 4 0 * -> -> -> 7 `i `ui `ux -> -> # *U &U . . _Si446xCmd 4 0 `ui `ux *U + &U _Pro2Cmd * -> -> -> 7 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux ]
+"368
+[; ;Si4463/si446x_api_lib.c: 368:     Si446xCmd.GET_PROPERTY.DATA[8 ] = Pro2Cmd[8];
+[e = *U + &U . . _Si446xCmd 4 0 * -> -> -> 8 `i `ui `ux -> -> # *U &U . . _Si446xCmd 4 0 `ui `ux *U + &U _Pro2Cmd * -> -> -> 8 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux ]
+"369
+[; ;Si4463/si446x_api_lib.c: 369:     Si446xCmd.GET_PROPERTY.DATA[9 ] = Pro2Cmd[9];
+[e = *U + &U . . _Si446xCmd 4 0 * -> -> -> 9 `i `ui `ux -> -> # *U &U . . _Si446xCmd 4 0 `ui `ux *U + &U _Pro2Cmd * -> -> -> 9 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux ]
+"370
+[; ;Si4463/si446x_api_lib.c: 370:     Si446xCmd.GET_PROPERTY.DATA[10] = Pro2Cmd[10];
+[e = *U + &U . . _Si446xCmd 4 0 * -> -> -> 10 `i `ui `ux -> -> # *U &U . . _Si446xCmd 4 0 `ui `ux *U + &U _Pro2Cmd * -> -> -> 10 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux ]
+"371
+[; ;Si4463/si446x_api_lib.c: 371:     Si446xCmd.GET_PROPERTY.DATA[11] = Pro2Cmd[11];
+[e = *U + &U . . _Si446xCmd 4 0 * -> -> -> 11 `i `ui `ux -> -> # *U &U . . _Si446xCmd 4 0 `ui `ux *U + &U _Pro2Cmd * -> -> -> 11 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux ]
+"372
+[; ;Si4463/si446x_api_lib.c: 372:     Si446xCmd.GET_PROPERTY.DATA[12] = Pro2Cmd[12];
+[e = *U + &U . . _Si446xCmd 4 0 * -> -> -> 12 `i `ui `ux -> -> # *U &U . . _Si446xCmd 4 0 `ui `ux *U + &U _Pro2Cmd * -> -> -> 12 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux ]
+"373
+[; ;Si4463/si446x_api_lib.c: 373:     Si446xCmd.GET_PROPERTY.DATA[13] = Pro2Cmd[13];
+[e = *U + &U . . _Si446xCmd 4 0 * -> -> -> 13 `i `ui `ux -> -> # *U &U . . _Si446xCmd 4 0 `ui `ux *U + &U _Pro2Cmd * -> -> -> 13 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux ]
+"374
+[; ;Si4463/si446x_api_lib.c: 374:     Si446xCmd.GET_PROPERTY.DATA[14] = Pro2Cmd[14];
+[e = *U + &U . . _Si446xCmd 4 0 * -> -> -> 14 `i `ui `ux -> -> # *U &U . . _Si446xCmd 4 0 `ui `ux *U + &U _Pro2Cmd * -> -> -> 14 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux ]
+"375
+[; ;Si4463/si446x_api_lib.c: 375:     Si446xCmd.GET_PROPERTY.DATA[15] = Pro2Cmd[15];
+[e = *U + &U . . _Si446xCmd 4 0 * -> -> -> 15 `i `ui `ux -> -> # *U &U . . _Si446xCmd 4 0 `ui `ux *U + &U _Pro2Cmd * -> -> -> 15 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux ]
+"376
+[; ;Si4463/si446x_api_lib.c: 376: }
+[e :UE 190 ]
+}
+"378
+[; ;Si4463/si446x_api_lib.c: 378: void si446x_func_info(void)
+[v _si446x_func_info `(v ~T0 @X0 1 ef ]
+"379
+[; ;Si4463/si446x_api_lib.c: 379: {
+{
+[e :U _si446x_func_info ]
+[f ]
+"380
+[; ;Si4463/si446x_api_lib.c: 380:     Pro2Cmd[0] = 0x10;
+[e = *U + &U _Pro2Cmd * -> -> -> 0 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux -> -> 16 `i `uc ]
+"382
+[; ;Si4463/si446x_api_lib.c: 382:     radio_comm_SendCmdGetResp( 1,
+[e ( _radio_comm_SendCmdGetResp (4 , , , -> -> 1 `i `uc &U _Pro2Cmd -> -> 6 `i `uc &U _Pro2Cmd ]
+"387
+[; ;Si4463/si446x_api_lib.c: 387:     Si446xCmd.FUNC_INFO.REVEXT = Pro2Cmd[0];
+[e = . . _Si446xCmd 3 0 *U + &U _Pro2Cmd * -> -> -> 0 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux ]
+"388
+[; ;Si4463/si446x_api_lib.c: 388:     Si446xCmd.FUNC_INFO.REVBRANCH = Pro2Cmd[1];
+[e = . . _Si446xCmd 3 1 *U + &U _Pro2Cmd * -> -> -> 1 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux ]
+"389
+[; ;Si4463/si446x_api_lib.c: 389:     Si446xCmd.FUNC_INFO.REVINT = Pro2Cmd[2];
+[e = . . _Si446xCmd 3 2 *U + &U _Pro2Cmd * -> -> -> 2 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux ]
+"390
+[; ;Si4463/si446x_api_lib.c: 390:     Si446xCmd.FUNC_INFO.FUNC = Pro2Cmd[5];
+[e = . . _Si446xCmd 3 3 *U + &U _Pro2Cmd * -> -> -> 5 `i `ui `ux -> -> # *U &U _Pro2Cmd `ui `ux ]
+"391
+[; ;Si4463/si446x_api_lib.c: 391: }
+[e :UE 191 ]
+}
