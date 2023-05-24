@@ -90,7 +90,7 @@ if(TRUE == gRadio_CheckReceived()) {
 
 ## 모듈제작
 
-![board](/board.png)
+![board](/board.jpg)
 
 ## 송수신 테스트
 
