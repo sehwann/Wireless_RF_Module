@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 16F883 ]
 [d frameptr 0 ]
-"59 C:\Users\PETABREW001\Desktop\pic16f883_si4463\PIC16F883_Si4463_TxRx\Si4463/radio.c
+"59 C:\Users\PETABREW001\Desktop\PIC16F883_Si4463_TxRx\Si4463/radio.c
 [e E1544 . `uc
 SI446X_SUCCESS 0
 SI446X_NO_PATCH 1
@@ -11,7 +11,7 @@ SI446X_CTS_TIMEOUT 2
 SI446X_PATCH_FAIL 3
 SI446X_COMMAND_ERROR 4
 ]
-"77 C:\Users\PETABREW001\Desktop\pic16f883_si4463\PIC16F883_Si4463_TxRx\Si4463/si446x_api_lib.c
+"77 C:\Users\PETABREW001\Desktop\PIC16F883_Si4463_TxRx\Si4463/si446x_api_lib.c
 [e E1544 . `uc
 SI446X_SUCCESS 0
 SI446X_NO_PATCH 1
@@ -35,21 +35,15 @@ SI446X_COMMAND_ERROR 4
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"33 C:\Users\PETABREW001\Desktop\pic16f883_si4463\PIC16F883_Si4463_TxRx\F883_Si4463_main.c
+"50 C:\Users\PETABREW001\Desktop\PIC16F883_Si4463_TxRx\F883_Si4463_main.c
 [v _main main `(v  1 e 1 0 ]
-"67
-[v _UART_ISR UART_ISR `II(v  1 e 1 0 ]
-"35 C:\Users\PETABREW001\Desktop\pic16f883_si4463\PIC16F883_Si4463_TxRx\Si4463/radio.c
+"35 C:\Users\PETABREW001\Desktop\PIC16F883_Si4463_TxRx\Si4463/radio.c
 [v _vRadio_PowerUp vRadio_PowerUp `(v  1 e 1 0 ]
 "52
 [v _vRadio_Init vRadio_Init `(v  1 e 1 0 ]
-"76
-[v _bRadio_Check_Tx_RX bRadio_Check_Tx_RX `(uc  1 e 1 0 ]
-"132
-[v _vRadio_StartRX vRadio_StartRX `(v  1 e 1 0 ]
 "154
 [v _vRadio_StartTx_Variable_Packet vRadio_StartTx_Variable_Packet `(v  1 e 1 0 ]
-"43 C:\Users\PETABREW001\Desktop\pic16f883_si4463\PIC16F883_Si4463_TxRx\Si4463/radio_comm.c
+"43 C:\Users\PETABREW001\Desktop\PIC16F883_Si4463_TxRx\Si4463/radio_comm.c
 [v _radio_comm_GetResp radio_comm_GetResp `(uc  1 e 1 0 ]
 "86
 [v _radio_comm_SendCmd radio_comm_SendCmd `(v  1 e 1 0 ]
@@ -63,7 +57,7 @@ SI446X_COMMAND_ERROR 4
 [v _radio_comm_ClearCTS radio_comm_ClearCTS `(v  1 e 1 0 ]
 "175
 [v _radio_comm_SendCmdGetResp radio_comm_SendCmdGetResp `(uc  1 e 1 0 ]
-"3 C:\Users\PETABREW001\Desktop\pic16f883_si4463\PIC16F883_Si4463_TxRx\Si4463/radio_hal.c
+"3 C:\Users\PETABREW001\Desktop\PIC16F883_Si4463_TxRx\Si4463/radio_hal.c
 [v _radio_hal_AssertShutdown radio_hal_AssertShutdown `(v  1 e 1 0 ]
 "7
 [v _radio_hal_DeassertShutdown radio_hal_DeassertShutdown `(v  1 e 1 0 ]
@@ -81,7 +75,7 @@ SI446X_COMMAND_ERROR 4
 [v _radio_hal_SpiWriteData radio_hal_SpiWriteData `(v  1 e 1 0 ]
 "38
 [v _radio_hal_SpiReadData radio_hal_SpiReadData `(v  1 e 1 0 ]
-"23 C:\Users\PETABREW001\Desktop\pic16f883_si4463\PIC16F883_Si4463_TxRx\Si4463/si446x_api_lib.c
+"23 C:\Users\PETABREW001\Desktop\PIC16F883_Si4463_TxRx\Si4463/si446x_api_lib.c
 [v _si446x_reset si446x_reset `(v  1 e 1 0 ]
 "57
 [v _si446x_configuration_init si446x_configuration_init `(uc  1 e 1 0 ]
@@ -99,14 +93,13 @@ SI446X_COMMAND_ERROR 4
 [v _si446x_write_tx_fifo si446x_write_tx_fifo `(v  1 e 1 0 ]
 "336
 [v _si446x_read_rx_fifo si446x_read_rx_fifo `(v  1 e 1 0 ]
-"17 C:\Users\PETABREW001\Desktop\pic16f883_si4463\PIC16F883_Si4463_TxRx\src/chipset.c
+"17 C:\Users\PETABREW001\Desktop\PIC16F883_Si4463_TxRx\src/chipset.c
 [v _UART_TxChar UART_TxChar `(v  1 e 1 0 ]
-[v i1_UART_TxChar UART_TxChar `(v  1 e 1 0 ]
 "40
 [v _SPI_Write SPI_Write `(v  1 e 1 0 ]
 "60
 [v _SPI_Read SPI_Read `(uc  1 e 1 0 ]
-"18 C:\Users\PETABREW001\Desktop\pic16f883_si4463\PIC16F883_Si4463_TxRx\src/main_pic16f883.c
+"18 C:\Users\PETABREW001\Desktop\PIC16F883_Si4463_TxRx\src/main_pic16f883.c
 [v _Systick_Init Systick_Init `(v  1 e 1 0 ]
 "24
 [v _UART_Init UART_Init `(uc  1 e 1 0 ]
@@ -118,7 +111,7 @@ SI446X_COMMAND_ERROR 4
 [v _Global_Interrupt Global_Interrupt `(v  1 e 1 0 ]
 "87
 [v _PIC16F883_SI4463_INIT PIC16F883_SI4463_INIT `(v  1 e 1 0 ]
-[s S457 . 1 `uc 1 RBIF 1 0 :1:0 
+[s S416 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INTF 1 0 :1:1 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 RBIE 1 0 :1:3 
@@ -128,41 +121,30 @@ SI446X_COMMAND_ERROR 4
 `uc 1 GIE 1 0 :1:7 
 ]
 "404 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f883.h
-[s S466 . 1 `uc 1 . 1 0 :2:0 
+[s S425 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 TMR0IE 1 0 :1:5 
 ]
-[u S471 . 1 `S457 1 . 1 0 `S466 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES471  1 e 1 @11 ]
-[s S53 . 1 `uc 1 TMR1IF 1 0 :1:0 
-`uc 1 TMR2IF 1 0 :1:1 
-`uc 1 CCP1IF 1 0 :1:2 
-`uc 1 SSPIF 1 0 :1:3 
-`uc 1 TXIF 1 0 :1:4 
-`uc 1 RCIF 1 0 :1:5 
-`uc 1 ADIF 1 0 :1:6 
-]
-"475
-[u S61 . 1 `S53 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES61  1 e 1 @12 ]
+[u S430 . 1 `S416 1 . 1 0 `S425 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES430  1 e 1 @11 ]
 "765
 [v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
-[s S360 . 1 `uc 1 SSPM 1 0 :4:0 
+[s S319 . 1 `uc 1 SSPM 1 0 :4:0 
 `uc 1 CKP 1 0 :1:4 
 `uc 1 SSPEN 1 0 :1:5 
 `uc 1 SSPOV 1 0 :1:6 
 `uc 1 WCOL 1 0 :1:7 
 ]
 "792
-[s S366 . 1 `uc 1 SSPM0 1 0 :1:0 
+[s S325 . 1 `uc 1 SSPM0 1 0 :1:0 
 `uc 1 SSPM1 1 0 :1:1 
 `uc 1 SSPM2 1 0 :1:2 
 `uc 1 SSPM3 1 0 :1:3 
 ]
-[u S371 . 1 `S360 1 . 1 0 `S366 1 . 1 0 ]
-[v _SSPCONbits SSPCONbits `VES371  1 e 1 @20 ]
-[s S276 . 1 `uc 1 RX9D 1 0 :1:0 
+[u S330 . 1 `S319 1 . 1 0 `S325 1 . 1 0 ]
+[v _SSPCONbits SSPCONbits `VES330  1 e 1 @20 ]
+[s S235 . 1 `uc 1 RX9D 1 0 :1:0 
 `uc 1 OERR 1 0 :1:1 
 `uc 1 FERR 1 0 :1:2 
 `uc 1 ADDEN 1 0 :1:3 
@@ -172,23 +154,21 @@ SI446X_COMMAND_ERROR 4
 `uc 1 SPEN 1 0 :1:7 
 ]
 "990
-[s S285 . 1 `uc 1 RCD8 1 0 :1:0 
+[s S244 . 1 `uc 1 RCD8 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 RC9 1 0 :1:6 
 ]
-[s S289 . 1 `uc 1 . 1 0 :6:0 
+[s S248 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 nRC8 1 0 :1:6 
 ]
-[s S292 . 1 `uc 1 . 1 0 :6:0 
+[s S251 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RC8_9 1 0 :1:6 
 ]
-[u S295 . 1 `S276 1 . 1 0 `S285 1 . 1 0 `S289 1 . 1 0 `S292 1 . 1 0 ]
-[v _RCSTAbits RCSTAbits `VES295  1 e 1 @24 ]
+[u S254 . 1 `S235 1 . 1 0 `S244 1 . 1 0 `S248 1 . 1 0 `S251 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES254  1 e 1 @24 ]
 "1055
 [v _TXREG TXREG `VEuc  1 e 1 @25 ]
-"1062
-[v _RCREG RCREG `VEuc  1 e 1 @26 ]
-[s S339 . 1 `uc 1 TRISA0 1 0 :1:0 
+[s S298 . 1 `uc 1 TRISA0 1 0 :1:0 
 `uc 1 TRISA1 1 0 :1:1 
 `uc 1 TRISA2 1 0 :1:2 
 `uc 1 TRISA3 1 0 :1:3 
@@ -198,9 +178,9 @@ SI446X_COMMAND_ERROR 4
 `uc 1 TRISA7 1 0 :1:7 
 ]
 "1355
-[u S348 . 1 `S339 1 . 1 0 ]
-[v _TRISAbits TRISAbits `VES348  1 e 1 @133 ]
-[s S436 . 1 `uc 1 TRISB0 1 0 :1:0 
+[u S307 . 1 `S298 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES307  1 e 1 @133 ]
+[s S395 . 1 `uc 1 TRISB0 1 0 :1:0 
 `uc 1 TRISB1 1 0 :1:1 
 `uc 1 TRISB2 1 0 :1:2 
 `uc 1 TRISB3 1 0 :1:3 
@@ -210,9 +190,9 @@ SI446X_COMMAND_ERROR 4
 `uc 1 TRISB7 1 0 :1:7 
 ]
 "1417
-[u S445 . 1 `S436 1 . 1 0 ]
-[v _TRISBbits TRISBbits `VES445  1 e 1 @134 ]
-[s S255 . 1 `uc 1 TRISC0 1 0 :1:0 
+[u S404 . 1 `S395 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES404  1 e 1 @134 ]
+[s S214 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -222,9 +202,9 @@ SI446X_COMMAND_ERROR 4
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "1479
-[u S264 . 1 `S255 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES264  1 e 1 @135 ]
-[s S320 . 1 `uc 1 TMR1IE 1 0 :1:0 
+[u S223 . 1 `S214 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES223  1 e 1 @135 ]
+[s S279 . 1 `uc 1 TMR1IE 1 0 :1:0 
 `uc 1 TMR2IE 1 0 :1:1 
 `uc 1 CCP1IE 1 0 :1:2 
 `uc 1 SSPIE 1 0 :1:3 
@@ -233,11 +213,11 @@ SI446X_COMMAND_ERROR 4
 `uc 1 ADIE 1 0 :1:6 
 ]
 "1561
-[u S328 . 1 `S320 1 . 1 0 ]
-[v _PIE1bits PIE1bits `VES328  1 e 1 @140 ]
+[u S287 . 1 `S279 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES287  1 e 1 @140 ]
 "1705
 [v _OSCCON OSCCON `VEuc  1 e 1 @143 ]
-[s S103 . 1 `uc 1 BF 1 0 :1:0 
+[s S62 . 1 `uc 1 BF 1 0 :1:0 
 `uc 1 UA 1 0 :1:1 
 `uc 1 R_nW 1 0 :1:2 
 `uc 1 S 1 0 :1:3 
@@ -247,40 +227,40 @@ SI446X_COMMAND_ERROR 4
 `uc 1 SMP 1 0 :1:7 
 ]
 "2074
-[s S112 . 1 `uc 1 . 1 0 :2:0 
+[s S71 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D 1 0 :1:5 
 ]
-[s S117 . 1 `uc 1 . 1 0 :2:0 
+[s S76 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 I2C_READ 1 0 :1:2 
 `uc 1 I2C_START 1 0 :1:3 
 `uc 1 I2C_STOP 1 0 :1:4 
 `uc 1 I2C_DATA 1 0 :1:5 
 ]
-[s S123 . 1 `uc 1 . 1 0 :2:0 
+[s S82 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nW 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nA 1 0 :1:5 
 ]
-[s S128 . 1 `uc 1 . 1 0 :2:0 
+[s S87 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nWRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nADDRESS 1 0 :1:5 
 ]
-[s S133 . 1 `uc 1 . 1 0 :2:0 
+[s S92 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_W 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D_A 1 0 :1:5 
 ]
-[s S138 . 1 `uc 1 . 1 0 :2:0 
+[s S97 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 READ_WRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 DATA_ADDRESS 1 0 :1:5 
 ]
-[u S143 . 1 `S103 1 . 1 0 `S112 1 . 1 0 `S117 1 . 1 0 `S123 1 . 1 0 `S128 1 . 1 0 `S133 1 . 1 0 `S138 1 . 1 0 ]
-[v _SSPSTATbits SSPSTATbits `VES143  1 e 1 @148 ]
-[s S217 . 1 `uc 1 TX9D 1 0 :1:0 
+[u S102 . 1 `S62 1 . 1 0 `S71 1 . 1 0 `S76 1 . 1 0 `S82 1 . 1 0 `S87 1 . 1 0 `S92 1 . 1 0 `S97 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES102  1 e 1 @148 ]
+[s S176 . 1 `uc 1 TX9D 1 0 :1:0 
 `uc 1 TRMT 1 0 :1:1 
 `uc 1 BRGH 1 0 :1:2 
 `uc 1 SENDB 1 0 :1:3 
@@ -290,15 +270,15 @@ SI446X_COMMAND_ERROR 4
 `uc 1 CSRC 1 0 :1:7 
 ]
 "2425
-[s S226 . 1 `uc 1 TXD8 1 0 :1:0 
+[s S185 . 1 `uc 1 TXD8 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 nTX8 1 0 :1:6 
 ]
-[s S230 . 1 `uc 1 . 1 0 :6:0 
+[s S189 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 TX8_9 1 0 :1:6 
 ]
-[u S233 . 1 `S217 1 . 1 0 `S226 1 . 1 0 `S230 1 . 1 0 ]
-[v _TXSTAbits TXSTAbits `VES233  1 e 1 @152 ]
+[u S192 . 1 `S176 1 . 1 0 `S185 1 . 1 0 `S189 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES192  1 e 1 @152 ]
 "2485
 [v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
 "3914
@@ -311,141 +291,133 @@ SI446X_COMMAND_ERROR 4
 [v _TXIF TXIF `VEb  1 e 0 @100 ]
 "358 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\doprnt.c
 [v _dpowers dpowers `DC[5]ui  1 s 10 dpowers ]
-"22 C:\Users\PETABREW001\Desktop\pic16f883_si4463\PIC16F883_Si4463_TxRx\F883_Si4463_main.c
+"22 C:\Users\PETABREW001\Desktop\PIC16F883_Si4463_TxRx\F883_Si4463_main.c
 [v _Radio_ChannelNumber Radio_ChannelNumber `uc  1 e 1 0 ]
-"23
-[v _customRadioPacket2 customRadioPacket2 `[64]uc  1 e 64 0 ]
 "24
 [v _uartDataReceived uartDataReceived `VEuc  1 e 1 0 ]
-"19 C:\Users\PETABREW001\Desktop\pic16f883_si4463\PIC16F883_Si4463_TxRx\Si4463/radio.c
+"19 C:\Users\PETABREW001\Desktop\PIC16F883_Si4463_TxRx\Si4463/radio.c
 [v _Radio_Configuration_Data_Array Radio_Configuration_Data_Array `DC[970]uc  1 e 970 0 ]
-[s S562 . 71 `*.25DCuc 1 Radio_ConfigurationArray 2 0 `uc 1 Radio_ChannelNumber 1 2 `uc 1 Radio_PacketLength 1 3 `uc 1 Radio_State_After_Power_Up 1 4 `us 1 Radio_Delay_Cnt_After_Reset 2 5 `[64]uc 1 Radio_CustomPayload 64 7 ]
+[s S521 . 71 `*.25DCuc 1 Radio_ConfigurationArray 2 0 `uc 1 Radio_ChannelNumber 1 2 `uc 1 Radio_PacketLength 1 3 `uc 1 Radio_State_After_Power_Up 1 4 `us 1 Radio_Delay_Cnt_After_Reset 2 5 `[64]uc 1 Radio_CustomPayload 64 7 ]
 "20
-[v _RadioConfiguration RadioConfiguration `DCS562  1 e 71 0 ]
+[v _RadioConfiguration RadioConfiguration `DCS521  1 e 71 0 ]
 "22
 [v _customRadioPacket customRadioPacket `[64]uc  1 e 64 0 ]
-"25 C:\Users\PETABREW001\Desktop\pic16f883_si4463\PIC16F883_Si4463_TxRx\Si4463/radio_comm.c
+"25 C:\Users\PETABREW001\Desktop\PIC16F883_Si4463_TxRx\Si4463/radio_comm.c
 [v _ctsWentHigh ctsWentHigh `uc  1 e 1 0 ]
-[s S595 si446x_reply_GENERIC_map 16 `[16]uc 1 REPLY 16 0 ]
-"14 C:\Users\PETABREW001\Desktop\pic16f883_si4463\PIC16F883_Si4463_TxRx\Si4463/si446x_api_lib.c
-[s S597 si446x_reply_PART_INFO_map 8 `uc 1 CHIPREV 1 0 `us 1 PART 2 1 `uc 1 PBUILD 1 3 `us 1 ID 2 4 `uc 1 CUSTOMER 1 6 `uc 1 ROMID 1 7 ]
-[s S604 si446x_reply_FUNC_INFO_map 4 `uc 1 REVEXT 1 0 `uc 1 REVBRANCH 1 1 `uc 1 REVINT 1 2 `uc 1 FUNC 1 3 ]
-[s S609 si446x_reply_GET_PROPERTY_map 16 `[16]uc 1 DATA 16 0 ]
-[s S611 si446x_reply_GPIO_PIN_CFG_map 7 `[4]uc 1 GPIO 4 0 `uc 1 NIRQ 1 4 `uc 1 SDO 1 5 `uc 1 GEN_CONFIG 1 6 ]
-[s S616 si446x_reply_FIFO_INFO_map 2 `uc 1 RX_FIFO_COUNT 1 0 `uc 1 TX_FIFO_SPACE 1 1 ]
-[s S619 si446x_reply_GET_INT_STATUS_map 8 `uc 1 INT_PEND 1 0 `uc 1 INT_STATUS 1 1 `uc 1 PH_PEND 1 2 `uc 1 PH_STATUS 1 3 `uc 1 MODEM_PEND 1 4 `uc 1 MODEM_STATUS 1 5 `uc 1 CHIP_PEND 1 6 `uc 1 CHIP_STATUS 1 7 ]
-[s S628 si446x_reply_REQUEST_DEVICE_STATE_map 2 `uc 1 CURR_STATE 1 0 `uc 1 CURRENT_CHANNEL 1 1 ]
-[s S631 si446x_reply_READ_CMD_BUFF_map 16 `[16]uc 1 BYTE 16 0 ]
-[s S633 si446x_reply_FRR_A_READ_map 4 `uc 1 FRR_A_VALUE 1 0 `uc 1 FRR_B_VALUE 1 1 `uc 1 FRR_C_VALUE 1 2 `uc 1 FRR_D_VALUE 1 3 ]
-[s S638 si446x_reply_FRR_B_READ_map 4 `uc 1 FRR_B_VALUE 1 0 `uc 1 FRR_C_VALUE 1 1 `uc 1 FRR_D_VALUE 1 2 `uc 1 FRR_A_VALUE 1 3 ]
-[s S643 si446x_reply_FRR_C_READ_map 4 `uc 1 FRR_C_VALUE 1 0 `uc 1 FRR_D_VALUE 1 1 `uc 1 FRR_A_VALUE 1 2 `uc 1 FRR_B_VALUE 1 3 ]
-[s S648 si446x_reply_FRR_D_READ_map 4 `uc 1 FRR_D_VALUE 1 0 `uc 1 FRR_A_VALUE 1 1 `uc 1 FRR_B_VALUE 1 2 `uc 1 FRR_C_VALUE 1 3 ]
-[s S653 si446x_reply_IRCAL_MANUAL_map 2 `uc 1 IRCAL_AMP_REPLY 1 0 `uc 1 IRCAL_PH_REPLY 1 1 ]
-[s S656 si446x_reply_PACKET_INFO_map 2 `us 1 LENGTH 2 0 ]
-[s S658 si446x_reply_GET_MODEM_STATUS_map 8 `uc 1 MODEM_PEND 1 0 `uc 1 MODEM_STATUS 1 1 `uc 1 CURR_RSSI 1 2 `uc 1 LATCH_RSSI 1 3 `uc 1 ANT1_RSSI 1 4 `uc 1 ANT2_RSSI 1 5 `us 1 AFC_FREQ_OFFSET 2 6 ]
-[s S666 si446x_reply_READ_RX_FIFO_map 2 `[2]uc 1 DATA 2 0 ]
-[s S668 si446x_reply_GET_ADC_READING_map 6 `us 1 GPIO_ADC 2 0 `us 1 BATTERY_ADC 2 2 `us 1 TEMP_ADC 2 4 ]
-[s S672 si446x_reply_GET_PH_STATUS_map 2 `uc 1 PH_PEND 1 0 `uc 1 PH_STATUS 1 1 ]
-[s S675 si446x_reply_GET_CHIP_STATUS_map 4 `uc 1 CHIP_PEND 1 0 `uc 1 CHIP_STATUS 1 1 `uc 1 CMD_ERR_STATUS 1 2 `uc 1 CMD_ERR_CMD_ID 1 3 ]
-[u S680 si446x_cmd_reply_union 16 `[16]uc 1 RAW 16 0 `S595 1 GENERIC 16 0 `S597 1 PART_INFO 8 0 `S604 1 FUNC_INFO 4 0 `S609 1 GET_PROPERTY 16 0 `S611 1 GPIO_PIN_CFG 7 0 `S616 1 FIFO_INFO 2 0 `S619 1 GET_INT_STATUS 8 0 `S628 1 REQUEST_DEVICE_STATE 2 0 `S631 1 READ_CMD_BUFF 16 0 `S633 1 FRR_A_READ 4 0 `S638 1 FRR_B_READ 4 0 `S643 1 FRR_C_READ 4 0 `S648 1 FRR_D_READ 4 0 `S653 1 IRCAL_MANUAL 2 0 `S656 1 PACKET_INFO 2 0 `S658 1 GET_MODEM_STATUS 8 0 `S666 1 READ_RX_FIFO 2 0 `S668 1 GET_ADC_READING 6 0 `S672 1 GET_PH_STATUS 2 0 `S675 1 GET_CHIP_STATUS 4 0 ]
-[v _Si446xCmd Si446xCmd `S680  1 e 16 0 ]
+[s S554 si446x_reply_GENERIC_map 16 `[16]uc 1 REPLY 16 0 ]
+"14 C:\Users\PETABREW001\Desktop\PIC16F883_Si4463_TxRx\Si4463/si446x_api_lib.c
+[s S556 si446x_reply_PART_INFO_map 8 `uc 1 CHIPREV 1 0 `us 1 PART 2 1 `uc 1 PBUILD 1 3 `us 1 ID 2 4 `uc 1 CUSTOMER 1 6 `uc 1 ROMID 1 7 ]
+[s S563 si446x_reply_FUNC_INFO_map 4 `uc 1 REVEXT 1 0 `uc 1 REVBRANCH 1 1 `uc 1 REVINT 1 2 `uc 1 FUNC 1 3 ]
+[s S568 si446x_reply_GET_PROPERTY_map 16 `[16]uc 1 DATA 16 0 ]
+[s S570 si446x_reply_GPIO_PIN_CFG_map 7 `[4]uc 1 GPIO 4 0 `uc 1 NIRQ 1 4 `uc 1 SDO 1 5 `uc 1 GEN_CONFIG 1 6 ]
+[s S575 si446x_reply_FIFO_INFO_map 2 `uc 1 RX_FIFO_COUNT 1 0 `uc 1 TX_FIFO_SPACE 1 1 ]
+[s S578 si446x_reply_GET_INT_STATUS_map 8 `uc 1 INT_PEND 1 0 `uc 1 INT_STATUS 1 1 `uc 1 PH_PEND 1 2 `uc 1 PH_STATUS 1 3 `uc 1 MODEM_PEND 1 4 `uc 1 MODEM_STATUS 1 5 `uc 1 CHIP_PEND 1 6 `uc 1 CHIP_STATUS 1 7 ]
+[s S587 si446x_reply_REQUEST_DEVICE_STATE_map 2 `uc 1 CURR_STATE 1 0 `uc 1 CURRENT_CHANNEL 1 1 ]
+[s S590 si446x_reply_READ_CMD_BUFF_map 16 `[16]uc 1 BYTE 16 0 ]
+[s S592 si446x_reply_FRR_A_READ_map 4 `uc 1 FRR_A_VALUE 1 0 `uc 1 FRR_B_VALUE 1 1 `uc 1 FRR_C_VALUE 1 2 `uc 1 FRR_D_VALUE 1 3 ]
+[s S597 si446x_reply_FRR_B_READ_map 4 `uc 1 FRR_B_VALUE 1 0 `uc 1 FRR_C_VALUE 1 1 `uc 1 FRR_D_VALUE 1 2 `uc 1 FRR_A_VALUE 1 3 ]
+[s S602 si446x_reply_FRR_C_READ_map 4 `uc 1 FRR_C_VALUE 1 0 `uc 1 FRR_D_VALUE 1 1 `uc 1 FRR_A_VALUE 1 2 `uc 1 FRR_B_VALUE 1 3 ]
+[s S607 si446x_reply_FRR_D_READ_map 4 `uc 1 FRR_D_VALUE 1 0 `uc 1 FRR_A_VALUE 1 1 `uc 1 FRR_B_VALUE 1 2 `uc 1 FRR_C_VALUE 1 3 ]
+[s S612 si446x_reply_IRCAL_MANUAL_map 2 `uc 1 IRCAL_AMP_REPLY 1 0 `uc 1 IRCAL_PH_REPLY 1 1 ]
+[s S615 si446x_reply_PACKET_INFO_map 2 `us 1 LENGTH 2 0 ]
+[s S617 si446x_reply_GET_MODEM_STATUS_map 8 `uc 1 MODEM_PEND 1 0 `uc 1 MODEM_STATUS 1 1 `uc 1 CURR_RSSI 1 2 `uc 1 LATCH_RSSI 1 3 `uc 1 ANT1_RSSI 1 4 `uc 1 ANT2_RSSI 1 5 `us 1 AFC_FREQ_OFFSET 2 6 ]
+[s S625 si446x_reply_READ_RX_FIFO_map 2 `[2]uc 1 DATA 2 0 ]
+[s S627 si446x_reply_GET_ADC_READING_map 6 `us 1 GPIO_ADC 2 0 `us 1 BATTERY_ADC 2 2 `us 1 TEMP_ADC 2 4 ]
+[s S631 si446x_reply_GET_PH_STATUS_map 2 `uc 1 PH_PEND 1 0 `uc 1 PH_STATUS 1 1 ]
+[s S634 si446x_reply_GET_CHIP_STATUS_map 4 `uc 1 CHIP_PEND 1 0 `uc 1 CHIP_STATUS 1 1 `uc 1 CMD_ERR_STATUS 1 2 `uc 1 CMD_ERR_CMD_ID 1 3 ]
+[u S639 si446x_cmd_reply_union 16 `[16]uc 1 RAW 16 0 `S554 1 GENERIC 16 0 `S556 1 PART_INFO 8 0 `S563 1 FUNC_INFO 4 0 `S568 1 GET_PROPERTY 16 0 `S570 1 GPIO_PIN_CFG 7 0 `S575 1 FIFO_INFO 2 0 `S578 1 GET_INT_STATUS 8 0 `S587 1 REQUEST_DEVICE_STATE 2 0 `S590 1 READ_CMD_BUFF 16 0 `S592 1 FRR_A_READ 4 0 `S597 1 FRR_B_READ 4 0 `S602 1 FRR_C_READ 4 0 `S607 1 FRR_D_READ 4 0 `S612 1 IRCAL_MANUAL 2 0 `S615 1 PACKET_INFO 2 0 `S617 1 GET_MODEM_STATUS 8 0 `S625 1 READ_RX_FIFO 2 0 `S627 1 GET_ADC_READING 6 0 `S631 1 GET_PH_STATUS 2 0 `S634 1 GET_CHIP_STATUS 4 0 ]
+[v _Si446xCmd Si446xCmd `S639  1 e 16 0 ]
 "15
 [v _Pro2Cmd Pro2Cmd `[16]uc  1 e 16 0 ]
-"33 C:\Users\PETABREW001\Desktop\pic16f883_si4463\PIC16F883_Si4463_TxRx\F883_Si4463_main.c
+"50 C:\Users\PETABREW001\Desktop\PIC16F883_Si4463_TxRx\F883_Si4463_main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"60
+"62
 } 0
-"154 C:\Users\PETABREW001\Desktop\pic16f883_si4463\PIC16F883_Si4463_TxRx\Si4463/radio.c
+"154 C:\Users\PETABREW001\Desktop\PIC16F883_Si4463_TxRx\Si4463/radio.c
 [v _vRadio_StartTx_Variable_Packet vRadio_StartTx_Variable_Packet `(v  1 e 1 0 ]
 {
 [v vRadio_StartTx_Variable_Packet@channel channel `uc  1 a 1 wreg ]
 [v vRadio_StartTx_Variable_Packet@channel channel `uc  1 a 1 wreg ]
-[v vRadio_StartTx_Variable_Packet@pioRadioPacket pioRadioPacket `*.4uc  1 p 1 18 ]
-[v vRadio_StartTx_Variable_Packet@length length `uc  1 p 1 19 ]
+[v vRadio_StartTx_Variable_Packet@pioRadioPacket pioRadioPacket `*.4uc  1 p 1 7 ]
+[v vRadio_StartTx_Variable_Packet@length length `uc  1 p 1 8 ]
 "156
-[v vRadio_StartTx_Variable_Packet@channel channel `uc  1 a 1 22 ]
+[v vRadio_StartTx_Variable_Packet@channel channel `uc  1 a 1 11 ]
 "169
 } 0
-"325 C:\Users\PETABREW001\Desktop\pic16f883_si4463\PIC16F883_Si4463_TxRx\Si4463/si446x_api_lib.c
+"325 C:\Users\PETABREW001\Desktop\PIC16F883_Si4463_TxRx\Si4463/si446x_api_lib.c
 [v _si446x_write_tx_fifo si446x_write_tx_fifo `(v  1 e 1 0 ]
 {
 [v si446x_write_tx_fifo@numBytes numBytes `uc  1 a 1 wreg ]
 [v si446x_write_tx_fifo@numBytes numBytes `uc  1 a 1 wreg ]
-[v si446x_write_tx_fifo@pTxData pTxData `*.4uc  1 p 1 13 ]
+[v si446x_write_tx_fifo@pTxData pTxData `*.4uc  1 p 1 3 ]
 "327
-[v si446x_write_tx_fifo@numBytes numBytes `uc  1 a 1 14 ]
+[v si446x_write_tx_fifo@numBytes numBytes `uc  1 a 1 13 ]
 "328
 } 0
-"131 C:\Users\PETABREW001\Desktop\pic16f883_si4463\PIC16F883_Si4463_TxRx\Si4463/radio_comm.c
+"131 C:\Users\PETABREW001\Desktop\PIC16F883_Si4463_TxRx\Si4463/radio_comm.c
 [v _radio_comm_WriteData radio_comm_WriteData `(v  1 e 1 0 ]
 {
 [v radio_comm_WriteData@cmd cmd `uc  1 a 1 wreg ]
 [v radio_comm_WriteData@cmd cmd `uc  1 a 1 wreg ]
-[v radio_comm_WriteData@pollCts pollCts `uc  1 p 1 9 ]
-[v radio_comm_WriteData@byteCount byteCount `uc  1 p 1 10 ]
-[v radio_comm_WriteData@pData pData `*.4uc  1 p 1 11 ]
+[v radio_comm_WriteData@pollCts pollCts `uc  1 p 1 0 ]
+[v radio_comm_WriteData@byteCount byteCount `uc  1 p 1 1 ]
+[v radio_comm_WriteData@pData pData `*.4uc  1 p 1 2 ]
 "133
 [v radio_comm_WriteData@cmd cmd `uc  1 a 1 12 ]
 "145
 } 0
-"134 C:\Users\PETABREW001\Desktop\pic16f883_si4463\PIC16F883_Si4463_TxRx\Si4463/si446x_api_lib.c
+"134 C:\Users\PETABREW001\Desktop\PIC16F883_Si4463_TxRx\Si4463/si446x_api_lib.c
 [v _si446x_start_tx si446x_start_tx `(v  1 e 1 0 ]
 {
 [v si446x_start_tx@CHANNEL CHANNEL `uc  1 a 1 wreg ]
 [v si446x_start_tx@CHANNEL CHANNEL `uc  1 a 1 wreg ]
-[v si446x_start_tx@CONDITION CONDITION `uc  1 p 1 11 ]
-[v si446x_start_tx@TX_LEN TX_LEN `us  1 p 2 12 ]
+[v si446x_start_tx@CONDITION CONDITION `uc  1 p 1 0 ]
+[v si446x_start_tx@TX_LEN TX_LEN `us  1 p 2 1 ]
 "136
-[v si446x_start_tx@CHANNEL CHANNEL `uc  1 a 1 14 ]
+[v si446x_start_tx@CHANNEL CHANNEL `uc  1 a 1 3 ]
 "148
 } 0
-"132 C:\Users\PETABREW001\Desktop\pic16f883_si4463\PIC16F883_Si4463_TxRx\Si4463/radio.c
-[v _vRadio_StartRX vRadio_StartRX `(v  1 e 1 0 ]
+"305
+[v _si446x_fifo_info si446x_fifo_info `(v  1 e 1 0 ]
 {
-[v vRadio_StartRX@channel channel `uc  1 a 1 wreg ]
-[v vRadio_StartRX@channel channel `uc  1 a 1 wreg ]
-[v vRadio_StartRX@packetLenght packetLenght `uc  1 p 1 18 ]
-"134
-[v vRadio_StartRX@channel channel `uc  1 a 1 21 ]
-"144
+[v si446x_fifo_info@FIFO FIFO `uc  1 a 1 wreg ]
+[v si446x_fifo_info@FIFO FIFO `uc  1 a 1 wreg ]
+"307
+[v si446x_fifo_info@FIFO FIFO `uc  1 a 1 4 ]
+"317
 } 0
-"160 C:\Users\PETABREW001\Desktop\pic16f883_si4463\PIC16F883_Si4463_TxRx\Si4463/si446x_api_lib.c
-[v _si446x_start_rx si446x_start_rx `(v  1 e 1 0 ]
+"278
+[v _si446x_change_state si446x_change_state `(v  1 e 1 0 ]
 {
-[v si446x_start_rx@CHANNEL CHANNEL `uc  1 a 1 wreg ]
-[v si446x_start_rx@CHANNEL CHANNEL `uc  1 a 1 wreg ]
-[v si446x_start_rx@CONDITION CONDITION `uc  1 p 1 11 ]
-[v si446x_start_rx@RX_LEN RX_LEN `us  1 p 2 12 ]
-[v si446x_start_rx@NEXT_STATE1 NEXT_STATE1 `uc  1 p 1 14 ]
-[v si446x_start_rx@NEXT_STATE2 NEXT_STATE2 `uc  1 p 1 15 ]
-[v si446x_start_rx@NEXT_STATE3 NEXT_STATE3 `uc  1 p 1 16 ]
-"162
-[v si446x_start_rx@CHANNEL CHANNEL `uc  1 a 1 17 ]
-"172
+[v si446x_change_state@NEXT_STATE1 NEXT_STATE1 `uc  1 a 1 wreg ]
+[v si446x_change_state@NEXT_STATE1 NEXT_STATE1 `uc  1 a 1 wreg ]
+"280
+[v si446x_change_state@NEXT_STATE1 NEXT_STATE1 `uc  1 a 1 0 ]
+"284
 } 0
-"52 C:\Users\PETABREW001\Desktop\pic16f883_si4463\PIC16F883_Si4463_TxRx\Si4463/radio.c
+"52 C:\Users\PETABREW001\Desktop\PIC16F883_Si4463_TxRx\Si4463/radio.c
 [v _vRadio_Init vRadio_Init `(v  1 e 1 0 ]
 {
 "53
-[v vRadio_Init@wDelay wDelay `us  1 a 2 24 ]
+[v vRadio_Init@wDelay wDelay `us  1 a 2 13 ]
 "66
 } 0
 "35
 [v _vRadio_PowerUp vRadio_PowerUp `(v  1 e 1 0 ]
 {
 "36
-[v vRadio_PowerUp@wDelay wDelay `us  1 a 2 0 ]
+[v vRadio_PowerUp@wDelay wDelay `us  1 a 2 3 ]
 "42
 } 0
-"23 C:\Users\PETABREW001\Desktop\pic16f883_si4463\PIC16F883_Si4463_TxRx\Si4463/si446x_api_lib.c
+"23 C:\Users\PETABREW001\Desktop\PIC16F883_Si4463_TxRx\Si4463/si446x_api_lib.c
 [v _si446x_reset si446x_reset `(v  1 e 1 0 ]
 {
 "25
-[v si446x_reset@loopCount loopCount `uc  1 a 1 4 ]
+[v si446x_reset@loopCount loopCount `uc  1 a 1 0 ]
 "34
 } 0
-"7 C:\Users\PETABREW001\Desktop\pic16f883_si4463\PIC16F883_Si4463_TxRx\Si4463/radio_hal.c
+"7 C:\Users\PETABREW001\Desktop\PIC16F883_Si4463_TxRx\Si4463/radio_hal.c
 [v _radio_hal_DeassertShutdown radio_hal_DeassertShutdown `(v  1 e 1 0 ]
 {
 "9
@@ -455,160 +427,68 @@ SI446X_COMMAND_ERROR 4
 {
 "5
 } 0
-"160 C:\Users\PETABREW001\Desktop\pic16f883_si4463\PIC16F883_Si4463_TxRx\Si4463/radio_comm.c
+"160 C:\Users\PETABREW001\Desktop\PIC16F883_Si4463_TxRx\Si4463/radio_comm.c
 [v _radio_comm_ClearCTS radio_comm_ClearCTS `(v  1 e 1 0 ]
 {
 "163
 } 0
-"57 C:\Users\PETABREW001\Desktop\pic16f883_si4463\PIC16F883_Si4463_TxRx\Si4463/si446x_api_lib.c
+"57 C:\Users\PETABREW001\Desktop\PIC16F883_Si4463_TxRx\Si4463/si446x_api_lib.c
 [v _si446x_configuration_init si446x_configuration_init `(uc  1 e 1 0 ]
 {
 "60
-[v si446x_configuration_init@numOfBytes numOfBytes `uc  1 a 1 21 ]
+[v si446x_configuration_init@numOfBytes numOfBytes `uc  1 a 1 10 ]
 "59
-[v si446x_configuration_init@col col `uc  1 a 1 20 ]
+[v si446x_configuration_init@col col `uc  1 a 1 9 ]
 "57
-[v si446x_configuration_init@pSetPropCmd pSetPropCmd `*.25DCuc  1 p 2 18 ]
+[v si446x_configuration_init@pSetPropCmd pSetPropCmd `*.25DCuc  1 p 2 7 ]
 "104
 } 0
-"505 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\doprnt.c
-[v _sprintf sprintf `(i  1 e 2 0 ]
-{
-[v sprintf@sp sp `*.4uc  1 a 1 wreg ]
-"545
-[v sprintf@val val `ui  1 a 2 19 ]
-"512
-[v sprintf@c c `uc  1 a 1 22 ]
-"521
-[v sprintf@prec prec `c  1 a 1 18 ]
-"525
-[v sprintf@flag flag `uc  1 a 1 17 ]
-"507
-[v sprintf@ap ap `[1]*.4v  1 a 1 16 ]
-"505
-[v sprintf@sp sp `*.4uc  1 a 1 wreg ]
-[v sprintf@f f `*.25DCuc  1 p 2 8 ]
-"550
-[v sprintf@sp sp `*.4uc  1 a 1 21 ]
-"1567
-} 0
-"5 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\lwmod.c
-[v ___lwmod __lwmod `(ui  1 e 2 0 ]
-{
-"10
-[v ___lwmod@counter counter `uc  1 a 1 7 ]
-"5
-[v ___lwmod@divisor divisor `ui  1 p 2 3 ]
-[v ___lwmod@dividend dividend `ui  1 p 2 5 ]
-"25
-} 0
-"5 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\lwdiv.c
-[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
-{
-"10
-[v ___lwdiv@quotient quotient `ui  1 a 2 0 ]
-"11
-[v ___lwdiv@counter counter `uc  1 a 1 2 ]
-"5
-[v ___lwdiv@divisor divisor `ui  1 p 2 4 ]
-[v ___lwdiv@dividend dividend `ui  1 p 2 6 ]
-"30
-} 0
-"76 C:\Users\PETABREW001\Desktop\pic16f883_si4463\PIC16F883_Si4463_TxRx\Si4463/radio.c
-[v _bRadio_Check_Tx_RX bRadio_Check_Tx_RX `(uc  1 e 1 0 ]
-{
-"78
-[v bRadio_Check_Tx_RX@lCnt lCnt `uc  1 a 1 19 ]
-"79
-[v bRadio_Check_Tx_RX@RF_NIRQ RF_NIRQ `uc  1 a 1 18 ]
-"122
-} 0
-"336 C:\Users\PETABREW001\Desktop\pic16f883_si4463\PIC16F883_Si4463_TxRx\Si4463/si446x_api_lib.c
-[v _si446x_read_rx_fifo si446x_read_rx_fifo `(v  1 e 1 0 ]
-{
-[v si446x_read_rx_fifo@numBytes numBytes `uc  1 a 1 wreg ]
-[v si446x_read_rx_fifo@numBytes numBytes `uc  1 a 1 wreg ]
-[v si446x_read_rx_fifo@pRxData pRxData `*.5uc  1 p 1 13 ]
-"338
-[v si446x_read_rx_fifo@numBytes numBytes `uc  1 a 1 14 ]
-"339
-} 0
-"106 C:\Users\PETABREW001\Desktop\pic16f883_si4463\PIC16F883_Si4463_TxRx\Si4463/radio_comm.c
-[v _radio_comm_ReadData radio_comm_ReadData `(v  1 e 1 0 ]
-{
-[v radio_comm_ReadData@cmd cmd `uc  1 a 1 wreg ]
-[v radio_comm_ReadData@cmd cmd `uc  1 a 1 wreg ]
-[v radio_comm_ReadData@pollCts pollCts `uc  1 p 1 9 ]
-[v radio_comm_ReadData@byteCount byteCount `uc  1 p 1 10 ]
-[v radio_comm_ReadData@pData pData `*.5uc  1 p 1 11 ]
-"108
-[v radio_comm_ReadData@cmd cmd `uc  1 a 1 12 ]
-"120
-} 0
-"181 C:\Users\PETABREW001\Desktop\pic16f883_si4463\PIC16F883_Si4463_TxRx\Si4463/si446x_api_lib.c
+"181
 [v _si446x_get_int_status si446x_get_int_status `(v  1 e 1 0 ]
 {
 [v si446x_get_int_status@PH_CLR_PEND PH_CLR_PEND `uc  1 a 1 wreg ]
 [v si446x_get_int_status@PH_CLR_PEND PH_CLR_PEND `uc  1 a 1 wreg ]
-[v si446x_get_int_status@MODEM_CLR_PEND MODEM_CLR_PEND `uc  1 p 1 15 ]
-[v si446x_get_int_status@CHIP_CLR_PEND CHIP_CLR_PEND `uc  1 p 1 16 ]
+[v si446x_get_int_status@MODEM_CLR_PEND MODEM_CLR_PEND `uc  1 p 1 4 ]
+[v si446x_get_int_status@CHIP_CLR_PEND CHIP_CLR_PEND `uc  1 p 1 5 ]
 "183
-[v si446x_get_int_status@PH_CLR_PEND PH_CLR_PEND `uc  1 a 1 17 ]
+[v si446x_get_int_status@PH_CLR_PEND PH_CLR_PEND `uc  1 a 1 6 ]
 "201
 } 0
-"305
-[v _si446x_fifo_info si446x_fifo_info `(v  1 e 1 0 ]
-{
-[v si446x_fifo_info@FIFO FIFO `uc  1 a 1 wreg ]
-[v si446x_fifo_info@FIFO FIFO `uc  1 a 1 wreg ]
-"307
-[v si446x_fifo_info@FIFO FIFO `uc  1 a 1 15 ]
-"317
-} 0
-"175 C:\Users\PETABREW001\Desktop\pic16f883_si4463\PIC16F883_Si4463_TxRx\Si4463/radio_comm.c
+"175 C:\Users\PETABREW001\Desktop\PIC16F883_Si4463_TxRx\Si4463/radio_comm.c
 [v _radio_comm_SendCmdGetResp radio_comm_SendCmdGetResp `(uc  1 e 1 0 ]
 {
 [v radio_comm_SendCmdGetResp@cmdByteCount cmdByteCount `uc  1 a 1 wreg ]
 [v radio_comm_SendCmdGetResp@cmdByteCount cmdByteCount `uc  1 a 1 wreg ]
-[v radio_comm_SendCmdGetResp@pCmdData pCmdData `*.4uc  1 p 1 11 ]
-[v radio_comm_SendCmdGetResp@respByteCount respByteCount `uc  1 p 1 12 ]
-[v radio_comm_SendCmdGetResp@pRespData pRespData `*.4uc  1 p 1 13 ]
+[v radio_comm_SendCmdGetResp@pCmdData pCmdData `*.4uc  1 p 1 0 ]
+[v radio_comm_SendCmdGetResp@respByteCount respByteCount `uc  1 p 1 1 ]
+[v radio_comm_SendCmdGetResp@pRespData pRespData `*.4uc  1 p 1 2 ]
 "177
-[v radio_comm_SendCmdGetResp@cmdByteCount cmdByteCount `uc  1 a 1 14 ]
+[v radio_comm_SendCmdGetResp@cmdByteCount cmdByteCount `uc  1 a 1 3 ]
 "179
 } 0
-"278 C:\Users\PETABREW001\Desktop\pic16f883_si4463\PIC16F883_Si4463_TxRx\Si4463/si446x_api_lib.c
-[v _si446x_change_state si446x_change_state `(v  1 e 1 0 ]
-{
-[v si446x_change_state@NEXT_STATE1 NEXT_STATE1 `uc  1 a 1 wreg ]
-[v si446x_change_state@NEXT_STATE1 NEXT_STATE1 `uc  1 a 1 wreg ]
-"280
-[v si446x_change_state@NEXT_STATE1 NEXT_STATE1 `uc  1 a 1 11 ]
-"284
-} 0
-"86 C:\Users\PETABREW001\Desktop\pic16f883_si4463\PIC16F883_Si4463_TxRx\Si4463/radio_comm.c
+"86
 [v _radio_comm_SendCmd radio_comm_SendCmd `(v  1 e 1 0 ]
 {
 [v radio_comm_SendCmd@byteCount byteCount `uc  1 a 1 wreg ]
 [v radio_comm_SendCmd@byteCount byteCount `uc  1 a 1 wreg ]
-[v radio_comm_SendCmd@pData pData `*.4uc  1 p 1 9 ]
-[v radio_comm_SendCmd@byteCount byteCount `uc  1 a 1 10 ]
+[v radio_comm_SendCmd@pData pData `*.4uc  1 p 1 12 ]
+[v radio_comm_SendCmd@byteCount byteCount `uc  1 a 1 13 ]
 "96
 } 0
-"31 C:\Users\PETABREW001\Desktop\pic16f883_si4463\PIC16F883_Si4463_TxRx\Si4463/radio_hal.c
+"31 C:\Users\PETABREW001\Desktop\PIC16F883_Si4463_TxRx\Si4463/radio_hal.c
 [v _radio_hal_SpiWriteData radio_hal_SpiWriteData `(v  1 e 1 0 ]
 {
 [v radio_hal_SpiWriteData@byteCount byteCount `uc  1 a 1 wreg ]
 "32
-[v radio_hal_SpiWriteData@i i `ui  1 a 2 1 ]
+[v radio_hal_SpiWriteData@i i `ui  1 a 2 5 ]
 "31
 [v radio_hal_SpiWriteData@byteCount byteCount `uc  1 a 1 wreg ]
-[v radio_hal_SpiWriteData@pData pData `*.4uc  1 p 1 5 ]
+[v radio_hal_SpiWriteData@pData pData `*.4uc  1 p 1 1 ]
 "33
-[v radio_hal_SpiWriteData@byteCount byteCount `uc  1 a 1 0 ]
+[v radio_hal_SpiWriteData@byteCount byteCount `uc  1 a 1 4 ]
 "36
 } 0
-"152 C:\Users\PETABREW001\Desktop\pic16f883_si4463\PIC16F883_Si4463_TxRx\Si4463/radio_comm.c
+"152 C:\Users\PETABREW001\Desktop\PIC16F883_Si4463_TxRx\Si4463/radio_comm.c
 [v _radio_comm_PollCTS radio_comm_PollCTS `(uc  1 e 1 0 ]
 {
 "155
@@ -618,43 +498,43 @@ SI446X_COMMAND_ERROR 4
 {
 [v radio_comm_GetResp@byteCount byteCount `uc  1 a 1 wreg ]
 "46
-[v radio_comm_GetResp@errCnt errCnt `us  1 a 2 6 ]
+[v radio_comm_GetResp@errCnt errCnt `us  1 a 2 9 ]
 "45
-[v radio_comm_GetResp@ctsVal ctsVal `uc  1 a 1 8 ]
+[v radio_comm_GetResp@ctsVal ctsVal `uc  1 a 1 11 ]
 "43
 [v radio_comm_GetResp@byteCount byteCount `uc  1 a 1 wreg ]
 [v radio_comm_GetResp@pData pData `*.4uc  1 p 1 7 ]
 "45
-[v radio_comm_GetResp@byteCount byteCount `uc  1 a 1 5 ]
+[v radio_comm_GetResp@byteCount byteCount `uc  1 a 1 8 ]
 "78
 } 0
-"23 C:\Users\PETABREW001\Desktop\pic16f883_si4463\PIC16F883_Si4463_TxRx\Si4463/radio_hal.c
+"23 C:\Users\PETABREW001\Desktop\PIC16F883_Si4463_TxRx\Si4463/radio_hal.c
 [v _radio_hal_SpiWriteByte radio_hal_SpiWriteByte `(v  1 e 1 0 ]
 {
 [v radio_hal_SpiWriteByte@byteToWrite byteToWrite `uc  1 a 1 wreg ]
 [v radio_hal_SpiWriteByte@byteToWrite byteToWrite `uc  1 a 1 wreg ]
-[v radio_hal_SpiWriteByte@byteToWrite byteToWrite `uc  1 a 1 5 ]
+[v radio_hal_SpiWriteByte@byteToWrite byteToWrite `uc  1 a 1 1 ]
 "25
 } 0
-"40 C:\Users\PETABREW001\Desktop\pic16f883_si4463\PIC16F883_Si4463_TxRx\src/chipset.c
+"40 C:\Users\PETABREW001\Desktop\PIC16F883_Si4463_TxRx\src/chipset.c
 [v _SPI_Write SPI_Write `(v  1 e 1 0 ]
 {
 [v SPI_Write@data data `uc  1 a 1 wreg ]
 [v SPI_Write@data data `uc  1 a 1 wreg ]
-[v SPI_Write@data data `uc  1 a 1 4 ]
+[v SPI_Write@data data `uc  1 a 1 0 ]
 "43
 } 0
-"38 C:\Users\PETABREW001\Desktop\pic16f883_si4463\PIC16F883_Si4463_TxRx\Si4463/radio_hal.c
+"38 C:\Users\PETABREW001\Desktop\PIC16F883_Si4463_TxRx\Si4463/radio_hal.c
 [v _radio_hal_SpiReadData radio_hal_SpiReadData `(v  1 e 1 0 ]
 {
 [v radio_hal_SpiReadData@byteCount byteCount `uc  1 a 1 wreg ]
 "39
-[v radio_hal_SpiReadData@i i `ui  1 a 2 3 ]
+[v radio_hal_SpiReadData@i i `ui  1 a 2 5 ]
 "38
 [v radio_hal_SpiReadData@byteCount byteCount `uc  1 a 1 wreg ]
-[v radio_hal_SpiReadData@pData pData `*.39uc  1 p 2 5 ]
+[v radio_hal_SpiReadData@pData pData `*.4uc  1 p 1 1 ]
 "40
-[v radio_hal_SpiReadData@byteCount byteCount `uc  1 a 1 2 ]
+[v radio_hal_SpiReadData@byteCount byteCount `uc  1 a 1 4 ]
 "43
 } 0
 "27
@@ -662,15 +542,15 @@ SI446X_COMMAND_ERROR 4
 {
 "29
 } 0
-"60 C:\Users\PETABREW001\Desktop\pic16f883_si4463\PIC16F883_Si4463_TxRx\src/chipset.c
+"60 C:\Users\PETABREW001\Desktop\PIC16F883_Si4463_TxRx\src/chipset.c
 [v _SPI_Read SPI_Read `(uc  1 e 1 0 ]
 {
 [v SPI_Read@data data `uc  1 a 1 wreg ]
 [v SPI_Read@data data `uc  1 a 1 wreg ]
-[v SPI_Read@data data `uc  1 a 1 4 ]
+[v SPI_Read@data data `uc  1 a 1 0 ]
 "64
 } 0
-"15 C:\Users\PETABREW001\Desktop\pic16f883_si4463\PIC16F883_Si4463_TxRx\Si4463/radio_hal.c
+"15 C:\Users\PETABREW001\Desktop\PIC16F883_Si4463_TxRx\Si4463/radio_hal.c
 [v _radio_hal_SetNsel radio_hal_SetNsel `(v  1 e 1 0 ]
 {
 "17
@@ -685,15 +565,50 @@ SI446X_COMMAND_ERROR 4
 {
 "21
 } 0
-"17 C:\Users\PETABREW001\Desktop\pic16f883_si4463\PIC16F883_Si4463_TxRx\src/chipset.c
-[v _UART_TxChar UART_TxChar `(v  1 e 1 0 ]
+"505 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\doprnt.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
 {
-[v UART_TxChar@ch ch `uc  1 a 1 wreg ]
-[v UART_TxChar@ch ch `uc  1 a 1 wreg ]
-[v UART_TxChar@ch ch `uc  1 a 1 4 ]
-"21
+[v sprintf@sp sp `*.4uc  1 a 1 wreg ]
+"545
+[v sprintf@val val `ui  1 a 2 11 ]
+"512
+[v sprintf@c c `uc  1 a 1 14 ]
+"521
+[v sprintf@prec prec `c  1 a 1 10 ]
+"525
+[v sprintf@flag flag `uc  1 a 1 9 ]
+"507
+[v sprintf@ap ap `[1]*.4v  1 a 1 8 ]
+"505
+[v sprintf@sp sp `*.4uc  1 a 1 wreg ]
+[v sprintf@f f `*.25DCuc  1 p 2 0 ]
+"550
+[v sprintf@sp sp `*.4uc  1 a 1 13 ]
+"1567
 } 0
-"87 C:\Users\PETABREW001\Desktop\pic16f883_si4463\PIC16F883_Si4463_TxRx\src/main_pic16f883.c
+"5 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwmod@counter counter `uc  1 a 1 11 ]
+"5
+[v ___lwmod@divisor divisor `ui  1 p 2 7 ]
+[v ___lwmod@dividend dividend `ui  1 p 2 9 ]
+"25
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwdiv@quotient quotient `ui  1 a 2 4 ]
+"11
+[v ___lwdiv@counter counter `uc  1 a 1 6 ]
+"5
+[v ___lwdiv@divisor divisor `ui  1 p 2 0 ]
+[v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
+"30
+} 0
+"87 C:\Users\PETABREW001\Desktop\PIC16F883_Si4463_TxRx\src/main_pic16f883.c
 [v _PIC16F883_SI4463_INIT PIC16F883_SI4463_INIT `(v  1 e 1 0 ]
 {
 "93
@@ -702,25 +617,25 @@ SI446X_COMMAND_ERROR 4
 [v _UART_Init UART_Init `(uc  1 e 1 0 ]
 {
 "26
-[v UART_Init@x x `ui  1 a 2 5 ]
+[v UART_Init@x x `ui  1 a 2 9 ]
 "24
-[v UART_Init@baudrate baudrate `DCl  1 p 4 14 ]
+[v UART_Init@baudrate baudrate `DCl  1 p 4 6 ]
 "40
 } 0
 "5 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\aldiv.c
 [v ___aldiv __aldiv `(l  1 e 4 0 ]
 {
 "10
-[v ___aldiv@quotient quotient `l  1 a 4 10 ]
+[v ___aldiv@quotient quotient `l  1 a 4 2 ]
 "11
-[v ___aldiv@sign sign `uc  1 a 1 9 ]
-[v ___aldiv@counter counter `uc  1 a 1 8 ]
+[v ___aldiv@sign sign `uc  1 a 1 1 ]
+[v ___aldiv@counter counter `uc  1 a 1 0 ]
 "5
 [v ___aldiv@divisor divisor `l  1 p 4 0 ]
 [v ___aldiv@dividend dividend `l  1 p 4 4 ]
 "41
 } 0
-"18 C:\Users\PETABREW001\Desktop\pic16f883_si4463\PIC16F883_Si4463_TxRx\src/main_pic16f883.c
+"18 C:\Users\PETABREW001\Desktop\PIC16F883_Si4463_TxRx\src/main_pic16f883.c
 [v _Systick_Init Systick_Init `(v  1 e 1 0 ]
 {
 "20
@@ -739,19 +654,4 @@ SI446X_COMMAND_ERROR 4
 [v _GPIO_Init GPIO_Init `(v  1 e 1 0 ]
 {
 "74
-} 0
-"67 C:\Users\PETABREW001\Desktop\pic16f883_si4463\PIC16F883_Si4463_TxRx\F883_Si4463_main.c
-[v _UART_ISR UART_ISR `II(v  1 e 1 0 ]
-{
-"69
-[v UART_ISR@data data `uc  1 a 1 3 ]
-"76
-} 0
-"17 C:\Users\PETABREW001\Desktop\pic16f883_si4463\PIC16F883_Si4463_TxRx\src/chipset.c
-[v i1_UART_TxChar UART_TxChar `(v  1 e 1 0 ]
-{
-[v i1UART_TxChar@ch ch `uc  1 a 1 wreg ]
-[v i1UART_TxChar@ch ch `uc  1 a 1 wreg ]
-[v i1UART_TxChar@ch ch `uc  1 a 1 0 ]
-"21
 } 0

@@ -2983,48 +2983,17 @@ void vRadio_StartTx_Variable_Packet(U8, U8*, U8);
 U8 Radio_ChannelNumber = 0xff;
 U8 customRadioPacket2[64];
 volatile bit uartDataReceived = 0;
-# 33 "F883_Si4463_main.c"
+# 50 "F883_Si4463_main.c"
 void main(void) {
     PIC16F883_SI4463_INIT();
  vRadio_Init();
+    sprintf((char *)customRadioPacket,"rftest@channel:%d\r\n",0);
     Radio_ChannelNumber = 0;
 
+    while(1){
 
-    sprintf((char *)customRadioPacket2,"rftest@channel:%d\r\n",0);
-
-    vRadio_StartRX(Radio_ChannelNumber,64);
-
-    while(1) {
-
-        if (uartDataReceived) {
-            uartDataReceived = 0;
-
-
-            vRadio_StartTx_Variable_Packet(Radio_ChannelNumber, customRadioPacket2, 64);
-
-        }
-
-        if(0x10 == bRadio_Check_Tx_RX()) {
-
-
-
-        }
+        vRadio_StartTx_Variable_Packet(Radio_ChannelNumber, customRadioPacket, 64);
+        _delay((unsigned long)((1000)*(8000000/4000.0)));
     }
     return;
-}
-
-
-
-
-
-
-void __attribute__((picinterrupt(("")))) UART_ISR() {
-    if (PIR1bits.RCIF) {
-        char data = RCREG;
-        if (data == 32) {
-            uartDataReceived = 1;
-        }
-
-        UART_TxChar(data);
-    }
 }
