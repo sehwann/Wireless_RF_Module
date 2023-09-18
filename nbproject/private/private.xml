@@ -3,8 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/PETABREW001/Desktop/pic16f883_si4463/PIC16F883_Si4463_TxRx/F883_Si4463_main.c</file>
-            <file>file:/C:/Users/PETABREW001/Desktop/pic16f883_si4463/PIC16F883_Si4463_TxRx/Si4463/radio.h</file>
+            <file>file:/C:/Users/PETABREW001/Desktop/PIC16F883_Si4463_TxRx/F883_Si4463_main.c</file>
+            <file>file:/C:/Users/PETABREW001/Desktop/PIC16F883_Si4463_TxRx/src/main_pic16f883.c</file>
+            <file>file:/C:/Users/PETABREW001/Desktop/PIC16F883_Si4463_TxRx/Si4463/radio.c</file>
         </group>
     </open-files>
 </project-private>

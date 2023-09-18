@@ -2981,19 +2981,25 @@ void vRadio_StartTx_Variable_Packet(U8, U8*, U8);
 
 
 U8 Radio_ChannelNumber = 0xff;
-U8 customRadioPacket2[64];
-volatile bit uartDataReceived = 0;
-# 50 "F883_Si4463_main.c"
+U8 lCnt;
+# 33 "F883_Si4463_main.c"
 void main(void) {
     PIC16F883_SI4463_INIT();
  vRadio_Init();
-    sprintf((char *)customRadioPacket,"rftest@channel:%d\r\n",0);
-    Radio_ChannelNumber = 0;
+    Radio_ChannelNumber = 1;
+    vRadio_StartRX(Radio_ChannelNumber,64);
 
     while(1){
+        if(0x10 == bRadio_Check_Tx_RX()) {
 
-        vRadio_StartTx_Variable_Packet(Radio_ChannelNumber, customRadioPacket, 64);
-        _delay((unsigned long)((1000)*(8000000/4000.0)));
+
+
+
+
+            for (lCnt = 0; lCnt < 64; lCnt++) {
+                UART_TxChar(*((U8 *) &customRadioPacket[0] + lCnt));
+            }
+        }
     }
     return;
 }

@@ -3022,13 +3022,12 @@ void vRadio_Init(void) {
         vRadio_PowerUp();
     }
 
-
     si446x_get_int_status(0u, 0u, 0u);
 }
-# 76 "Si4463/radio.c"
+# 75 "Si4463/radio.c"
 U8 bRadio_Check_Tx_RX(void)
 {
-    U8 lCnt;
+
     uint8_t RF_NIRQ;
 
     RF_NIRQ = radio_hal_NirqLevel();
@@ -3055,13 +3054,12 @@ U8 bRadio_Check_Tx_RX(void)
 
 
             si446x_fifo_info(0x00);
-
             si446x_read_rx_fifo(Si446xCmd.FIFO_INFO.RX_FIFO_COUNT, &customRadioPacket[0]);
 
 
-            for (lCnt = 0; lCnt < 64; lCnt++) {
-                UART_TxChar(*((U8 *) &customRadioPacket[0] + lCnt));
-            }
+
+
+
 
             return 0x10;
         }
@@ -3073,7 +3071,7 @@ U8 bRadio_Check_Tx_RX(void)
     }
     return 0;
 }
-# 132 "Si4463/radio.c"
+# 130 "Si4463/radio.c"
 void vRadio_StartRX(U8 channel, U8 packetLenght ) {
 
     si446x_get_int_status(0u, 0u, 0u);
@@ -3087,7 +3085,7 @@ void vRadio_StartRX(U8 channel, U8 packetLenght ) {
                     8,
                     8 );
 }
-# 154 "Si4463/radio.c"
+# 152 "Si4463/radio.c"
 void vRadio_StartTx_Variable_Packet(U8 channel, U8 *pioRadioPacket, U8 length) {
 
     si446x_change_state(3);

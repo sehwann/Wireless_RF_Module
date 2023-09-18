@@ -20,14 +20,14 @@
 // Global Variables
 //-----------------------------------------------------------------------------
 U8 Radio_ChannelNumber = 0xff;
-U8 customRadioPacket2[RADIO_MAX_PACKET_LENGTH];
-volatile bit uartDataReceived = 0;
+U8 lCnt;            // Check customRadioPacket as UART
+
 //-----------------------------------------------------------------------------
 // MAIN Routine
 //-----------------------------------------------------------------------------
 // channel selection, entering values from 0 to 255 *(channel 256 = channel 0)
-#define ch 0        
-#define RX 0        // Set RX module to 1, TX module to 0
+#define ch 1        
+#define RX 1        // Set RX module to 1, TX module to 0
 
 #if RX
 void main(void) {
@@ -37,22 +37,26 @@ void main(void) {
     vRadio_StartRX(Radio_ChannelNumber,RADIO_MAX_PACKET_LENGTH);
     
     while(1){
-        if(TRUE == gRadio_CheckReceived()) {
+        if(SI446X_CMD_GET_INT_STATUS_REP_PH_PEND_PACKET_RX_PEND_BIT == bRadio_Check_Tx_RX()) {                  
             // Processing after received
             // ..
             // ..
+            
+            // Check customRadioPacket as UART
+            for (lCnt = 0; lCnt < RADIO_MAX_PACKET_LENGTH; lCnt++) {        
+                UART_TxChar(*((U8 *) &customRadioPacket[0] + lCnt));
+            }
         }
     }
     return;
 }
 
-#else
+#else   // TX
 void main(void) {
-    PIC16F883_SI4463_INIT();                                        // Initialize PIC16F883
-	vRadio_Init();                                                  // Initialize Si4463 
+    PIC16F883_SI4463_INIT();                                        // Initialize PIC16F883	
+    vRadio_Init();                                                  // Initialize Si4463 
     sprintf((char *)customRadioPacket,"rftest@channel:%d\r\n",ch);  // Putting Data to Send in Packets
     Radio_ChannelNumber = ch;
-    
     while(1){
         // Send stored packets
         vRadio_StartTx_Variable_Packet(Radio_ChannelNumber, customRadioPacket, RADIO_MAX_PACKET_LENGTH);

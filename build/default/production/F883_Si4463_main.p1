@@ -6,18 +6,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 "41 ./Si4463/radio.h
 [; ;./Si4463/radio.h: 41: void vRadio_Init(void);
 [v _vRadio_Init `(v ~T0 @X0 0 ef ]
-"194 C:\Program Files\Microchip\xc8\v2.41\pic\include\c90\stdio.h
-[v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
+"43
+[; ;./Si4463/radio.h: 43: void vRadio_StartRX(U8,U8);
+[v _vRadio_StartRX `(v ~T0 @X0 0 ef2`uc`uc ]
+"42
+[; ;./Si4463/radio.h: 42: U8 bRadio_Check_Tx_RX(void);
+[v _bRadio_Check_Tx_RX `(uc ~T0 @X0 0 ef ]
+"43 ./Si4463/../inc/chipset.h
+[; ;./Si4463/../inc/chipset.h: 43: void UART_TxChar(char ch);
+[v _UART_TxChar `(v ~T0 @X0 0 ef1`uc ]
 "36 ./Si4463/radio.h
 [; ;./Si4463/radio.h: 36: extern U8 customRadioPacket[64];
 [v _customRadioPacket `uc ~T0 @X0 -> 0 `x e ]
-"45
-[; ;./Si4463/radio.h: 45: void vRadio_StartTx_Variable_Packet(U8, U8*, U8);
-[v _vRadio_StartTx_Variable_Packet `(v ~T0 @X0 0 ef3`uc`*uc`uc ]
-[v F177 `(v ~T0 @X0 1 tf1`ul ]
-"12 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\builtins.h
-[v __delay `JF177 ~T0 @X0 0 e ]
-[p i __delay ]
 "14 ./Si4463/../inc/main_pic16f883.h
 [p x FOSC  =  INTRC_CLKOUT           ]
 "15
@@ -277,55 +277,67 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 255 `i `uc
 ]
 "23
-[; ;F883_Si4463_main.c: 23: U8 customRadioPacket2[64];
-[v _customRadioPacket2 `uc ~T0 @X0 -> 64 `i e ]
-"24
-[; ;F883_Si4463_main.c: 24: volatile bit uartDataReceived = 0;
-[v _uartDataReceived `Vuc ~T0 @X0 1 e ]
-[i _uartDataReceived
--> -> 0 `i `uc
-]
+[; ;F883_Si4463_main.c: 23: U8 lCnt;
+[v _lCnt `uc ~T0 @X0 1 e ]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"50
-[; ;F883_Si4463_main.c: 50: void main(void) {
+"33
+[; ;F883_Si4463_main.c: 33: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"51
-[; ;F883_Si4463_main.c: 51:     PIC16F883_SI4463_INIT();
+"34
+[; ;F883_Si4463_main.c: 34:     PIC16F883_SI4463_INIT();
 [e ( _PIC16F883_SI4463_INIT ..  ]
-"52
-[; ;F883_Si4463_main.c: 52:  vRadio_Init();
+"35
+[; ;F883_Si4463_main.c: 35:  vRadio_Init();
 [e ( _vRadio_Init ..  ]
-"53
-[; ;F883_Si4463_main.c: 53:     sprintf((char *)customRadioPacket,"rftest@channel:%d\r\n",0);
-[e ( _sprintf (1 , (. , -> &U _customRadioPacket `*uc :s 1C -> 0 `i ]
-"54
-[; ;F883_Si4463_main.c: 54:     Radio_ChannelNumber = 0;
-[e = _Radio_ChannelNumber -> -> 0 `i `uc ]
-"56
-[; ;F883_Si4463_main.c: 56:     while(1){
+"36
+[; ;F883_Si4463_main.c: 36:     Radio_ChannelNumber = 1;
+[e = _Radio_ChannelNumber -> -> 1 `i `uc ]
+"37
+[; ;F883_Si4463_main.c: 37:     vRadio_StartRX(Radio_ChannelNumber,64);
+[e ( _vRadio_StartRX (2 , _Radio_ChannelNumber -> -> 64 `i `uc ]
+"39
+[; ;F883_Si4463_main.c: 39:     while(1){
 [e :U 159 ]
 {
-"58
-[; ;F883_Si4463_main.c: 58:         vRadio_StartTx_Variable_Packet(Radio_ChannelNumber, customRadioPacket, 64);
-[e ( _vRadio_StartTx_Variable_Packet (3 , , _Radio_ChannelNumber &U _customRadioPacket -> -> 64 `i `uc ]
-"59
-[; ;F883_Si4463_main.c: 59:         _delay((unsigned long)((1000)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"60
-[; ;F883_Si4463_main.c: 60:     }
+"40
+[; ;F883_Si4463_main.c: 40:         if(0x10 == bRadio_Check_Tx_RX()) {
+[e $ ! == -> 16 `i -> ( _bRadio_Check_Tx_RX ..  `i 161  ]
+{
+"46
+[; ;F883_Si4463_main.c: 46:             for (lCnt = 0; lCnt < 64; lCnt++) {
+{
+[e = _lCnt -> -> 0 `i `uc ]
+[e $ < -> _lCnt `i -> 64 `i 162  ]
+[e $U 163  ]
+[e :U 162 ]
+{
+"47
+[; ;F883_Si4463_main.c: 47:                 UART_TxChar(*((U8 *) &customRadioPacket[0] + lCnt));
+[e ( _UART_TxChar (1 -> *U + &U *U + &U _customRadioPacket * -> -> -> 0 `i `ui `ux -> -> # *U &U _customRadioPacket `ui `ux * -> -> _lCnt `i `x -> -> # *U &U *U + &U _customRadioPacket * -> -> -> 0 `i `ui `ux -> -> # *U &U _customRadioPacket `ui `ux `i `x `uc ]
+"48
+[; ;F883_Si4463_main.c: 48:             }
+}
+[e ++ _lCnt -> -> 1 `i `uc ]
+[e $ < -> _lCnt `i -> 64 `i 162  ]
+[e :U 163 ]
+}
+"49
+[; ;F883_Si4463_main.c: 49:         }
+}
+[e :U 161 ]
+"50
+[; ;F883_Si4463_main.c: 50:     }
 }
 [e :U 158 ]
 [e $U 159  ]
 [e :U 160 ]
-"61
-[; ;F883_Si4463_main.c: 61:     return;
+"51
+[; ;F883_Si4463_main.c: 51:     return;
 [e $UE 157  ]
-"62
-[; ;F883_Si4463_main.c: 62: }
+"52
+[; ;F883_Si4463_main.c: 52: }
 [e :UE 157 ]
 }
-[p f _sprintf 8388736 ]
-[a 1C 114 102 116 101 115 116 64 99 104 97 110 110 101 108 58 37 100 13 10 0 ]

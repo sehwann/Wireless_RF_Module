@@ -60,7 +60,6 @@ void vRadio_Init(void) {
         for (wDelay = 0x7FFF; wDelay--; ) ;
         vRadio_PowerUp();
     }
-
     // Read ITs, clear pending ones
     si446x_get_int_status(0u, 0u, 0u);
 }
@@ -75,7 +74,7 @@ void vRadio_Init(void) {
  */
 U8 bRadio_Check_Tx_RX(void)
 {
-    U8 lCnt;
+    //U8 lCnt;
     uint8_t RF_NIRQ;
     // TODO::
     RF_NIRQ = radio_hal_NirqLevel();
@@ -102,13 +101,12 @@ U8 bRadio_Check_Tx_RX(void)
             /* Packet RX */
             /* Get payload length */
             si446x_fifo_info(0x00);
-
             si446x_read_rx_fifo(Si446xCmd.FIFO_INFO.RX_FIFO_COUNT, &customRadioPacket[0]);
 
             // Check customRadioPacket as UART
-            for (lCnt = 0; lCnt < RADIO_MAX_PACKET_LENGTH; lCnt++) {        
-                UART_TxChar(*((U8 *) &customRadioPacket[0] + lCnt));
-            }
+            //for (lCnt = 0; lCnt < RADIO_MAX_PACKET_LENGTH; lCnt++) {        
+            //    UART_TxChar(*((U8 *) &customRadioPacket[0] + lCnt));
+            //}
             
             return SI446X_CMD_GET_INT_STATUS_REP_PH_PEND_PACKET_RX_PEND_BIT;
         }

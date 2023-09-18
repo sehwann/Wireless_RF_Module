@@ -6,10 +6,10 @@ Linker command line:
   --edf=C:\Program Files\Microchip\xc8\v2.41\pic\dat\20230208172133_en.msgs \
   -cn -h+dist/default/production\PIC16F883_Si4463_TxRx.production.sym \
   --cmf=dist/default/production\PIC16F883_Si4463_TxRx.production.cmf -z \
-  -Q16F883 -oC:\Users\PETABR~1\AppData\Local\Temp\xcAsg84.\driver_tmp_3.o \
+  -Q16F883 -oC:\Users\PETABR~1\AppData\Local\Temp\xcAsgtg.\driver_tmp_3.o \
   --defsym=__MPLAB_BUILD=1 --fixupoverflow=error \
   -Mdist/default/production/PIC16F883_Si4463_TxRx.production.map \
-  --md=C:\Users\PETABR~1\AppData\Local\Temp\xcAsg84.\driver_tmp_0.dat -E1 \
+  --md=C:\Users\PETABR~1\AppData\Local\Temp\xcAsgtg.\driver_tmp_0.dat -E1 \
   -ver=XC8 Compiler --acfsm=1493 -ACODE=00h-07FFhx2 -ASTRCODE=00h-0FFFh \
   -ASTRING=00h-0FFhx16 -ACONST=00h-0FFhx16 -AENTRY=00h-0FFhx16 \
   -ACOMMON=070h-07Fh -ABANK0=020h-06Fh -ABANK1=0A0h-0EFh \
@@ -20,7 +20,7 @@ Linker command line:
   -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
   -DENTRY=2 -preset_vec=00h,intentry=04h,init,end_init -ppowerup=CODE \
   -pcinit=CODE -pfunctab=ENTRY -k \
-  C:\Users\PETABR~1\AppData\Local\Temp\xcAsg84.\driver_tmp_17.o \
+  C:\Users\PETABR~1\AppData\Local\Temp\xcAsgtg.\driver_tmp_12.o \
   dist/default/production\PIC16F883_Si4463_TxRx.production.o 
 
 Object code version is 3.11
@@ -30,111 +30,108 @@ Machine type is 16F883
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\PETABR~1\AppData\Local\Temp\xcAsg84.\driver_tmp_17.o
+C:\Users\PETABR~1\AppData\Local\Temp\xcAsgtg.\driver_tmp_12.o
                 end_init                              4        4        2        8       0
                 reset_vec                             0        0        2        0       0
                 config                             2007     2007        2        0       4
                 idloc                              2000     2000        4        0       5
 dist/default/production\PIC16F883_Si4463_TxRx.production.o
-                cinit                                 6        6       23        8       0
+                cinit                                 6        6       1C        8       0
                 config                             2007     2007        2        0       4
                 idloc                              2000     2000        4        0       5
-                text37                              E22      E22        5     1C44       0
-                text36                              E08      E08        3     1C10       0
-                text35                              E93      E93       16     1D26       0
-                text34                              E27      E27        5     1C4E       0
-                text33                              61F      61F       9D      A82       0
-                text32                              729      729       69      A82       0
-                text31                              ED7      ED7       1A     1DAE       0
-                text30                               29       29       44        8       0
-                text29                               A9       A9       3A        8       0
-                text28                              541      541       DE      A82       0
-                text27                              E31      E31        6     1C62       0
-                text26                              E0E      E0E        4     1C1C       0
-                text25                              E12      E12        4     1C24       0
-                text24                              E72      E72        F     1CE4       0
-                text23                              E2C      E2C        5     1C58       0
-                text22                              F2F      F2F       23     1E5E       0
-                text21                              E4B      E4B        C     1C96       0
-                text20                              E37      E37        6     1C6E       0
-                text19                              792      792       47      A82       0
-                text18                              E3D      E3D        6     1C7A       0
-                text17                              F0D      F0D       22     1E1A       0
-                text16                              EF1      EF1       1C     1DE2       0
-                text15                              E81      E81       12     1D02       0
-                text14                              F52      F52       28     1EA4       0
-                text13                              6BC      6BC       6D      A82       0
-                text12                              E16      E16        4     1C2C       0
-                text11                              E1A      E1A        4     1C34       0
-                text10                              E1E      E1E        4     1C3C       0
-                text9                                E3       E3       1C        8       0
-                text8                               7D9      7D9       25      A82       0
-                text7                                6D       6D       3C        8       0
-                text6                               E64      E64        E     1CC8       0
-                text5                               EBF      EBF       18     1D7E       0
-                text4                               EA9      EA9       16     1D52       0
-                text3                               F7A      F7A       29     1EF4       0
-                text2                               E57      E57        D     1CAE       0
-                text1                               FA3      FA3       2B     1F46       0
-                maintext                            FCE      FCE       32     1F9C       0
-                cstackBANK0                          42       42       19       20       1
+                text36                              F56      F56        5     1EAC       0
+                text35                              F3C      F3C        3     1E78       0
+                text34                              FD2      FD2       16     1FA4       0
+                text33                              F5B      F5B        5     1EB6       0
+                text32                              523      523       9D      A46       0
+                text31                              62D      62D       69      A46       0
+                text30                               E4       E4       1A        8       0
+                text29                              F7F      F7F        B     1EFE       0
+                text28                              F65      F65        6     1ECA       0
+                text27                              F42      F42        4     1E84       0
+                text26                              F46      F46        4     1E8C       0
+                text25                              FB1      FB1        F     1F62       0
+                text24                              F60      F60        5     1EC0       0
+                text23                               47       47       23        8       0
+                text22                              F8A      F8A        C     1F14       0
+                text21                              F6B      F6B        6     1ED6       0
+                text20                              6DD      6DD       47      A46       0
+                text19                              F71      F71        6     1EE2       0
+                text18                               8C       8C       22        8       0
+                text17                               AE       AE       1C        8       0
+                text16                              FA3      FA3        E     1F46       0
+                text15                              FC0      FC0       12     1F80       0
+                text14                              FE8      FE8       18     1FD0       0
+                text13                              7BB      7BB       28      A46       0
+                text12                              792      792       29      A46       0
+                text11                              F96      F96        D     1F2C       0
+                text10                              696      696       47      A46       0
+                text9                               5C0      5C0       6D      A46       0
+                text8                               F4A      F4A        4     1E94       0
+                text7                               F4E      F4E        4     1E9C       0
+                text6                               F52      F52        4     1EA4       0
+                text5                               7E3      7E3       1C      A46       0
+                text4                                22       22       25        8       0
+                text3                               724      724       3C      A46       0
+                text2                                CA       CA       1A        8       0
+                text1                                6A       6A       22        8       0
+                maintext                            760      760       32      A46       0
+                cstackBANK0                          42       42       16       20       1
                 cstackCOMMON                         70       70        E       70       1
-                clrtext                             E43      E43        8     1C86       0
-                bssBANK2                            120      120       40      120       1
+                clrtext                             F77      F77        8     1EEE       0
                 bssBANK1                             A0       A0       40       A0       1
-                dataBANK0                            5B       5B        3       20       1
+                dataBANK0                            58       58        3       20       1
                 bssBANK0                             20       20       22       20       1
-                stringtext                          100      100      441        2       0
-                idataBANK0                          E0B      E0B        3     1C16       0
+                stringtext                          100      100      423        2       0
+                idataBANK0                          F3F      F3F        3     1E7E       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   CODE           
                 end_init                              4        4        2         0
-                cinit                                 6        6       23         0
+                cinit                                 6        6       1C         0
                 reset_vec                             0        0        2         0
-                text37                              E22      E22        5         0
-                text36                              E08      E08        3         0
-                text35                              E93      E93       16         0
-                text34                              E27      E27        5         0
-                text33                              61F      61F       9D         0
-                text32                              729      729       69         0
-                text31                              ED7      ED7       1A         0
-                text30                               29       29       44         0
-                text29                               A9       A9       3A         0
-                text28                              541      541       DE         0
-                text27                              E31      E31        6         0
-                text26                              E0E      E0E        4         0
-                text25                              E12      E12        4         0
-                text24                              E72      E72        F         0
-                text23                              E2C      E2C        5         0
-                text22                              F2F      F2F       23         0
-                text21                              E4B      E4B        C         0
-                text20                              E37      E37        6         0
-                text19                              792      792       47         0
-                text18                              E3D      E3D        6         0
-                text17                              F0D      F0D       22         0
-                text16                              EF1      EF1       1C         0
-                text15                              E81      E81       12         0
-                text14                              F52      F52       28         0
-                text13                              6BC      6BC       6D         0
-                text12                              E16      E16        4         0
-                text11                              E1A      E1A        4         0
-                text10                              E1E      E1E        4         0
-                text9                                E3       E3       1C         0
-                text8                               7D9      7D9       25         0
-                text7                                6D       6D       3C         0
-                text6                               E64      E64        E         0
-                text5                               EBF      EBF       18         0
-                text4                               EA9      EA9       16         0
-                text3                               F7A      F7A       29         0
-                text2                               E57      E57        D         0
-                text1                               FA3      FA3       2B         0
-                maintext                            FCE      FCE       32         0
-                clrtext                             E43      E43        8         0
-                idataBANK0                          E0B      E0B        3         0
+                text36                              F56      F56        5         0
+                text35                              F3C      F3C        3         0
+                text34                              FD2      FD2       16         0
+                text33                              F5B      F5B        5         0
+                text32                              523      523       9D         0
+                text31                              62D      62D       69         0
+                text30                               E4       E4       1A         0
+                text29                              F7F      F7F        B         0
+                text28                              F65      F65        6         0
+                text27                              F42      F42        4         0
+                text26                              F46      F46        4         0
+                text25                              FB1      FB1        F         0
+                text24                              F60      F60        5         0
+                text23                               47       47       23         0
+                text22                              F8A      F8A        C         0
+                text21                              F6B      F6B        6         0
+                text20                              6DD      6DD       47         0
+                text19                              F71      F71        6         0
+                text18                               8C       8C       22         0
+                text17                               AE       AE       1C         0
+                text16                              FA3      FA3        E         0
+                text15                              FC0      FC0       12         0
+                text14                              FE8      FE8       18         0
+                text13                              7BB      7BB       28         0
+                text12                              792      792       29         0
+                text11                              F96      F96        D         0
+                text10                              696      696       47         0
+                text9                               5C0      5C0       6D         0
+                text8                               F4A      F4A        4         0
+                text7                               F4E      F4E        4         0
+                text6                               F52      F52        4         0
+                text5                               7E3      7E3       1C         0
+                text4                                22       22       25         0
+                text3                               724      724       3C         0
+                text2                                CA       CA       1A         0
+                text1                                6A       6A       22         0
+                maintext                            760      760       32         0
+                clrtext                             F77      F77        8         0
+                idataBANK0                          F3F      F3F        3         0
 
         CLASS   STRCODE        
-                stringtext                          100      100      441         0
+                stringtext                          100      100      423         0
 
         CLASS   STRING         
 
@@ -146,15 +143,14 @@ TOTAL           Name                               Link     Load   Length     Sp
                 cstackCOMMON                         70       70        E         1
 
         CLASS   BANK0          
-                cstackBANK0                          42       42       19         1
-                dataBANK0                            5B       5B        3         1
+                cstackBANK0                          42       42       16         1
+                dataBANK0                            58       58        3         1
                 bssBANK0                             20       20       22         1
 
         CLASS   BANK1          
                 bssBANK1                             A0       A0       40         1
 
         CLASS   BANK2          
-                bssBANK2                            120      120       40         1
 
         CLASS   RAM            
 
@@ -186,496 +182,452 @@ TOTAL           Name                               Link     Load   Length     Sp
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
 
                 reset_vec                      000000  000002  000002         0       0  CODE        2
-                intentry                       000004  0000FB  0000FF         8       0  CODE        2
-                bssBANK0                       000020  00003E  00005E        20       1  BANK0       1
+                intentry                       000004  0000FA  0000FE         8       0  CODE        2
+                bssBANK0                       000020  00003B  00005B        20       1  BANK0       1
                 cstackCOMMON                   000070  00000E  00007E        70       1  COMMON      1
                 bssBANK1                       0000A0  000040  0000E0        A0       1  BANK1       1
-                bssBANK2                       000120  000040  000160       120       1  BANK2       1
-                stringtext                     000100  000441  000541         2       0  STRCODE     2
-                text28                         000541  0002BD  0007FE       A82       0  CODE        2
-                text36                         000E08  000003  000E0B      1C10       0  CODE        2
-                idataBANK0                     000E0B  000003  000E0E      1C16       0  CODE        2
-                text26                         000E0E  000004  000E12      1C1C       0  CODE        2
-                text25                         000E12  000004  000E16      1C24       0  CODE        2
-                text12                         000E16  000004  000E1A      1C2C       0  CODE        2
-                text11                         000E1A  000004  000E1E      1C34       0  CODE        2
-                text10                         000E1E  000004  000E22      1C3C       0  CODE        2
-                text37                         000E22  000005  000E27      1C44       0  CODE        2
-                text34                         000E27  000005  000E2C      1C4E       0  CODE        2
-                text23                         000E2C  000005  000E31      1C58       0  CODE        2
-                text27                         000E31  000006  000E37      1C62       0  CODE        2
-                text20                         000E37  000006  000E3D      1C6E       0  CODE        2
-                text18                         000E3D  000006  000E43      1C7A       0  CODE        2
-                clrtext                        000E43  000008  000E4B      1C86       0  CODE        2
-                text21                         000E4B  00000C  000E57      1C96       0  CODE        2
-                text2                          000E57  00000D  000E64      1CAE       0  CODE        2
-                text6                          000E64  00000E  000E72      1CC8       0  CODE        2
-                text24                         000E72  00000F  000E81      1CE4       0  CODE        2
-                text15                         000E81  000012  000E93      1D02       0  CODE        2
-                text35                         000E93  000016  000EA9      1D26       0  CODE        2
-                text4                          000EA9  000016  000EBF      1D52       0  CODE        2
-                text5                          000EBF  000018  000ED7      1D7E       0  CODE        2
-                text31                         000ED7  00001A  000EF1      1DAE       0  CODE        2
-                text16                         000EF1  00001C  000F0D      1DE2       0  CODE        2
-                text17                         000F0D  000022  000F2F      1E1A       0  CODE        2
-                text22                         000F2F  000023  000F52      1E5E       0  CODE        2
-                text14                         000F52  000028  000F7A      1EA4       0  CODE        2
-                text3                          000F7A  000029  000FA3      1EF4       0  CODE        2
-                text1                          000FA3  00002B  000FCE      1F46       0  CODE        2
-                maintext                       000FCE  000032  001000      1F9C       0  CODE        2
+                stringtext                     000100  000423  000523         2       0  STRCODE     2
+                text32                         000523  0002DC  0007FF       A46       0  CODE        2
+                text35                         000F3C  000003  000F3F      1E78       0  CODE        2
+                idataBANK0                     000F3F  000003  000F42      1E7E       0  CODE        2
+                text27                         000F42  000004  000F46      1E84       0  CODE        2
+                text26                         000F46  000004  000F4A      1E8C       0  CODE        2
+                text8                          000F4A  000004  000F4E      1E94       0  CODE        2
+                text7                          000F4E  000004  000F52      1E9C       0  CODE        2
+                text6                          000F52  000004  000F56      1EA4       0  CODE        2
+                text36                         000F56  000005  000F5B      1EAC       0  CODE        2
+                text33                         000F5B  000005  000F60      1EB6       0  CODE        2
+                text24                         000F60  000005  000F65      1EC0       0  CODE        2
+                text28                         000F65  000006  000F6B      1ECA       0  CODE        2
+                text21                         000F6B  000006  000F71      1ED6       0  CODE        2
+                text19                         000F71  000006  000F77      1EE2       0  CODE        2
+                clrtext                        000F77  000008  000F7F      1EEE       0  CODE        2
+                text29                         000F7F  00000B  000F8A      1EFE       0  CODE        2
+                text22                         000F8A  00000C  000F96      1F14       0  CODE        2
+                text11                         000F96  00000D  000FA3      1F2C       0  CODE        2
+                text16                         000FA3  00000E  000FB1      1F46       0  CODE        2
+                text25                         000FB1  00000F  000FC0      1F62       0  CODE        2
+                text15                         000FC0  000012  000FD2      1F80       0  CODE        2
+                text34                         000FD2  000016  000FE8      1FA4       0  CODE        2
+                text14                         000FE8  000018  001000      1FD0       0  CODE        2
 
 
 UNUSED ADDRESS RANGES
 
         Name                Unused          Largest block    Delta
-        BANK0            005E-006F             12           1
+        BANK0            005B-006F             15           1
         BANK1            00E0-00EF             10           1
-        BANK2            0160-016F             10           1
+        BANK2            0120-016F             50           1
         CODE             0002-0003              2           2
-                         00FF-00FF              1
-                         07FE-0E07              2
+                         00FE-00FF              2
+                         07FF-0F3B              1
         CONST            0002-0003              2           2
-                         00FF-00FF              1
-                         07FE-0E07            100
+                         00FE-00FF              2
+                         07FF-0F3B            100
         EEDATA           2100-21FF            100           2
         ENTRY            0002-0003              2           2
-                         00FF-00FF              1
-                         07FE-0E07            100
-        RAM              005E-006F             12           1
+                         00FE-00FF              2
+                         07FF-0F3B            100
+        RAM              005B-006F             15           1
                          00E0-00EF             10
-                         0160-016F             10
+                         0120-016F             50
         SFR0             0000-001F             20           1
         SFR1             0080-009F             20           1
         SFR2             0100-011F             20           1
         SFR3             0180-01EF             70           1
         STRCODE          0002-0003              2           2
-                         00FF-00FF              1
-                         07FE-0E07            60A
+                         00FE-00FF              2
+                         07FF-0F3B            73D
         STRING           0002-0003              2           2
-                         00FF-00FF              1
-                         07FE-0E07            100
+                         00FE-00FF              2
+                         07FF-0F3B            100
 
                                   Symbol Table
 
-?___aldiv                                     cstackCOMMON 0070
-?___lwdiv                                     cstackCOMMON 0070
-?___lwmod                                     cstackCOMMON 0077
-?_sprintf                                     cstackBANK0  0042
-SPI_Read@data                                 cstackCOMMON 0070
-SPI_Write@data                                cstackCOMMON 0070
-UART_Init@baudrate                            cstackBANK0  0048
-UART_Init@x                                   cstackCOMMON 0079
-_GPIO_Init                                    text37       0E22
-_Global_Interrupt                             text36       0E08
-_INTCONbits                                   (abs)        000B
-_OSCCON                                       (abs)        008F
-_PIC16F883_SI4463_INIT                        text31       0ED7
-_PIE1bits                                     (abs)        008C
-_Pro2Cmd                                      bssBANK0     0032
-_RA5                                          (abs)        002D
-_RB0                                          (abs)        0030
-_RB1                                          (abs)        0031
-_RCSTAbits                                    (abs)        0018
-_RadioConfiguration                           stringtext   04E6
-_Radio_ChannelNumber                          dataBANK0    005D
-_Radio_Configuration_Data_Array               stringtext   011C
-_SPBRG                                        (abs)        0099
-_SPI_Init                                     text35       0E93
-_SPI_Read                                     text24       0E72
-_SPI_Write                                    text21       0E4B
-_SSPBUF                                       (abs)        0013
-_SSPCONbits                                   (abs)        0014
-_SSPSTATbits                                  (abs)        0094
-_Si446xCmd                                    bssBANK0     0020
-_Systick_Init                                 text34       0E27
-_TRISAbits                                    (abs)        0085
-_TRISBbits                                    (abs)        0086
-_TRISCbits                                    (abs)        0087
-_TXIF                                         (abs)        0064
-_TXREG                                        (abs)        0019
-_TXSTAbits                                    (abs)        0098
-_UART_Init                                    text32       0729
-__H__absolute__                               __absolute__ 0000
-__Habs1                                       abs1         0000
-__Hbank0                                      bank0        0000
-__Hbank1                                      bank1        0000
-__Hbank2                                      bank2        0000
-__Hbank3                                      bank3        0000
-__HbssBANK0                                   bssBANK0     0000
-__HbssBANK1                                   bssBANK1     0000
-__HbssBANK2                                   bssBANK2     0000
-__Hcinit                                      cinit        0029
-__Hclrtext                                    clrtext      0000
-__Hcode                                       code         0000
-__Hcommon                                     common       0000
-__Hconfig                                     config       2009
-__HcstackBANK0                                cstackBANK0  0000
-__HcstackCOMMON                               cstackCOMMON 0000
-__HdataBANK0                                  dataBANK0    0000
-__Heeprom_data                                eeprom_data  0000
-__Hend_init                                   end_init     0006
-__Hfunctab                                    functab      0000
-__HidataBANK0                                 idataBANK0   0000
-__Hidloc                                      idloc        2004
-__Hinit                                       init         0004
-__Hintentry                                   intentry     0004
-__Hmaintext                                   maintext     0000
-__Hpowerup                                    powerup      0000
-__Hram                                        ram          0000
-__Hreset_vec                                  reset_vec    0002
-__Hsfr0                                       sfr0         0000
-__Hsfr1                                       sfr1         0000
-__Hsfr2                                       sfr2         0000
-__Hsfr3                                       sfr3         0000
-__Hspace_0                                    (abs)        1000
-__Hspace_1                                    (abs)        0160
-__Hspace_2                                    (abs)        0000
-__Hspace_3                                    (abs)        0000
-__Hspace_4                                    (abs)        4010
-__Hstack                                      stack        0000
-__Hstrings                                    strings      0000
-__Hstringtext                                 stringtext   0000
-__Htext                                       text         0000
-__L__absolute__                               __absolute__ 0000
-__Labs1                                       abs1         0000
-__Lbank0                                      bank0        0000
-__Lbank1                                      bank1        0000
-__Lbank2                                      bank2        0000
-__Lbank3                                      bank3        0000
-__LbssBANK0                                   bssBANK0     0000
-__LbssBANK1                                   bssBANK1     0000
-__LbssBANK2                                   bssBANK2     0000
-__Lcinit                                      cinit        0006
-__Lclrtext                                    clrtext      0000
-__Lcode                                       code         0000
-__Lcommon                                     common       0000
-__Lconfig                                     config       0000
-__LcstackBANK0                                cstackBANK0  0000
-__LcstackCOMMON                               cstackCOMMON 0000
-__LdataBANK0                                  dataBANK0    0000
-__Leeprom_data                                eeprom_data  0000
-__Lend_init                                   end_init     0004
-__Lfunctab                                    functab      0000
-__LidataBANK0                                 idataBANK0   0000
-__Lidloc                                      idloc        0000
-__Linit                                       init         0004
-__Lintentry                                   intentry     0004
-__Lmaintext                                   maintext     0000
-__Lpowerup                                    powerup      0000
-__Lram                                        ram          0000
-__Lreset_vec                                  reset_vec    0000
-__Lsfr0                                       sfr0         0000
-__Lsfr1                                       sfr1         0000
-__Lsfr2                                       sfr2         0000
-__Lsfr3                                       sfr3         0000
-__Lspace_0                                    (abs)        0000
-__Lspace_1                                    (abs)        0000
-__Lspace_2                                    (abs)        0000
-__Lspace_3                                    (abs)        0000
-__Lspace_4                                    (abs)        0000
-__Lstack                                      stack        0000
-__Lstrings                                    strings      0000
-__Lstringtext                                 stringtext   0000
-__Ltext                                       text         0000
-__S0                                          (abs)        1000
-__S1                                          (abs)        0160
-__S3                                          (abs)        0000
-___aldiv                                      text33       061F
-___aldiv@counter                              cstackBANK0  0042
-___aldiv@dividend                             cstackCOMMON 0074
-___aldiv@divisor                              cstackCOMMON 0070
-___aldiv@quotient                             cstackBANK0  0044
-___aldiv@sign                                 cstackBANK0  0043
-___int_sp                                     stack        0000
-___latbits                                    (abs)        0001
-___lwdiv                                      text30       0029
-___lwdiv@counter                              cstackCOMMON 0076
-___lwdiv@dividend                             cstackCOMMON 0072
-___lwdiv@divisor                              cstackCOMMON 0070
-___lwdiv@quotient                             cstackCOMMON 0074
-___lwmod                                      text29       00A9
-___lwmod@counter                              cstackCOMMON 007B
-___lwmod@dividend                             cstackCOMMON 0079
-___lwmod@divisor                              cstackCOMMON 0077
-___sp                                         stack        0000
-___stackhi                                    (abs)        0000
-___stacklo                                    (abs)        0000
-__end_of_GPIO_Init                            text37       0E27
-__end_of_Global_Interrupt                     text36       0E0B
-__end_of_PIC16F883_SI4463_INIT                text31       0EF1
-__end_of_RadioConfiguration                   stringtext   052D
-__end_of_Radio_Configuration_Data_Array       stringtext   04E6
-__end_of_SPI_Init                             text35       0EA9
-__end_of_SPI_Read                             text24       0E81
-__end_of_SPI_Write                            text21       0E57
-__end_of_Systick_Init                         text34       0E2C
-__end_of_UART_Init                            text32       0792
-__end_of___aldiv                              text33       06BC
-__end_of___lwdiv                              text30       006D
-__end_of___lwmod                              text29       00E3
-__end_of__initialization                      cinit        0026
-__end_of__stringtab                           stringtext   0112
-__end_of_dpowers                              stringtext   011C
-__end_of_main                                 maintext     1000
-__end_of_radio_comm_ClearCTS                  text12       0E1A
-__end_of_radio_comm_GetResp                   text19       07D9
-__end_of_radio_comm_PollCTS                   text18       0E43
-__end_of_radio_comm_SendCmd                   text16       0F0D
-__end_of_radio_comm_SendCmdGetResp            text15       0E93
-__end_of_radio_comm_WriteData                 text3        0FA3
-__end_of_radio_hal_AssertShutdown             text11       0E1E
-__end_of_radio_hal_ClearNsel                  text26       0E12
-__end_of_radio_hal_DeassertShutdown           text10       0E22
-__end_of_radio_hal_NirqLevel                  text27       0E37
-__end_of_radio_hal_SetNsel                    text25       0E16
-__end_of_radio_hal_SpiReadByte                text23       0E31
-__end_of_radio_hal_SpiReadData                text22       0F52
-__end_of_radio_hal_SpiWriteByte               text20       0E3D
-__end_of_radio_hal_SpiWriteData               text17       0F2F
-__end_of_si446x_change_state                  text6        0E72
-__end_of_si446x_configuration_init            text13       0729
-__end_of_si446x_fifo_info                     text5        0ED7
-__end_of_si446x_get_int_status                text14       0F7A
-__end_of_si446x_reset                         text9        00FF
-__end_of_si446x_start_tx                      text4        0EBF
-__end_of_si446x_write_tx_fifo                 text2        0E64
-__end_of_sprintf                              text28       061F
-__end_of_vRadio_Init                          text7        00A9
-__end_of_vRadio_PowerUp                       text8        07FE
-__end_of_vRadio_StartTx_Variable_Packet       text1        0FCE
-__initialization                              cinit        0006
-__pbssBANK0                                   bssBANK0     0020
-__pbssBANK1                                   bssBANK1     00A0
-__pbssBANK2                                   bssBANK2     0120
-__pcstackBANK0                                cstackBANK0  0042
-__pcstackCOMMON                               cstackCOMMON 0070
-__pdataBANK0                                  dataBANK0    005B
-__pidataBANK0                                 idataBANK0   0E0B
-__pmaintext                                   maintext     0FCE
-__pstringtext                                 stringtext   0100
-__ptext1                                      text1        0FA3
-__ptext10                                     text10       0E1E
-__ptext11                                     text11       0E1A
-__ptext12                                     text12       0E16
-__ptext13                                     text13       06BC
-__ptext14                                     text14       0F52
-__ptext15                                     text15       0E81
-__ptext16                                     text16       0EF1
-__ptext17                                     text17       0F0D
-__ptext18                                     text18       0E3D
-__ptext19                                     text19       0792
-__ptext2                                      text2        0E57
-__ptext20                                     text20       0E37
-__ptext21                                     text21       0E4B
-__ptext22                                     text22       0F2F
-__ptext23                                     text23       0E2C
-__ptext24                                     text24       0E72
-__ptext25                                     text25       0E12
-__ptext26                                     text26       0E0E
-__ptext27                                     text27       0E31
-__ptext28                                     text28       0541
-__ptext29                                     text29       00A9
-__ptext3                                      text3        0F7A
-__ptext30                                     text30       0029
-__ptext31                                     text31       0ED7
-__ptext32                                     text32       0729
-__ptext33                                     text33       061F
-__ptext34                                     text34       0E27
-__ptext35                                     text35       0E93
-__ptext36                                     text36       0E08
-__ptext37                                     text37       0E22
-__ptext4                                      text4        0EA9
-__ptext5                                      text5        0EBF
-__ptext6                                      text6        0E64
-__ptext7                                      text7        006D
-__ptext8                                      text8        07D9
-__ptext9                                      text9        00E3
-__stringbase                                  stringtext   0112
-__stringtab                                   stringtext   0100
-_ctsWentHigh                                  bssBANK0     0030
-_customRadioPacket                            bssBANK1     00A0
-_dpowers                                      stringtext   0112
-_main                                         maintext     0FCE
-_radio_comm_ClearCTS                          text12       0E16
-_radio_comm_GetResp                           text19       0792
-_radio_comm_PollCTS                           text18       0E3D
-_radio_comm_SendCmd                           text16       0EF1
-_radio_comm_SendCmdGetResp                    text15       0E81
-_radio_comm_WriteData                         text3        0F7A
-_radio_hal_AssertShutdown                     text11       0E1A
-_radio_hal_ClearNsel                          text26       0E0E
-_radio_hal_DeassertShutdown                   text10       0E1E
-_radio_hal_NirqLevel                          text27       0E31
-_radio_hal_SetNsel                            text25       0E12
-_radio_hal_SpiReadByte                        text23       0E2C
-_radio_hal_SpiReadData                        text22       0F2F
-_radio_hal_SpiWriteByte                       text20       0E37
-_radio_hal_SpiWriteData                       text17       0F0D
-_si446x_change_state                          text6        0E64
-_si446x_configuration_init                    text13       06BC
-_si446x_fifo_info                             text5        0EBF
-_si446x_get_int_status                        text14       0F52
-_si446x_reset                                 text9        00E3
-_si446x_start_tx                              text4        0EA9
-_si446x_write_tx_fifo                         text2        0E57
-_sprintf                                      text28       0541
-_uartDataReceived                             bssBANK0     0031
-_vRadio_Init                                  text7        006D
-_vRadio_PowerUp                               text8        07D9
-_vRadio_StartTx_Variable_Packet               text1        0FA3
-btemp                                         (abs)        007E
-clear_ram0                                    clrtext      0E43
-end_of_initialization                         cinit        0026
-intlevel0                                     functab      0000
-intlevel1                                     functab      0000
-intlevel2                                     functab      0000
-intlevel3                                     functab      0000
-intlevel4                                     functab      0000
-intlevel5                                     functab      0000
-radio_comm_GetResp@byteCount                  cstackCOMMON 0078
-radio_comm_GetResp@ctsVal                     cstackCOMMON 007B
-radio_comm_GetResp@errCnt                     cstackCOMMON 0079
-radio_comm_GetResp@pData                      cstackCOMMON 0077
-radio_comm_SendCmd@byteCount                  cstackCOMMON 007D
-radio_comm_SendCmd@pData                      cstackCOMMON 007C
-radio_comm_SendCmdGetResp@cmdByteCount        cstackBANK0  0045
-radio_comm_SendCmdGetResp@pCmdData            cstackBANK0  0042
-radio_comm_SendCmdGetResp@pRespData           cstackBANK0  0044
-radio_comm_SendCmdGetResp@respByteCount       cstackBANK0  0043
-radio_comm_WriteData@byteCount                cstackBANK0  0043
-radio_comm_WriteData@cmd                      cstackCOMMON 007C
-radio_comm_WriteData@pData                    cstackBANK0  0044
-radio_comm_WriteData@pollCts                  cstackBANK0  0042
-radio_hal_SpiReadData@byteCount               cstackCOMMON 0074
-radio_hal_SpiReadData@i                       cstackCOMMON 0075
-radio_hal_SpiReadData@pData                   cstackCOMMON 0071
-radio_hal_SpiWriteByte@byteToWrite            cstackCOMMON 0071
-radio_hal_SpiWriteData@byteCount              cstackCOMMON 0074
-radio_hal_SpiWriteData@i                      cstackCOMMON 0075
-radio_hal_SpiWriteData@pData                  cstackCOMMON 0071
-reset_vec                                     reset_vec    0000
-si446x_change_state@NEXT_STATE1               cstackBANK0  0042
-si446x_configuration_init@col                 cstackBANK0  004B
-si446x_configuration_init@numOfBytes          cstackBANK0  004C
-si446x_configuration_init@pSetPropCmd         cstackBANK0  0049
-si446x_fifo_info@FIFO                         cstackBANK0  0046
-si446x_get_int_status@CHIP_CLR_PEND           cstackBANK0  0047
-si446x_get_int_status@MODEM_CLR_PEND          cstackBANK0  0046
-si446x_get_int_status@PH_CLR_PEND             cstackBANK0  0048
-si446x_reset@loopCount                        cstackCOMMON 0070
-si446x_start_tx@CHANNEL                       cstackBANK0  0045
-si446x_start_tx@CONDITION                     cstackBANK0  0042
-si446x_start_tx@TX_LEN                        cstackBANK0  0043
-si446x_write_tx_fifo@numBytes                 cstackCOMMON 007D
-si446x_write_tx_fifo@pTxData                  cstackBANK0  0045
-sprintf@ap                                    cstackBANK0  004A
-sprintf@c                                     cstackBANK0  0050
-sprintf@f                                     cstackBANK0  0042
-sprintf@flag                                  cstackBANK0  004B
-sprintf@prec                                  cstackBANK0  004C
-sprintf@sp                                    cstackBANK0  004F
-sprintf@val                                   cstackBANK0  004D
-start                                         init         0004
-start_initialization                          cinit        0006
-vRadio_Init@wDelay                            cstackBANK0  004F
-vRadio_PowerUp@wDelay                         cstackCOMMON 0073
-vRadio_StartTx_Variable_Packet@channel        cstackBANK0  004D
-vRadio_StartTx_Variable_Packet@length         cstackBANK0  004A
-vRadio_StartTx_Variable_Packet@pioRadioPacket cstackBANK0  0049
-wtemp0                                        (abs)        007E
+?___aldiv                               cstackCOMMON 0070
+SPI_Read@data                           cstackCOMMON 0070
+SPI_Write@data                          cstackCOMMON 0070
+UART_Init@baudrate                      cstackBANK0  0048
+UART_Init@x                             cstackCOMMON 0079
+UART_TxChar@ch                          cstackCOMMON 0070
+_GPIO_Init                              text36       0F56
+_Global_Interrupt                       text35       0F3C
+_INTCONbits                             (abs)        000B
+_OSCCON                                 (abs)        008F
+_PIC16F883_SI4463_INIT                  text30       00E4
+_PIE1bits                               (abs)        008C
+_Pro2Cmd                                bssBANK0     0032
+_RA5                                    (abs)        002D
+_RB0                                    (abs)        0030
+_RB1                                    (abs)        0031
+_RCSTAbits                              (abs)        0018
+_RadioConfiguration                     stringtext   04DC
+_Radio_ChannelNumber                    dataBANK0    005A
+_Radio_Configuration_Data_Array         stringtext   0112
+_SPBRG                                  (abs)        0099
+_SPI_Init                               text34       0FD2
+_SPI_Read                               text25       0FB1
+_SPI_Write                              text22       0F8A
+_SSPBUF                                 (abs)        0013
+_SSPCONbits                             (abs)        0014
+_SSPSTATbits                            (abs)        0094
+_Si446xCmd                              bssBANK0     0020
+_Systick_Init                           text33       0F5B
+_TRISAbits                              (abs)        0085
+_TRISBbits                              (abs)        0086
+_TRISCbits                              (abs)        0087
+_TXIF                                   (abs)        0064
+_TXREG                                  (abs)        0019
+_TXSTAbits                              (abs)        0098
+_UART_Init                              text31       062D
+_UART_TxChar                            text29       0F7F
+__H__absolute__                         __absolute__ 0000
+__Habs1                                 abs1         0000
+__Hbank0                                bank0        0000
+__Hbank1                                bank1        0000
+__Hbank2                                bank2        0000
+__Hbank3                                bank3        0000
+__HbssBANK0                             bssBANK0     0000
+__HbssBANK1                             bssBANK1     0000
+__Hcinit                                cinit        0022
+__Hclrtext                              clrtext      0000
+__Hcode                                 code         0000
+__Hcommon                               common       0000
+__Hconfig                               config       2009
+__HcstackBANK0                          cstackBANK0  0000
+__HcstackCOMMON                         cstackCOMMON 0000
+__HdataBANK0                            dataBANK0    0000
+__Heeprom_data                          eeprom_data  0000
+__Hend_init                             end_init     0006
+__Hfunctab                              functab      0000
+__HidataBANK0                           idataBANK0   0000
+__Hidloc                                idloc        2004
+__Hinit                                 init         0004
+__Hintentry                             intentry     0004
+__Hmaintext                             maintext     0000
+__Hpowerup                              powerup      0000
+__Hram                                  ram          0000
+__Hreset_vec                            reset_vec    0002
+__Hsfr0                                 sfr0         0000
+__Hsfr1                                 sfr1         0000
+__Hsfr2                                 sfr2         0000
+__Hsfr3                                 sfr3         0000
+__Hspace_0                              (abs)        1000
+__Hspace_1                              (abs)        00E0
+__Hspace_2                              (abs)        0000
+__Hspace_3                              (abs)        0000
+__Hspace_4                              (abs)        4010
+__Hstack                                stack        0000
+__Hstrings                              strings      0000
+__Hstringtext                           stringtext   0000
+__Htext                                 text         0000
+__L__absolute__                         __absolute__ 0000
+__Labs1                                 abs1         0000
+__Lbank0                                bank0        0000
+__Lbank1                                bank1        0000
+__Lbank2                                bank2        0000
+__Lbank3                                bank3        0000
+__LbssBANK0                             bssBANK0     0000
+__LbssBANK1                             bssBANK1     0000
+__Lcinit                                cinit        0006
+__Lclrtext                              clrtext      0000
+__Lcode                                 code         0000
+__Lcommon                               common       0000
+__Lconfig                               config       0000
+__LcstackBANK0                          cstackBANK0  0000
+__LcstackCOMMON                         cstackCOMMON 0000
+__LdataBANK0                            dataBANK0    0000
+__Leeprom_data                          eeprom_data  0000
+__Lend_init                             end_init     0004
+__Lfunctab                              functab      0000
+__LidataBANK0                           idataBANK0   0000
+__Lidloc                                idloc        0000
+__Linit                                 init         0004
+__Lintentry                             intentry     0004
+__Lmaintext                             maintext     0000
+__Lpowerup                              powerup      0000
+__Lram                                  ram          0000
+__Lreset_vec                            reset_vec    0000
+__Lsfr0                                 sfr0         0000
+__Lsfr1                                 sfr1         0000
+__Lsfr2                                 sfr2         0000
+__Lsfr3                                 sfr3         0000
+__Lspace_0                              (abs)        0000
+__Lspace_1                              (abs)        0000
+__Lspace_2                              (abs)        0000
+__Lspace_3                              (abs)        0000
+__Lspace_4                              (abs)        0000
+__Lstack                                stack        0000
+__Lstrings                              strings      0000
+__Lstringtext                           stringtext   0000
+__Ltext                                 text         0000
+__S0                                    (abs)        1000
+__S1                                    (abs)        00E0
+__S3                                    (abs)        0000
+___aldiv                                text32       0523
+___aldiv@counter                        cstackBANK0  0042
+___aldiv@dividend                       cstackCOMMON 0074
+___aldiv@divisor                        cstackCOMMON 0070
+___aldiv@quotient                       cstackBANK0  0044
+___aldiv@sign                           cstackBANK0  0043
+___int_sp                               stack        0000
+___latbits                              (abs)        0001
+___sp                                   stack        0000
+___stackhi                              (abs)        0000
+___stacklo                              (abs)        0000
+__end_of_GPIO_Init                      text36       0F5B
+__end_of_Global_Interrupt               text35       0F3F
+__end_of_PIC16F883_SI4463_INIT          text30       00FE
+__end_of_RadioConfiguration             stringtext   0523
+__end_of_Radio_Configuration_Data_Array stringtext   04DC
+__end_of_SPI_Init                       text34       0FE8
+__end_of_SPI_Read                       text25       0FC0
+__end_of_SPI_Write                      text22       0F96
+__end_of_Systick_Init                   text33       0F60
+__end_of_UART_Init                      text31       0696
+__end_of_UART_TxChar                    text29       0F8A
+__end_of___aldiv                        text32       05C0
+__end_of__initialization                cinit        001F
+__end_of__stringtab                     stringtext   0112
+__end_of_bRadio_Check_Tx_RX             text10       06DD
+__end_of_main                           maintext     0792
+__end_of_radio_comm_ClearCTS            text8        0F4E
+__end_of_radio_comm_GetResp             text20       0724
+__end_of_radio_comm_PollCTS             text19       0F77
+__end_of_radio_comm_ReadData            text12       07BB
+__end_of_radio_comm_SendCmd             text17       00CA
+__end_of_radio_comm_SendCmdGetResp      text15       0FD2
+__end_of_radio_hal_AssertShutdown       text7        0F52
+__end_of_radio_hal_ClearNsel            text27       0F46
+__end_of_radio_hal_DeassertShutdown     text6        0F56
+__end_of_radio_hal_NirqLevel            text28       0F6B
+__end_of_radio_hal_SetNsel              text26       0F4A
+__end_of_radio_hal_SpiReadByte          text24       0F65
+__end_of_radio_hal_SpiReadData          text23       006A
+__end_of_radio_hal_SpiWriteByte         text21       0F71
+__end_of_radio_hal_SpiWriteData         text18       00AE
+__end_of_si446x_change_state            text16       0FB1
+__end_of_si446x_configuration_init      text9        062D
+__end_of_si446x_fifo_info               text14       1000
+__end_of_si446x_get_int_status          text13       07E3
+__end_of_si446x_read_rx_fifo            text11       0FA3
+__end_of_si446x_reset                   text5        07FF
+__end_of_si446x_start_rx                text2        00E4
+__end_of_vRadio_Init                    text3        0760
+__end_of_vRadio_PowerUp                 text4        0047
+__end_of_vRadio_StartRX                 text1        008C
+__initialization                        cinit        0006
+__pbssBANK0                             bssBANK0     0020
+__pbssBANK1                             bssBANK1     00A0
+__pcstackBANK0                          cstackBANK0  0042
+__pcstackCOMMON                         cstackCOMMON 0070
+__pdataBANK0                            dataBANK0    0058
+__pidataBANK0                           idataBANK0   0F3F
+__pmaintext                             maintext     0760
+__pstringtext                           stringtext   0100
+__ptext1                                text1        006A
+__ptext10                               text10       0696
+__ptext11                               text11       0F96
+__ptext12                               text12       0792
+__ptext13                               text13       07BB
+__ptext14                               text14       0FE8
+__ptext15                               text15       0FC0
+__ptext16                               text16       0FA3
+__ptext17                               text17       00AE
+__ptext18                               text18       008C
+__ptext19                               text19       0F71
+__ptext2                                text2        00CA
+__ptext20                               text20       06DD
+__ptext21                               text21       0F6B
+__ptext22                               text22       0F8A
+__ptext23                               text23       0047
+__ptext24                               text24       0F60
+__ptext25                               text25       0FB1
+__ptext26                               text26       0F46
+__ptext27                               text27       0F42
+__ptext28                               text28       0F65
+__ptext29                               text29       0F7F
+__ptext3                                text3        0724
+__ptext30                               text30       00E4
+__ptext31                               text31       062D
+__ptext32                               text32       0523
+__ptext33                               text33       0F5B
+__ptext34                               text34       0FD2
+__ptext35                               text35       0F3C
+__ptext36                               text36       0F56
+__ptext4                                text4        0022
+__ptext5                                text5        07E3
+__ptext6                                text6        0F52
+__ptext7                                text7        0F4E
+__ptext8                                text8        0F4A
+__ptext9                                text9        05C0
+__stringbase                            stringtext   0112
+__stringtab                             stringtext   0100
+_bRadio_Check_Tx_RX                     text10       0696
+_ctsWentHigh                            bssBANK0     0030
+_customRadioPacket                      bssBANK1     00A0
+_lCnt                                   bssBANK0     0031
+_main                                   maintext     0760
+_radio_comm_ClearCTS                    text8        0F4A
+_radio_comm_GetResp                     text20       06DD
+_radio_comm_PollCTS                     text19       0F71
+_radio_comm_ReadData                    text12       0792
+_radio_comm_SendCmd                     text17       00AE
+_radio_comm_SendCmdGetResp              text15       0FC0
+_radio_hal_AssertShutdown               text7        0F4E
+_radio_hal_ClearNsel                    text27       0F42
+_radio_hal_DeassertShutdown             text6        0F52
+_radio_hal_NirqLevel                    text28       0F65
+_radio_hal_SetNsel                      text26       0F46
+_radio_hal_SpiReadByte                  text24       0F60
+_radio_hal_SpiReadData                  text23       0047
+_radio_hal_SpiWriteByte                 text21       0F6B
+_radio_hal_SpiWriteData                 text18       008C
+_si446x_change_state                    text16       0FA3
+_si446x_configuration_init              text9        05C0
+_si446x_fifo_info                       text14       0FE8
+_si446x_get_int_status                  text13       07BB
+_si446x_read_rx_fifo                    text11       0F96
+_si446x_reset                           text5        07E3
+_si446x_start_rx                        text2        00CA
+_vRadio_Init                            text3        0724
+_vRadio_PowerUp                         text4        0022
+_vRadio_StartRX                         text1        006A
+bRadio_Check_Tx_RX@RF_NIRQ              cstackBANK0  0049
+btemp                                   (abs)        007E
+clear_ram0                              clrtext      0F77
+end_of_initialization                   cinit        001F
+intlevel0                               functab      0000
+intlevel1                               functab      0000
+intlevel2                               functab      0000
+intlevel3                               functab      0000
+intlevel4                               functab      0000
+intlevel5                               functab      0000
+radio_comm_GetResp@byteCount            cstackCOMMON 0078
+radio_comm_GetResp@ctsVal               cstackCOMMON 007B
+radio_comm_GetResp@errCnt               cstackCOMMON 0079
+radio_comm_GetResp@pData                cstackCOMMON 0077
+radio_comm_ReadData@byteCount           cstackBANK0  0043
+radio_comm_ReadData@cmd                 cstackCOMMON 007C
+radio_comm_ReadData@pData               cstackBANK0  0044
+radio_comm_ReadData@pollCts             cstackBANK0  0042
+radio_comm_SendCmd@byteCount            cstackCOMMON 007D
+radio_comm_SendCmd@pData                cstackCOMMON 007C
+radio_comm_SendCmdGetResp@cmdByteCount  cstackBANK0  0045
+radio_comm_SendCmdGetResp@pCmdData      cstackBANK0  0042
+radio_comm_SendCmdGetResp@pRespData     cstackBANK0  0044
+radio_comm_SendCmdGetResp@respByteCount cstackBANK0  0043
+radio_hal_SpiReadData@byteCount         cstackCOMMON 0074
+radio_hal_SpiReadData@i                 cstackCOMMON 0075
+radio_hal_SpiReadData@pData             cstackCOMMON 0071
+radio_hal_SpiWriteByte@byteToWrite      cstackCOMMON 0071
+radio_hal_SpiWriteData@byteCount        cstackCOMMON 0074
+radio_hal_SpiWriteData@i                cstackCOMMON 0075
+radio_hal_SpiWriteData@pData            cstackCOMMON 0071
+reset_vec                               reset_vec    0000
+si446x_change_state@NEXT_STATE1         cstackBANK0  0042
+si446x_configuration_init@col           cstackBANK0  004B
+si446x_configuration_init@numOfBytes    cstackBANK0  004C
+si446x_configuration_init@pSetPropCmd   cstackBANK0  0049
+si446x_fifo_info@FIFO                   cstackBANK0  0046
+si446x_get_int_status@CHIP_CLR_PEND     cstackBANK0  0047
+si446x_get_int_status@MODEM_CLR_PEND    cstackBANK0  0046
+si446x_get_int_status@PH_CLR_PEND       cstackBANK0  0048
+si446x_read_rx_fifo@numBytes            cstackCOMMON 007D
+si446x_read_rx_fifo@pRxData             cstackBANK0  0045
+si446x_reset@loopCount                  cstackCOMMON 0070
+si446x_start_rx@CHANNEL                 cstackBANK0  0048
+si446x_start_rx@CONDITION               cstackBANK0  0042
+si446x_start_rx@NEXT_STATE1             cstackBANK0  0045
+si446x_start_rx@NEXT_STATE2             cstackBANK0  0046
+si446x_start_rx@NEXT_STATE3             cstackBANK0  0047
+si446x_start_rx@RX_LEN                  cstackBANK0  0043
+start                                   init         0004
+start_initialization                    cinit        0006
+vRadio_Init@wDelay                      cstackBANK0  004F
+vRadio_PowerUp@wDelay                   cstackCOMMON 0073
+vRadio_StartRX@channel                  cstackBANK0  004C
+vRadio_StartRX@packetLenght             cstackBANK0  0049
+wtemp0                                  (abs)        007E
 
 
 MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
 src/main_pic16f883.c
-		_UART_Init     		CODE           	0729	0000	105
-		_Systick_Init  		CODE           	0E27	0000	5
-		_GPIO_Init     		CODE           	0E22	0000	5
-		_SPI_Init      		CODE           	0E93	0000	22
-		_PIC16F883_SI4463_INIT		CODE           	0ED7	0000	26
-		_Global_Interrupt		CODE           	0E08	0000	3
+		_UART_Init     		CODE           	062D	0000	105
+		_Systick_Init  		CODE           	0F5B	0000	5
+		_GPIO_Init     		CODE           	0F56	0000	5
+		_SPI_Init      		CODE           	0FD2	0000	22
+		_PIC16F883_SI4463_INIT		CODE           	00E4	0000	26
+		_Global_Interrupt		CODE           	0F3C	0000	3
 
 src/main_pic16f883.c estimated size: 166
 
 F883_Si4463_main.c
-		_main          		CODE           	0FCE	0000	50
+		_main          		CODE           	0760	0000	50
 
 F883_Si4463_main.c estimated size: 50
 
-C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\lwdiv.c
-		___lwdiv       		CODE           	0029	0000	68
-
-C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\lwdiv.c estimated size: 68
-
 Si4463/radio_comm.c
-		_radio_comm_PollCTS		CODE           	0E3D	0000	6
-		_radio_comm_SendCmdGetResp		CODE           	0E81	0000	18
-		_radio_comm_GetResp		CODE           	0792	0000	71
-		_radio_comm_SendCmd		CODE           	0EF1	0000	28
-		_radio_comm_ClearCTS		CODE           	0E16	0000	4
-		_radio_comm_WriteData		CODE           	0F7A	0000	41
+		_radio_comm_ReadData		CODE           	0792	0000	41
+		_radio_comm_PollCTS		CODE           	0F71	0000	6
+		_radio_comm_SendCmdGetResp		CODE           	0FC0	0000	18
+		_radio_comm_GetResp		CODE           	06DD	0000	71
+		_radio_comm_SendCmd		CODE           	00AE	0000	28
+		_radio_comm_ClearCTS		CODE           	0F4A	0000	4
 
 Si4463/radio_comm.c estimated size: 168
 
 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\aldiv.c
-		___aldiv       		CODE           	061F	0000	157
+		___aldiv       		CODE           	0523	0000	157
 
 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\aldiv.c estimated size: 157
 
 Si4463/radio.c
-		_vRadio_Init   		CODE           	006D	0000	60
-		_vRadio_StartTx_Variable_Packet		CODE           	0FA3	0000	43
-		_vRadio_PowerUp		CODE           	07D9	0000	37
+		_bRadio_Check_Tx_RX		CODE           	0696	0000	71
+		_vRadio_Init   		CODE           	0724	0000	60
+		_vRadio_StartRX		CODE           	006A	0000	34
+		_vRadio_PowerUp		CODE           	0022	0000	37
 
-Si4463/radio.c estimated size: 140
+Si4463/radio.c estimated size: 202
 
 Si4463/radio_hal.c
-		_radio_hal_ClearNsel		CODE           	0E0E	0000	4
-		_radio_hal_SpiReadByte		CODE           	0E2C	0000	5
-		_radio_hal_NirqLevel		CODE           	0E31	0000	6
-		_radio_hal_SpiWriteData		CODE           	0F0D	0000	34
-		_radio_hal_DeassertShutdown		CODE           	0E1E	0000	4
-		_radio_hal_SetNsel		CODE           	0E12	0000	4
-		_radio_hal_SpiReadData		CODE           	0F2F	0000	35
-		_radio_hal_SpiWriteByte		CODE           	0E37	0000	6
-		_radio_hal_AssertShutdown		CODE           	0E1A	0000	4
+		_radio_hal_ClearNsel		CODE           	0F42	0000	4
+		_radio_hal_SpiReadByte		CODE           	0F60	0000	5
+		_radio_hal_NirqLevel		CODE           	0F65	0000	6
+		_radio_hal_SpiWriteData		CODE           	008C	0000	34
+		_radio_hal_DeassertShutdown		CODE           	0F52	0000	4
+		_radio_hal_SetNsel		CODE           	0F46	0000	4
+		_radio_hal_SpiReadData		CODE           	0047	0000	35
+		_radio_hal_SpiWriteByte		CODE           	0F6B	0000	6
+		_radio_hal_AssertShutdown		CODE           	0F4E	0000	4
 
 Si4463/radio_hal.c estimated size: 102
 
 src/chipset.c
-		_SPI_Write     		CODE           	0E4B	0000	12
-		_SPI_Read      		CODE           	0E72	0000	15
+		_SPI_Write     		CODE           	0F8A	0000	12
+		_SPI_Read      		CODE           	0FB1	0000	15
+		_UART_TxChar   		CODE           	0F7F	0000	11
 
-src/chipset.c estimated size: 27
+src/chipset.c estimated size: 38
 
 shared
 		__stringtab    		STRCODE        	0100	0000	18
-		_dpowers       		STRCODE        	0112	0000	10
-		__initialization		CODE           	0006	0000	32
-		_RadioConfiguration		STRCODE        	04E6	0000	71
-		_Radio_Configuration_Data_Array		STRCODE        	011C	0000	970
+		__initialization		CODE           	0006	0000	25
+		_RadioConfiguration		STRCODE        	04DC	0000	71
+		_Radio_Configuration_Data_Array		STRCODE        	0112	0000	970
 
-shared estimated size: 1101
-
-C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\doprnt.c
-		_sprintf       		CODE           	0541	0000	222
-
-C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\doprnt.c estimated size: 222
-
-C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\lwmod.c
-		___lwmod       		CODE           	00A9	0000	58
-
-C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\lwmod.c estimated size: 58
+shared estimated size: 1084
 
 Si4463/si446x_api_lib.c
-		_si446x_configuration_init		CODE           	06BC	0000	109
-		_si446x_reset  		CODE           	00E3	0000	28
-		_si446x_change_state		CODE           	0E64	0000	14
-		_si446x_fifo_info		CODE           	0EBF	0000	24
-		_si446x_get_int_status		CODE           	0F52	0000	40
-		_si446x_write_tx_fifo		CODE           	0E57	0000	13
-		_si446x_start_tx		CODE           	0EA9	0000	22
+		_si446x_configuration_init		CODE           	05C0	0000	109
+		_si446x_reset  		CODE           	07E3	0000	28
+		_si446x_change_state		CODE           	0FA3	0000	14
+		_si446x_fifo_info		CODE           	0FE8	0000	24
+		_si446x_read_rx_fifo		CODE           	0F96	0000	13
+		_si446x_get_int_status		CODE           	07BB	0000	40
+		_si446x_start_rx		CODE           	00CA	0000	26
 
-Si4463/si446x_api_lib.c estimated size: 250
+Si4463/si446x_api_lib.c estimated size: 254
 

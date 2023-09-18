@@ -115,10 +115,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "56
 [; ;Si4463/si446x_api_lib.h: 56: void si446x_read_rx_fifo( U8 numBytes, U8* pRxData );
 [v _si446x_read_rx_fifo `(v ~T0 @X0 0 ef2`uc`*uc ]
-"43 Si4463/../inc/chipset.h
-[; ;Si4463/../inc/chipset.h: 43: void UART_TxChar(char ch);
-[v _UART_TxChar `(v ~T0 @X0 0 ef1`uc ]
-"43 Si4463/si446x_api_lib.h
+"43
 [; ;Si4463/si446x_api_lib.h: 43: void si446x_start_rx(U8 CHANNEL, U8 CONDITION, U16 RX_LEN, U8 NEXT_STATE1, U8 NEXT_STATE2, U8 NEXT_STATE3);
 [v _si446x_start_rx `(v ~T0 @X0 0 ef6`uc`uc`us`uc`uc`uc ]
 "55
@@ -1453,148 +1450,127 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;Si4463/radio.c: 59:     while (SI446X_SUCCESS != si446x_configuration_init(pRadioConfiguration->Radio_ConfigurationArray)) {
 [e $ != -> . `E1544 0 `i -> ( _si446x_configuration_init (1 . *U _pRadioConfiguration 0 `i 164  ]
 [e :U 165 ]
-"65
-[; ;Si4463/radio.c: 65:     si446x_get_int_status(0u, 0u, 0u);
+"64
+[; ;Si4463/radio.c: 64:     si446x_get_int_status(0u, 0u, 0u);
 [e ( _si446x_get_int_status (3 , , -> -> 0 `ui `uc -> -> 0 `ui `uc -> -> 0 `ui `uc ]
-"66
-[; ;Si4463/radio.c: 66: }
+"65
+[; ;Si4463/radio.c: 65: }
 [e :UE 162 ]
 }
-"76
-[; ;Si4463/radio.c: 76: U8 bRadio_Check_Tx_RX(void)
+"75
+[; ;Si4463/radio.c: 75: U8 bRadio_Check_Tx_RX(void)
 [v _bRadio_Check_Tx_RX `(uc ~T0 @X0 1 ef ]
-"77
-[; ;Si4463/radio.c: 77: {
+"76
+[; ;Si4463/radio.c: 76: {
 {
 [e :U _bRadio_Check_Tx_RX ]
 [f ]
 "78
-[; ;Si4463/radio.c: 78:     U8 lCnt;
-[v _lCnt `uc ~T0 @X0 1 a ]
-"79
-[; ;Si4463/radio.c: 79:     uint8_t RF_NIRQ;
+[; ;Si4463/radio.c: 78:     uint8_t RF_NIRQ;
 [v _RF_NIRQ `uc ~T0 @X0 1 a ]
-"81
-[; ;Si4463/radio.c: 81:     RF_NIRQ = radio_hal_NirqLevel();
+"80
+[; ;Si4463/radio.c: 80:     RF_NIRQ = radio_hal_NirqLevel();
 [e = _RF_NIRQ ( _radio_hal_NirqLevel ..  ]
-"82
-[; ;Si4463/radio.c: 82:     if (RF_NIRQ == 0) {
+"81
+[; ;Si4463/radio.c: 81:     if (RF_NIRQ == 0) {
 [e $ ! == -> _RF_NIRQ `i -> 0 `i 171  ]
 {
-"84
-[; ;Si4463/radio.c: 84:         si446x_get_int_status(0u, 0u, 0u);
+"83
+[; ;Si4463/radio.c: 83:         si446x_get_int_status(0u, 0u, 0u);
 [e ( _si446x_get_int_status (3 , , -> -> 0 `ui `uc -> -> 0 `ui `uc -> -> 0 `ui `uc ]
-"86
-[; ;Si4463/radio.c: 86:         if (Si446xCmd.GET_INT_STATUS.CHIP_PEND & 0x8) {
+"85
+[; ;Si4463/radio.c: 85:         if (Si446xCmd.GET_INT_STATUS.CHIP_PEND & 0x8) {
 [e $ ! != & -> . . _Si446xCmd 7 6 `i -> 8 `i -> 0 `i 172  ]
 {
-"88
-[; ;Si4463/radio.c: 88:             si446x_change_state(1);
+"87
+[; ;Si4463/radio.c: 87:             si446x_change_state(1);
 [e ( _si446x_change_state (1 -> -> 1 `i `uc ]
-"91
-[; ;Si4463/radio.c: 91:             si446x_fifo_info(0x2);
+"90
+[; ;Si4463/radio.c: 90:             si446x_fifo_info(0x2);
 [e ( _si446x_fifo_info (1 -> -> 2 `i `uc ]
-"94
-[; ;Si4463/radio.c: 94:             si446x_change_state(8);
+"93
+[; ;Si4463/radio.c: 93:             si446x_change_state(8);
 [e ( _si446x_change_state (1 -> -> 8 `i `uc ]
-"95
-[; ;Si4463/radio.c: 95:         }
+"94
+[; ;Si4463/radio.c: 94:         }
 }
 [e :U 172 ]
-"97
-[; ;Si4463/radio.c: 97:         if(Si446xCmd.GET_INT_STATUS.PH_PEND & 0x20) {
+"96
+[; ;Si4463/radio.c: 96:         if(Si446xCmd.GET_INT_STATUS.PH_PEND & 0x20) {
 [e $ ! != & -> . . _Si446xCmd 7 2 `i -> 32 `i -> 0 `i 173  ]
 {
-"98
-[; ;Si4463/radio.c: 98:             return 0x20;
+"97
+[; ;Si4463/radio.c: 97:             return 0x20;
 [e ) -> -> 32 `i `uc ]
 [e $UE 170  ]
-"99
-[; ;Si4463/radio.c: 99:         }
+"98
+[; ;Si4463/radio.c: 98:         }
 }
 [e :U 173 ]
-"101
-[; ;Si4463/radio.c: 101:         if(Si446xCmd.GET_INT_STATUS.PH_PEND & 0x10) {
+"100
+[; ;Si4463/radio.c: 100:         if(Si446xCmd.GET_INT_STATUS.PH_PEND & 0x10) {
 [e $ ! != & -> . . _Si446xCmd 7 2 `i -> 16 `i -> 0 `i 174  ]
 {
-"104
-[; ;Si4463/radio.c: 104:             si446x_fifo_info(0x00);
+"103
+[; ;Si4463/radio.c: 103:             si446x_fifo_info(0x00);
 [e ( _si446x_fifo_info (1 -> -> 0 `i `uc ]
-"106
-[; ;Si4463/radio.c: 106:             si446x_read_rx_fifo(Si446xCmd.FIFO_INFO.RX_FIFO_COUNT, &customRadioPacket[0]);
+"104
+[; ;Si4463/radio.c: 104:             si446x_read_rx_fifo(Si446xCmd.FIFO_INFO.RX_FIFO_COUNT, &customRadioPacket[0]);
 [e ( _si446x_read_rx_fifo (2 , . . _Si446xCmd 6 0 &U *U + &U _customRadioPacket * -> -> -> 0 `i `ui `ux -> -> # *U &U _customRadioPacket `ui `ux ]
-"109
-[; ;Si4463/radio.c: 109:             for (lCnt = 0; lCnt < 64; lCnt++) {
-{
-[e = _lCnt -> -> 0 `i `uc ]
-[e $ < -> _lCnt `i -> 64 `i 175  ]
-[e $U 176  ]
-[e :U 175 ]
-{
-"110
-[; ;Si4463/radio.c: 110:                 UART_TxChar(*((U8 *) &customRadioPacket[0] + lCnt));
-[e ( _UART_TxChar (1 -> *U + &U *U + &U _customRadioPacket * -> -> -> 0 `i `ui `ux -> -> # *U &U _customRadioPacket `ui `ux * -> -> _lCnt `i `x -> -> # *U &U *U + &U _customRadioPacket * -> -> -> 0 `i `ui `ux -> -> # *U &U _customRadioPacket `ui `ux `i `x `uc ]
 "111
-[; ;Si4463/radio.c: 111:             }
-}
-[e ++ _lCnt -> -> 1 `i `uc ]
-[e $ < -> _lCnt `i -> 64 `i 175  ]
-[e :U 176 ]
-}
-"113
-[; ;Si4463/radio.c: 113:             return 0x10;
+[; ;Si4463/radio.c: 111:             return 0x10;
 [e ) -> -> 16 `i `uc ]
 [e $UE 170  ]
-"114
-[; ;Si4463/radio.c: 114:         }
+"112
+[; ;Si4463/radio.c: 112:         }
 }
 [e :U 174 ]
-"116
-[; ;Si4463/radio.c: 116:         if (Si446xCmd.GET_INT_STATUS.PH_PEND & 0x8) {
-[e $ ! != & -> . . _Si446xCmd 7 2 `i -> 8 `i -> 0 `i 178  ]
+"114
+[; ;Si4463/radio.c: 114:         if (Si446xCmd.GET_INT_STATUS.PH_PEND & 0x8) {
+[e $ ! != & -> . . _Si446xCmd 7 2 `i -> 8 `i -> 0 `i 175  ]
 {
-"118
-[; ;Si4463/radio.c: 118:             si446x_fifo_info(0x2);
+"116
+[; ;Si4463/radio.c: 116:             si446x_fifo_info(0x2);
 [e ( _si446x_fifo_info (1 -> -> 2 `i `uc ]
-"119
-[; ;Si4463/radio.c: 119:         }
+"117
+[; ;Si4463/radio.c: 117:         }
 }
-[e :U 178 ]
-"120
-[; ;Si4463/radio.c: 120:     }
+[e :U 175 ]
+"118
+[; ;Si4463/radio.c: 118:     }
 }
 [e :U 171 ]
-"121
-[; ;Si4463/radio.c: 121:     return 0;
+"119
+[; ;Si4463/radio.c: 119:     return 0;
 [e ) -> -> 0 `i `uc ]
 [e $UE 170  ]
-"122
-[; ;Si4463/radio.c: 122: }
+"120
+[; ;Si4463/radio.c: 120: }
 [e :UE 170 ]
 }
-"132
-[; ;Si4463/radio.c: 132: void vRadio_StartRX(U8 channel, U8 packetLenght ) {
+"130
+[; ;Si4463/radio.c: 130: void vRadio_StartRX(U8 channel, U8 packetLenght ) {
 [v _vRadio_StartRX `(v ~T0 @X0 1 ef2`uc`uc ]
 {
 [e :U _vRadio_StartRX ]
 [v _channel `uc ~T0 @X0 1 r1 ]
 [v _packetLenght `uc ~T0 @X0 1 r2 ]
 [f ]
-"134
-[; ;Si4463/radio.c: 134:     si446x_get_int_status(0u, 0u, 0u);
+"132
+[; ;Si4463/radio.c: 132:     si446x_get_int_status(0u, 0u, 0u);
 [e ( _si446x_get_int_status (3 , , -> -> 0 `ui `uc -> -> 0 `ui `uc -> -> 0 `ui `uc ]
-"137
-[; ;Si4463/radio.c: 137:      si446x_fifo_info(0x2);
+"135
+[; ;Si4463/radio.c: 135:      si446x_fifo_info(0x2);
 [e ( _si446x_fifo_info (1 -> -> 2 `i `uc ]
-"140
-[; ;Si4463/radio.c: 140:     si446x_start_rx(channel, 0u, packetLenght,
+"138
+[; ;Si4463/radio.c: 138:     si446x_start_rx(channel, 0u, packetLenght,
 [e ( _si446x_start_rx (4 , , , , , _channel -> -> 0 `ui `uc -> _packetLenght `us -> -> 8 `i `uc -> -> 8 `i `uc -> -> 8 `i `uc ]
-"144
-[; ;Si4463/radio.c: 144: }
-[e :UE 179 ]
+"142
+[; ;Si4463/radio.c: 142: }
+[e :UE 176 ]
 }
-"154
-[; ;Si4463/radio.c: 154: void vRadio_StartTx_Variable_Packet(U8 channel, U8 *pioRadioPacket, U8 length) {
+"152
+[; ;Si4463/radio.c: 152: void vRadio_StartTx_Variable_Packet(U8 channel, U8 *pioRadioPacket, U8 length) {
 [v _vRadio_StartTx_Variable_Packet `(v ~T0 @X0 1 ef3`uc`*uc`uc ]
 {
 [e :U _vRadio_StartTx_Variable_Packet ]
@@ -1602,22 +1578,22 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _pioRadioPacket `*uc ~T0 @X0 1 r2 ]
 [v _length `uc ~T0 @X0 1 r3 ]
 [f ]
-"156
-[; ;Si4463/radio.c: 156:     si446x_change_state(3);
+"154
+[; ;Si4463/radio.c: 154:     si446x_change_state(3);
 [e ( _si446x_change_state (1 -> -> 3 `i `uc ]
-"159
-[; ;Si4463/radio.c: 159:     si446x_get_int_status(0u, 0u, 0u);
+"157
+[; ;Si4463/radio.c: 157:     si446x_get_int_status(0u, 0u, 0u);
 [e ( _si446x_get_int_status (3 , , -> -> 0 `ui `uc -> -> 0 `ui `uc -> -> 0 `ui `uc ]
-"162
-[; ;Si4463/radio.c: 162:     si446x_fifo_info(0x1);
+"160
+[; ;Si4463/radio.c: 160:     si446x_fifo_info(0x1);
 [e ( _si446x_fifo_info (1 -> -> 1 `i `uc ]
-"165
-[; ;Si4463/radio.c: 165:     si446x_write_tx_fifo(length, pioRadioPacket);
+"163
+[; ;Si4463/radio.c: 163:     si446x_write_tx_fifo(length, pioRadioPacket);
 [e ( _si446x_write_tx_fifo (2 , _length _pioRadioPacket ]
-"168
-[; ;Si4463/radio.c: 168:      si446x_start_tx(channel, 0x80, length);
+"166
+[; ;Si4463/radio.c: 166:      si446x_start_tx(channel, 0x80, length);
 [e ( _si446x_start_tx (3 , , _channel -> -> 128 `i `uc -> _length `us ]
-"169
-[; ;Si4463/radio.c: 169: }
-[e :UE 180 ]
+"167
+[; ;Si4463/radio.c: 167: }
+[e :UE 177 ]
 }
